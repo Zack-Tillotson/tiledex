@@ -1,0 +1,421 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.compactContainer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 800px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.section {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.overviewContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .overviewContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .imagesGrid {
+    margin-top: 1.5rem;
+  }
+  
+  .spriteRow {
+    justify-content: space-around;
+  }
+}
+
+.imageSection {
+  flex: 0 0 auto;
+  margin-right: 1.5rem;
+}
+
+.pokemonImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.infoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.idBadge {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.pokemonName {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.1;
+}
+
+.typesList {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.typeBadgeWrapper {
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.typeBadge {
+  padding: 0.35rem 1rem;
+  border-radius: 16px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.typeBadge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Images Section */
+.imagesSection {
+  margin-bottom: 2rem;
+}
+
+.imagesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.spriteRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.imageContainer:hover {
+  transform: scale(1.05);
+}
+
+.imageTitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.image {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Info Section */
+.infoSection {
+  margin-bottom: 2rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.infoItem {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.infoTitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.infoValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Abilities Section */
+.abilitiesSection {
+  margin-bottom: 2rem;
+}
+
+.abilitiesList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.abilityItem {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.hiddenAbility {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Stats Section */
+.statsSection {
+  margin-bottom: 2rem;
+}
+
+.statsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.statSeparator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0.75rem 0;
+  grid-column: 1 / -1;
+}
+
+.statItem {
+  display: grid;
+  grid-template-columns: 120px 1fr 50px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statName {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.statBarContainer {
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.statBar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.statValue {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Evolutions Section */
+.evolutionsSection {
+  margin-bottom: 2rem;
+}
+
+.evolutionsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.evolutionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 150px;
+  transition: transform 0.2s;
+}
+
+.evolutionItem:hover {
+  transform: scale(1.05);
+}
+
+.evolutionRelation {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.evolutionImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.evolutionImage {
+  object-fit: contain;
+}
+
+.evolutionName {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .imagesSection,
+  .statsSection,
+  .evolutionsSection {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .name {
+    font-size: 2rem;
+  }
+  
+  .imagesGrid,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statItem {
+    grid-template-columns: 100px 1fr 40px;
+  }
+  
+  .attributesContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Attributes Section Styles */
+.attributesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.attributeItem {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.attributeLabel {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.attributeValue {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.abilitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.abilityTag {
+  background-color: #e9ecef;
+  border-radius: 16px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hiddenTag {
+  font-size: 0.8rem;
+  color: #868e96;
+  font-style: italic;
+}

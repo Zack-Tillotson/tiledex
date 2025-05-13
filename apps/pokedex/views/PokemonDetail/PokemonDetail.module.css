@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.backLinkContainer {
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.error {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.error h1 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+.typeLink {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.pokemonLink {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pokemonLink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

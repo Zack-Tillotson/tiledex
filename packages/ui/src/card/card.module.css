@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content {
+  padding: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.linkContainer {
+  margin-top: 16px;
+}
+
+.link {
+  color: #0066cc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@repo/pokeapi",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "fetch-data": "ts-node etl/fetchPokemonData.ts",
+    "fetch-data:range": "ts-node etl/fetchPokemonData.ts --rangeStart $1 --rangeEnd $2",
+    "process-data": "ts-node etl/processPokemonData.ts",
+    "etl": "pnpm fetch-data && pnpm process-data",
+    "etl:range": "pnpm fetch-data:range $1 $2 && pnpm process-data"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.5",
+    "@types/yargs": "^17.0.32",
+    "eslint": "^9.26.0",
+    "ts-node": "^10.9.2",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "axios": "^1.6.7",
+    "fs-extra": "^11.2.0",
+    "yargs": "^17.7.2"
+  }
+}

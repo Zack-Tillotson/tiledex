@@ -1,0 +1,176 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.typeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.typeName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.pokemonCount {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.description {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.typeCharacteristics {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.typeCharacteristics li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.colorSwatch {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-left: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  text-transform: capitalize;
+}
+
+.pokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Type effectiveness styles */
+.typeEffectiveness {
+  margin-bottom: 2rem;
+}
+
+.effectivenessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.effectivenessCard {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.effectivenessTitle {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.typePill {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 16px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.effectivenessSection {
+  margin-bottom: 1.5rem;
+}
+
+.effectivenessSection:last-child {
+  margin-bottom: 0;
+}
+
+.effectivenessSubtitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.typeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.typeBadge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 16px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .typeHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .typeName {
+    font-size: 2rem;
+  }
+  
+  .pokemonGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemonGrid {
+    grid-template-columns: 1fr;
+  }
+}

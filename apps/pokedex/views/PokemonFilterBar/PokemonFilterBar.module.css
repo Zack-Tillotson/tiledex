@@ -1,0 +1,139 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.filterBar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.filterBarFixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.75rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.filterButton:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.filterIcon {
+  fill: currentColor;
+}
+
+.activeFilters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  flex: 1;
+}
+
+.activeFilters::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.filterTag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #f0f8ff;
+  border: 1px solid #d0e8ff;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.filterLabel {
+  color: #666;
+  font-weight: 500;
+  margin-right: 0.15rem;
+}
+
+.filterValue {
+  color: #333;
+}
+
+.clearFilterButton {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.25rem;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.clearFilterButton:hover {
+  color: #666;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.clearAllButton {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.clearAllButton:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .filterBarFixed {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Add some bottom padding to the container to account for the fixed bar */
+  :global(.container) {
+    padding-bottom: 3.5rem;
+  }
+}

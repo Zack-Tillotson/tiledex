@@ -1,0 +1,276 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 50px 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.paginationButton:hover {
+  background-color: #2980b9;
+}
+
+/* Filter Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Results Styles */
+.resultsCount {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.resetButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.resetButton:hover {
+  background-color: #2980b9;
+}
+
+.paginationButtonDisabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.paginationButtonDisabled:hover {
+  background-color: #ccc;
+}
+
+.paginationInfo {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* PokemonCard styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.pokemonImage {
+  object-fit: contain;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.pokemonName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.pokemonInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.attributes {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.attributes p {
+  margin: 0.25rem 0;
+}
+
+.linkContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Pokemon type colors */
+.normal {
+  background-color: #A8A878;
+}
+
+.fire {
+  background-color: #F08030;
+}
+
+.water {
+  background-color: #6890F0;
+}
+
+.electric {
+  background-color: #F8D030;
+}
+
+.grass {
+  background-color: #78C850;
+}
+
+.ice {
+  background-color: #98D8D8;
+}
+
+.fighting {
+  background-color: #C03028;
+}
+
+.poison {
+  background-color: #A040A0;
+}
+
+.ground {
+  background-color: #E0C068;
+}
+
+.flying {
+  background-color: #A890F0;
+}
+
+.psychic {
+  background-color: #F85888;
+}
+
+.bug {
+  background-color: #A8B820;
+}
+
+.rock {
+  background-color: #B8A038;
+}
+
+.ghost {
+  background-color: #705898;
+}
+
+.dragon {
+  background-color: #7038F8;
+}
+
+.dark {
+  background-color: #705848;
+}
+
+.steel {
+  background-color: #B8B8D0;
+}
+
+.fairy {
+  background-color: #EE99AC;
+}
