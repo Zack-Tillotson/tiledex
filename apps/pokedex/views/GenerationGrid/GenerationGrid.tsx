@@ -22,7 +22,7 @@ const generations = [
     iconicPokemon: {
       id: 1,
       name: 'Bulbasaur',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+      imageUrl: '/images/official_artwork/1.png',
       type: 'Grass'
     }
   },
@@ -34,7 +34,7 @@ const generations = [
     iconicPokemon: {
       id: 155,
       name: 'Cyndaquil',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png',
+      imageUrl: '/images/official_artwork/155.png',
       type: 'Fire'
     }
   },
@@ -46,7 +46,7 @@ const generations = [
     iconicPokemon: {
       id: 258,
       name: 'Mudkip',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png',
+      imageUrl: '/images/official_artwork/258.png',
       type: 'Water'
     }
   },
@@ -58,7 +58,7 @@ const generations = [
     iconicPokemon: {
       id: 387,
       name: 'Turtwig',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png',
+      imageUrl: '/images/official_artwork/387.png',
       type: 'Grass'
     }
   },
@@ -70,7 +70,7 @@ const generations = [
     iconicPokemon: {
       id: 498,
       name: 'Tepig',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png',
+      imageUrl: '/images/official_artwork/498.png',
       type: 'Fire'
     }
   },
@@ -82,7 +82,7 @@ const generations = [
     iconicPokemon: {
       id: 656,
       name: 'Froakie',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png',
+      imageUrl: '/images/official_artwork/656.png',
       type: 'Water'
     }
   },
@@ -94,7 +94,7 @@ const generations = [
     iconicPokemon: {
       id: 722,
       name: 'Rowlet',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png',
+      imageUrl: '/images/official_artwork/722.png',
       type: 'Grass'
     }
   },
@@ -106,7 +106,7 @@ const generations = [
     iconicPokemon: {
       id: 813,
       name: 'Scorbunny',
-      imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png',
+      imageUrl: '/images/official_artwork/813.png',
       type: 'Fire'
     }
   }

@@ -21,21 +21,36 @@ const argv = yargs(hideBin(process.argv))
 const INPUT_DIR = path.join(__dirname, 'pokemon');
 const OUTPUT_FILE = path.join(argv.outputDir as string, 'pokemon.json');
 
+// Image paths configuration
+const IMAGE_BASE_PATH = '/images'; // Base path for local images in the public directory
+
+/**
+ * Generate a local image path for a Pokemon sprite
+ */
+function getLocalImagePath(id: number, spriteType: string): string {
+  return `${IMAGE_BASE_PATH}/${spriteType}/${id}.png`;
+}
+
 /**
  * Process a single Pokemon's raw data into a more usable format
  */
 function processPokemon(rawData: PokemonRaw): ProcessedPokemon {
+  const id = rawData.id;
+  
+  // Create sprites object with local image paths
+  const sprites = {
+    front_default: `${IMAGE_BASE_PATH}/front_default/${id}.png`,
+    back_default: `${IMAGE_BASE_PATH}/back_default/${id}.png`,
+    front_shiny: `${IMAGE_BASE_PATH}/front_shiny/${id}.png`,
+    back_shiny: `${IMAGE_BASE_PATH}/back_shiny/${id}.png`,
+    official_artwork: `${IMAGE_BASE_PATH}/official_artwork/${id}.png`
+  };
+  
   return {
-    id: rawData.id,
+    id,
     name: rawData.name,
     types: rawData.types.map(t => t.type.name),
-    sprites: {
-      front_default: rawData.sprites.front_default,
-      back_default: rawData.sprites.back_default,
-      front_shiny: rawData.sprites.front_shiny,
-      back_shiny: rawData.sprites.back_shiny,
-      official_artwork: rawData.sprites.other['official-artwork'].front_default
-    },
+    sprites,
     stats: rawData.stats.map(s => ({
       name: s.stat.name,
       base_stat: s.base_stat
@@ -55,6 +70,7 @@ function processPokemon(rawData: PokemonRaw): ProcessedPokemon {
  */
 async function processAllPokemon(): Promise<void> {
   console.log('Starting to process Pokemon data...');
+  console.log('Using local image paths...');
   
   // Ensure the output directory exists
   fs.ensureDirSync(path.dirname(OUTPUT_FILE));

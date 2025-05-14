@@ -7,6 +7,9 @@
 // Import types from the types package
 import { Pokemon, PokemonType } from '@repo/types';
 
+// Import image utilities
+import { useLocalImagesForPokemon } from './utils/imageUtils';
+
 // Re-export types for convenience
 export type { Pokemon, PokemonType } from '@repo/types';
 
@@ -52,7 +55,11 @@ try {
  * @returns The Pokemon data or undefined if not found
  */
 export const getPokemon = (id: number): Pokemon | undefined => {
-  return pokemonData.find(pokemon => pokemon.id === id);
+  const pokemon = pokemonData.find(pokemon => pokemon.id === id);
+  if (pokemon) {
+    return useLocalImagesForPokemon(pokemon);
+  }
+  return undefined;
 };
 
 /**
@@ -62,8 +69,11 @@ export const getPokemon = (id: number): Pokemon | undefined => {
  */
 export const searchPokemon = (query: string): Pokemon[] => {
   const normalizedQuery = query.toLowerCase();
-  return pokemonData.filter(pokemon => 
+  const results = pokemonData.filter(pokemon => 
     pokemon.name.toLowerCase().includes(normalizedQuery));
+  
+  // Apply local image paths to results
+  return results.map(pokemon => useLocalImagesForPokemon(pokemon));
 };
 
 /**
@@ -71,7 +81,8 @@ export const searchPokemon = (query: string): Pokemon[] => {
  * @returns An array of all Pokemon
  */
 export const getAllPokemon = (): Pokemon[] => {
-  return [...pokemonData];
+  // Apply local image paths to all Pokemon
+  return pokemonData.map(pokemon => useLocalImagesForPokemon(pokemon));
 };
 
 /**
@@ -107,7 +118,8 @@ export const getPaginatedPokemon = (page: number = 1, pageSize: number = 20): Pa
   const totalPages = Math.ceil(pokemonData.length / pageSize);
   
   return {
-    pokemon: paginatedData,
+    // Apply local image paths to paginated Pokemon
+    pokemon: paginatedData.map(pokemon => useLocalImagesForPokemon(pokemon)),
     pagination: {
       currentPage: page,
       totalPages,
@@ -126,8 +138,11 @@ export const getPaginatedPokemon = (page: number = 1, pageSize: number = 20): Pa
  */
 export const getPokemonByType = (type: string): Pokemon[] => {
   const normalizedType = type.toLowerCase();
-  return pokemonData.filter(pokemon => 
+  const results = pokemonData.filter(pokemon => 
     pokemon.types.some((t: string) => t.toLowerCase() === normalizedType));
+  
+  // Apply local image paths to results
+  return results.map(pokemon => useLocalImagesForPokemon(pokemon));
 };
 
 /**

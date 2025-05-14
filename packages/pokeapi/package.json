@@ -11,6 +11,9 @@
     "fetch-data": "ts-node etl/fetchPokemonData.ts",
     "fetch-data:range": "ts-node etl/fetchPokemonData.ts --rangeStart $1 --rangeEnd $2",
     "process-data": "ts-node etl/processPokemonData.ts",
+    "download-images": "ts-node etl/downloadPokemonImages.ts",
+    "download-images:range": "ts-node etl/downloadPokemonImages.ts --rangeStart $1 --rangeEnd $2",
+    "copy-images": "node scripts/copy-images-to-public.js",
     "etl": "pnpm fetch-data && pnpm process-data",
     "etl:range": "pnpm fetch-data:range $1 $2 && pnpm process-data"
   },

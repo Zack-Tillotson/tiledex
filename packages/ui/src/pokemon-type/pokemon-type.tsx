@@ -218,7 +218,7 @@ export function PokemonType({ typeData, className = "" }: PokemonTypeProps): Rea
           <PokemonCard 
             key={poke.id} 
             pokemon={poke} 
-            linkPath={`/pokemon/${poke.id}`} 
+            linkPath={`/pokedex/pokemon/${poke.id}`} 
           />
         ))}
       </div>
