@@ -13,8 +13,8 @@ export function Navigation() {
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <Link 
-            href="/pokemon" 
-            className={`${styles.navLink} ${pathname === '/pokemon' ? styles.active : ''}`}
+            href="/pokedex" 
+            className={`${styles.navLink} ${pathname === '/pokedex' ? styles.active : ''}`}
           >
             Pokédex
           </Link>

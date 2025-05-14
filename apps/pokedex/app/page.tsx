@@ -1,6 +1,9 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 
+// This page is static by default in Next.js App Router
+// We don't need to add any special functions for the home page
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -10,7 +13,7 @@ export default function Home() {
       </p>
       
       <div className={styles.cardGrid}>
-        <Link href="/pokemon" className={styles.card}>
+        <Link href="/pokedex" className={styles.card}>
           <div className={styles.cardContent}>
             <h2 className={styles.cardTitle}>Pokédex</h2>
             <p className={styles.cardDescription}>

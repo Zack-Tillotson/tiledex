@@ -24,6 +24,18 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
     return pokemon ? [pokemon] : [];
   }, [pokemon]);
 
+  // Helper function to determine the correct range based on Pokémon ID
+  const getGenerationRange = (pokemonId: number): string => {
+    if (pokemonId <= 151) return '1-151'; // Gen 1
+    if (pokemonId <= 251) return '152-251'; // Gen 2
+    if (pokemonId <= 386) return '252-386'; // Gen 3
+    if (pokemonId <= 493) return '387-493'; // Gen 4
+    if (pokemonId <= 649) return '494-649'; // Gen 5
+    if (pokemonId <= 721) return '650-721'; // Gen 6
+    if (pokemonId <= 809) return '722-809'; // Gen 7
+    return '810-898'; // Gen 8
+  };
+
   // If pokemon not found, show error message
   if (!pokemon) {
     return (
@@ -31,19 +43,28 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
         <div className={styles.error}>
           <h1>Pokemon Not Found</h1>
           <p>Sorry, we couldn&apos;t find a Pokemon with ID: {id}</p>
-          <Link href="/pokemon" className={styles.backLink}>
+          <Link href="/pokedex" className={styles.backLink}>
             Back to Pokedex
           </Link>
         </div>
       </div>
     );
   }
+  
+  // Get the correct range for this Pokémon
+  const generationRange = getGenerationRange(pokemon.id);
 
   return (
     <div className={styles.container}>
       <div className={styles.backLinkContainer}>
-        <Link href="/pokemon" className={styles.backLink}>
-          &larr; Back to Pokedex
+        <Link href={`/pokedex/${generationRange}`} className={styles.backLink}>
+          &larr; Back to Generation {pokemon.id <= 151 ? 'I' : 
+                                   pokemon.id <= 251 ? 'II' : 
+                                   pokemon.id <= 386 ? 'III' : 
+                                   pokemon.id <= 493 ? 'IV' : 
+                                   pokemon.id <= 649 ? 'V' : 
+                                   pokemon.id <= 721 ? 'VI' : 
+                                   pokemon.id <= 809 ? 'VII' : 'VIII'}
         </Link>
       </div>
       
@@ -61,7 +82,7 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
           if (!pokemonForLink) return children;
           
           return (
-            <Link href={`/pokemon/${pokemonForLink.id}`} className={styles.pokemonLink}>
+            <Link href={`/pokedex/pokemon/${pokemonForLink.id}`} className={styles.pokemonLink}>
               {children}
             </Link>
           );

@@ -1,0 +1,18 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}

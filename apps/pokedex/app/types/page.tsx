@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: "Explore Pokémon by their types. Each type has unique characteristics and strengths."
 };
 
+// Force static rendering for this page
+export const dynamic = 'force-static';
+
 export default function TypesPage() {
   return <TypesView />;
 }
