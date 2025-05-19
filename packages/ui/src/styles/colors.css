@@ -1,0 +1,88 @@
+:root {
+
+  /* Base colors */
+  --robin-egg-blue: rgb(0, 169, 169);
+  --gold: #ffd700ff;
+  --coral: #ff7f50ff;
+  --cornsilk: #fff8dcff;
+  --charcoal: #36454fff;
+
+  /* Cornsilk Gradient */
+  --cornsilk-000: #fffdf7;
+  --cornsilk-100: #fffbf0;
+  --cornsilk-200: #fff9e8;
+  --cornsilk-300: #fff8e0;
+  --cornsilk-400: #fff8de;
+  --cornsilk-500: #fff8dc;
+  --cornsilk-600: #ccc7b0;
+  --cornsilk-700: #999584;
+  --cornsilk-800: #666358;
+  --cornsilk-900: #33322c;
+
+  /* Charcoal Grayscale */
+  --charcoal-000: #f7f8f8;
+  --charcoal-100: #e3e5e6;
+  --charcoal-200: #c4c9cc;
+  --charcoal-300: #a5adb2;
+  --charcoal-400: #869198;
+  --charcoal-500: #36454f;
+  --charcoal-600: #2b373f;
+  --charcoal-700: #20292f;
+  --charcoal-800: #161c20;
+  --charcoal-900: #0b0e10;
+
+  /* Robin Egg Blue Gradient */
+  --robin-egg-blue-000: rgb(229, 250, 250);
+  --robin-egg-blue-100: rgb(204, 244, 244);
+  --robin-egg-blue-200: rgb(153, 233, 233);
+  --robin-egg-blue-300: rgb(102, 222, 222);
+  --robin-egg-blue-400: rgb(51, 211, 211);
+  --robin-egg-blue-500: rgb(0, 169, 169);
+  --robin-egg-blue-600: rgb(0, 135, 135);
+  --robin-egg-blue-700: rgb(0, 101, 101);
+  --robin-egg-blue-800: rgb(0, 68, 68);
+  --robin-egg-blue-900: rgb(0, 34, 34);
+
+  /* Gold Gradient */
+  --gold-000: #fff9e6;
+  --gold-100: #fff3cc;
+  --gold-200: #ffe799;
+  --gold-300: #ffdb66;
+  --gold-400: #ffcf33;
+  --gold-500: #ffd700;
+  --gold-600: #ccac00;
+  --gold-700: #998100;
+  --gold-800: #665600;
+  --gold-900: #332b00;
+
+  /* Coral Gradient */
+  --coral-000: #fff2ee;
+  --coral-100: #ffe5dd;
+  --coral-200: #ffccbb;
+  --coral-300: #ffb299;
+  --coral-400: #ff9977;
+  --coral-500: #ff7f50;
+  --coral-600: #cc6640;
+  --coral-700: #994c30;
+  --coral-800: #663320;
+  --coral-900: #331a10;
+
+  /* Imperative colors */
+  --color-primary: var(--robin-egg-blue-500);
+  --color-secondary: var(--gold-500);
+  --color-tertiary: var(--coral-500);
+  
+  --color-background: var(--cornsilk-000);
+  --color-light-background: var(--cornsilk-500);
+  --color-dark-background: var(--charcoal-600);
+
+  --color-border: var(--charcoal-200);
+  --color-light-border: var(--charcoal-100);
+  --color-dark-border: var(--charcoal-300);
+
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-info: #2563eb;
+
+} 
