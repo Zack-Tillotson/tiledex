@@ -1,108 +1,108 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: var(--spacing-8);
+  font-family: var(--font-family-base);
 }
 
 .typeHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  color: white;
+  padding: var(--spacing-8);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-8);
+  color: var(--cornsilk-000);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .typeName {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
   text-transform: capitalize;
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .pokemonCount {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
 }
 
 .description {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+  background-color: var(--cornsilk-000);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .typeCharacteristics {
   list-style-type: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: var(--spacing-4) 0 0;
 }
 
 .typeCharacteristics li {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--spacing-3);
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
 }
 
 .colorSwatch {
   display: inline-block;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  margin-left: 8px;
-  border: 2px solid #fff;
+  border-radius: var(--radius-full);
+  margin-left: var(--spacing-2);
+  border: 2px solid var(--cornsilk-000);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .sectionTitle {
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem;
+  font-size: var(--font-size-2xl);
+  margin: var(--spacing-8) 0 var(--spacing-4);
   text-transform: capitalize;
 }
 
 .pokemonGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: var(--spacing-6);
 }
 
 /* Type effectiveness styles */
 .typeEffectiveness {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .effectivenessGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
 }
 
 .effectivenessCard {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
+  background-color: var(--cornsilk-000);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .effectivenessTitle {
-  font-size: 1.4rem;
+  font-size: var(--font-size-xl);
   margin-top: 0;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.5rem;
+  margin-bottom: var(--spacing-4);
+  border-bottom: 2px solid var(--charcoal-100);
+  padding-bottom: var(--spacing-2);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-2);
 }
 
 .typePill {

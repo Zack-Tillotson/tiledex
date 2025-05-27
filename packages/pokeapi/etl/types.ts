@@ -1,7 +1,7 @@
 /**
  * Type definitions for the PokeAPI ETL process
  */
-import { Pokemon } from '@repo/types';
+import { Pokemon } from "@repo/types";
 
 /**
  * Command line arguments for the ETL process
@@ -30,7 +30,7 @@ export interface PokemonResponse {
     front_shiny: string;
     back_shiny: string;
     other: {
-      'official-artwork': {
+      "official-artwork": {
         front_default: string;
       };
     };

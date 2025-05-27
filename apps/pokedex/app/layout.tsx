@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header } from "../components/Header";
+
 import "./globals.css";
+import "@repo/ui/styles";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Pokédex - Explore the World of Pokémon",
-  description: "Browse and discover information about all Pokémon species from every generation",
+  description:
+    "Browse and discover information about all Pokémon species from every generation",
 };
 
 export default function RootLayout({
@@ -26,9 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <main className="main-content">
-          {children}
-        </main>
+        <main className="main-content">{children}</main>
       </body>
     </html>
   );

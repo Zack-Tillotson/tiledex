@@ -1,6 +1,10 @@
-
 // Define the types of sprites available
-export type SpriteType = 'front_default' | 'back_default' | 'front_shiny' | 'back_shiny' | 'official_artwork';
+export type SpriteType =
+  | "front_default"
+  | "back_default"
+  | "front_shiny"
+  | "back_shiny"
+  | "official_artwork";
 
 /**
  * Get the local image path for a Pokemon sprite
@@ -27,18 +31,20 @@ export function getImageUrl(id: number, spriteType: SpriteType): string {
  * @param pokemon Pokemon data object
  * @returns Pokemon with updated sprite URLs
  */
-export function useLocalImagesForPokemon<T extends { id: number, sprites: Record<string, string> }>(pokemon: T): T {
+export function useLocalImagesForPokemon<
+  T extends { id: number; sprites: Record<string, string> },
+>(pokemon: T): T {
   const updatedSprites = { ...pokemon.sprites };
-  
+
   // Update each sprite type to use local path
-  (Object.keys(updatedSprites) as SpriteType[]).forEach(spriteType => {
+  (Object.keys(updatedSprites) as SpriteType[]).forEach((spriteType) => {
     if (updatedSprites[spriteType]) {
       updatedSprites[spriteType] = getLocalImagePath(pokemon.id, spriteType);
     }
   });
-  
+
   return {
     ...pokemon,
-    sprites: updatedSprites
+    sprites: updatedSprites,
   };
 }

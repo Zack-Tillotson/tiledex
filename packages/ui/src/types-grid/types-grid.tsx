@@ -14,17 +14,17 @@ interface TypesGridProps {
   getTypeHref?: (type: string) => string;
 }
 
-export function TypesGrid({ 
-  types, 
+export function TypesGrid({
+  types,
   className = "",
   linkComponent,
-  getTypeHref
+  getTypeHref,
 }: TypesGridProps): React.ReactElement {
   return (
     <div className={`${styles.grid} ${className}`}>
       {types.map((type) => (
         <div key={type.name} className={styles.gridItem}>
-          <TypeCard 
+          <TypeCard
             type={type.name}
             count={type.count}
             linkComponent={linkComponent}

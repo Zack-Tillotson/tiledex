@@ -1,12 +1,11 @@
-import { 
-  type Pokemon
-} from '@repo/types';
-import { PokemonCard } from '@repo/ui/pokemon-card/pokemon-card';
+import { type Pokemon } from "@repo/types";
+import { PokemonCard } from "@repo/ui/pokemon-card";
 
 import styles from "./pokemon-grid.module.css";
+import { Link } from "../link-button/Link";
 
 interface PokemonGridProps {
-  pokemon: Pokemon[],
+  pokemon: Pokemon[];
 }
 
 export function PokemonGrid({ pokemon }: PokemonGridProps) {
@@ -14,10 +13,11 @@ export function PokemonGrid({ pokemon }: PokemonGridProps) {
     <div className={styles.grid}>
       {pokemon.length > 0 ? (
         pokemon.map((poke: Pokemon) => (
-          <PokemonCard 
-            key={poke.id} 
-            pokemon={poke} 
-            linkPath={`/pokedex/pokemon/${poke.id}`}
+          <PokemonCard
+            key={poke.id}
+            pokemon={poke}
+            href={`/pokedex/pokemon/${poke.id}`}
+            linkComponent={Link}
           />
         ))
       ) : (

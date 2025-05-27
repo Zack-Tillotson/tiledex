@@ -1,7 +1,9 @@
-'use client'
+"use client";
 
-import React, { useState, FormEvent } from 'react';
-import styles from './SearchForm.module.css';
+import React, { useState, FormEvent, ChangeEvent } from "react";
+import styles from "./SearchForm.module.css";
+import { Input } from "@repo/ui";
+import { Button } from "@repo/ui";
 
 interface SearchFormProps {
   initialSearch?: string;
@@ -9,7 +11,11 @@ interface SearchFormProps {
   onClear: () => void;
 }
 
-export function SearchForm({ initialSearch = '', onSearch, onClear }: SearchFormProps) {
+export function SearchForm({
+  initialSearch = "",
+  onSearch,
+  onClear,
+}: SearchFormProps) {
   const [searchTerm, setSearchTerm] = useState(initialSearch);
 
   const handleSubmit = (e: FormEvent) => {
@@ -18,37 +24,32 @@ export function SearchForm({ initialSearch = '', onSearch, onClear }: SearchForm
   };
 
   const handleClear = () => {
-    setSearchTerm('');
+    setSearchTerm("");
     onClear();
   };
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSubmit}>      
-      <div className={styles.formGroup}>
-        <label htmlFor="search" className={styles.label}>Pokémon Name</label>
-        <input
-          id="search"
-          type="text"
-          className={styles.input}
-          placeholder="Enter a Pokémon name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
-      
+    <form className={styles.searchForm} onSubmit={handleSubmit}>
+      <Input
+        label="Pokémon Name"
+        id="search"
+        type="text"
+        placeholder="Enter a Pokémon name..."
+        value={searchTerm}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setSearchTerm(e.target.value)
+        }
+      />
+
       <div className={styles.buttonGroup}>
         {searchTerm && (
-          <button 
-            type="button" 
-            className={styles.clearButton}
-            onClick={handleClear}
-          >
+          <Button variant="outline" onClick={handleClear} type="button">
             Clear
-          </button>
+          </Button>
         )}
-        <button type="submit" className={styles.searchButton}>
+        <Button variant="primary" type="submit">
           Search
-        </button>
+        </Button>
       </div>
     </form>
   );

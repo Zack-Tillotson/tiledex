@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./pokemon-detail.module.css";
 import { PokemonEvolution } from "../pokemon-evolution";
+import { getPokemonTypeColor } from "@repo/types";
 
 // Define Pokemon interfaces locally to avoid import issues
 // These match the structure in the types package
@@ -47,42 +48,23 @@ interface EvolutionNode {
 
 // Helper functions removed as they're no longer used in the compact view
 
-// Type color mapping
-const typeColors: Record<string, string> = {
-  'normal': "#A8A878",
-  'fire': "#F08030",
-  'water': "#6890F0",
-  'electric': "#F8D030",
-  'grass': "#78C850",
-  'ice': "#98D8D8",
-  'fighting': "#C03028",
-  'poison': "#A040A0",
-  'ground': "#E0C068",
-  'flying': "#A890F0",
-  'psychic': "#F85888",
-  'bug': "#A8B820",
-  'rock': "#B8A038",
-  'ghost': "#705898",
-  'dragon': "#7038F8",
-  'dark': "#705848",
-  'steel': "#B8B8D0",
-  'fairy': "#EE99AC"
-};
-
 interface PokemonDetailProps {
   pokemon: Pokemon;
   pokemonData?: Pokemon[];
   className?: string;
   renderTypeLink?: (type: string, children: React.ReactNode) => React.ReactNode;
-  renderPokemonLink?: (pokemonName: string, children: React.ReactNode) => React.ReactNode;
+  renderPokemonLink?: (
+    pokemonName: string,
+    children: React.ReactNode,
+  ) => React.ReactNode;
 }
 
-export function PokemonDetail({ 
-  pokemon, 
+export function PokemonDetail({
+  pokemon,
   pokemonData = [],
   className = "",
   renderTypeLink,
-  renderPokemonLink
+  renderPokemonLink,
 }: PokemonDetailProps): React.ReactElement {
   return (
     <div className={`${styles.container} ${className}`}>
@@ -91,20 +73,22 @@ export function PokemonDetail({
         <h2 className={styles.sectionTitle}>Overview</h2>
         <div className={styles.overviewContainer}>
           <div className={styles.headerInfo}>
-            <div className={styles.idBadge}>#{pokemon.id.toString().padStart(3, '0')}</div>
+            <div className={styles.idBadge}>
+              #{pokemon.id.toString().padStart(3, "0")}
+            </div>
             <h1 className={styles.pokemonName}>{pokemon.name}</h1>
-            
+
             <div className={styles.typesList}>
               {pokemon.types.map((type: string) => {
                 const typeBadge = (
-                  <span 
+                  <span
                     className={styles.typeBadge}
-                    style={{ backgroundColor: typeColors[type] || "#777" }}
+                    style={{ backgroundColor: getPokemonTypeColor(type) }}
                   >
                     {type}
                   </span>
                 );
-                
+
                 return renderTypeLink ? (
                   <React.Fragment key={type}>
                     {renderTypeLink(type, typeBadge)}
@@ -117,7 +101,7 @@ export function PokemonDetail({
               })}
             </div>
           </div>
-          
+
           <div className={styles.imagesSection}>
             <div className={styles.imagesGrid}>
               {pokemon.sprites.official_artwork && (
@@ -172,11 +156,11 @@ export function PokemonDetail({
               <div key={stat.name} className={styles.statItem}>
                 <h3 className={styles.statName}>{stat.name}</h3>
                 <div className={styles.statBarContainer}>
-                  <div 
-                    className={styles.statBar} 
-                    style={{ 
+                  <div
+                    className={styles.statBar}
+                    style={{
                       width: `${Math.min(100, (stat.base_stat / 160) * 100)}%`,
-                      backgroundColor: getStatColor(stat.base_stat)
+                      backgroundColor: getStatColor(stat.base_stat),
                     }}
                   ></div>
                 </div>
@@ -187,15 +171,22 @@ export function PokemonDetail({
             <div className={styles.statItem}>
               <h3 className={styles.statName}>Total</h3>
               <div className={styles.statBarContainer}>
-                <div 
-                  className={styles.statBar} 
-                  style={{ 
+                <div
+                  className={styles.statBar}
+                  style={{
                     width: `${Math.min(100, (pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0) / 600) * 100)}%`,
-                    backgroundColor: getTotalStatColor(pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0))
+                    backgroundColor: getTotalStatColor(
+                      pokemon.stats.reduce(
+                        (sum, stat) => sum + stat.base_stat,
+                        0,
+                      ),
+                    ),
                   }}
                 ></div>
               </div>
-              <span className={styles.statValue}>{pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0)}</span>
+              <span className={styles.statValue}>
+                {pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0)}
+              </span>
             </div>
           </div>
         </div>
@@ -207,11 +198,15 @@ export function PokemonDetail({
         <div className={styles.attributesContainer}>
           <div className={styles.attributeItem}>
             <h3 className={styles.attributeLabel}>Height</h3>
-            <p className={styles.attributeValue}>{(pokemon.height / 10).toFixed(1)} m</p>
+            <p className={styles.attributeValue}>
+              {(pokemon.height / 10).toFixed(1)} m
+            </p>
           </div>
           <div className={styles.attributeItem}>
             <h3 className={styles.attributeLabel}>Weight</h3>
-            <p className={styles.attributeValue}>{(pokemon.weight / 10).toFixed(1)} kg</p>
+            <p className={styles.attributeValue}>
+              {(pokemon.weight / 10).toFixed(1)} kg
+            </p>
           </div>
           <div className={styles.attributeItem}>
             <h3 className={styles.attributeLabel}>Species</h3>
@@ -224,7 +219,9 @@ export function PokemonDetail({
                 {pokemon.abilities.map((ability) => (
                   <span key={ability.name} className={styles.abilityTag}>
                     {ability.name}
-                    {ability.is_hidden && <span className={styles.hiddenTag}> (Hidden)</span>}
+                    {ability.is_hidden && (
+                      <span className={styles.hiddenTag}> (Hidden)</span>
+                    )}
                   </span>
                 ))}
               </div>
@@ -237,8 +234,8 @@ export function PokemonDetail({
       {pokemon.evolution && pokemon.evolution.length > 0 && (
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Evolution Chain</h2>
-          <PokemonEvolution 
-            evolution={pokemon.evolution} 
+          <PokemonEvolution
+            evolution={pokemon.evolution}
             currentPokemonName={pokemon.name}
             pokemonData={pokemonData.length > 0 ? pokemonData : [pokemon]}
             renderPokemonLink={renderPokemonLink}

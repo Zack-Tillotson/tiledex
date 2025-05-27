@@ -3,4 +3,4 @@
  * Re-exports all Pokemon-related types
  */
 
-export * from './models';
+export * from "./models";

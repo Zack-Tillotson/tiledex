@@ -1,6 +1,6 @@
-import React from 'react';
-import { PokemonDetail } from '../../../../views/PokemonDetail';
-import { getAllPokemon } from '@repo/pokeapi';
+import React from "react";
+import { PokemonDetail } from "../../../../views/PokemonDetail";
+import { getAllPokemon } from "@repo/pokeapi";
 
 // @ts-expect-error - Next.js App Router type issues
 export default function PokemonDetailPage({ params }) {
@@ -8,7 +8,7 @@ export default function PokemonDetailPage({ params }) {
 }
 
 // Force static rendering for this page
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 // Generate metadata for the page
 // @ts-expect-error - Next.js App Router type issues
@@ -23,8 +23,8 @@ export async function generateMetadata({ params }) {
 // Generate static params for all Pokemon
 export async function generateStaticParams() {
   const allPokemon = getAllPokemon();
-  
-  return allPokemon.map(pokemon => ({
-    id: pokemon.id.toString()
+
+  return allPokemon.map((pokemon) => ({
+    id: pokemon.id.toString(),
   }));
 }

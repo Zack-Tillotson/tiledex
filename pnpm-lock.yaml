@@ -23,6 +23,9 @@ importers:
       '@repo/pokeapi':
         specifier: workspace:*
         version: link:../../packages/pokeapi
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui

@@ -1,26 +1,26 @@
-import fs from 'fs-extra';
-import path from 'path';
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-import { Pokemon } from '@repo/types';
+import fs from "fs-extra";
+import path from "path";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+import { Pokemon } from "@repo/types";
 
 // Parse command line arguments using yargs
 const argv = yargs(hideBin(process.argv))
   .options({
     outputDir: {
-      type: 'string',
-      description: 'Output directory for processed data',
-      default: path.join(__dirname, '..', 'src', 'data')
-    }
+      type: "string",
+      description: "Output directory for processed data",
+      default: path.join(__dirname, "..", "src", "data"),
+    },
   })
   .help()
-  .alias('help', 'h')
+  .alias("help", "h")
   .parseSync();
 
 // Configuration
-const EVOLUTION_DIR = path.join(__dirname, 'evolution');
-const POKEMON_FILE = path.join(argv.outputDir as string, 'pokemon.json');
-const OUTPUT_FILE = path.join(argv.outputDir as string, 'pokemon.json');
+const EVOLUTION_DIR = path.join(__dirname, "evolution");
+const POKEMON_FILE = path.join(argv.outputDir as string, "pokemon.json");
+const OUTPUT_FILE = path.join(argv.outputDir as string, "pokemon.json");
 
 // Interfaces for evolution data
 interface EvolutionDetail {
@@ -71,7 +71,7 @@ interface ProcessedEvolutionNode {
  * Extract Pokemon ID from species URL
  */
 function extractPokemonId(url: string): number | null {
-  const match = url.match(/\/pokemon-species\/(\d+)\//); 
+  const match = url.match(/\/pokemon-species\/(\d+)\//);
   return match && match[1] ? parseInt(match[1]) : null;
 }
 
@@ -79,17 +79,20 @@ function extractPokemonId(url: string): number | null {
  * Get Pokemon name by ID
  */
 function getPokemonNameById(id: number, pokemonData: Pokemon[]): string | null {
-  const pokemon = pokemonData.find(p => p.id === id);
+  const pokemon = pokemonData.find((p) => p.id === id);
   return pokemon ? pokemon.name : null;
 }
 
 /**
  * Process evolution details into a more usable format
  */
-function processEvolutionDetail(detail: EvolutionDetail): { trigger: string; detail: any } {
+function processEvolutionDetail(detail: EvolutionDetail): {
+  trigger: string;
+  detail: any;
+} {
   const result: { trigger: string; detail: any } = {
     trigger: detail.trigger.name,
-    detail: {}
+    detail: {},
   };
 
   if (detail.min_level) {
@@ -117,15 +120,15 @@ function processEvolutionDetail(detail: EvolutionDetail): { trigger: string; det
  * Recursively process evolution chain nodes
  */
 function processEvolutionNodes(
-  node: EvolutionNode, 
+  node: EvolutionNode,
   chain: ProcessedEvolutionNode[],
   pokemonData: Pokemon[],
-  isFirstNode: boolean = true
+  isFirstNode: boolean = true,
 ): void {
   // Get species ID from URL
   const speciesUrl = node.species.url;
   const speciesId = extractPokemonId(speciesUrl);
-  
+
   if (!speciesId) {
     console.warn(`Could not extract Pokemon ID from URL: ${speciesUrl}`);
     return;
@@ -133,7 +136,7 @@ function processEvolutionNodes(
 
   // Get Pokemon name from ID
   const pokemonName = getPokemonNameById(speciesId, pokemonData);
-  
+
   if (!pokemonName) {
     console.warn(`Pokemon with ID ${speciesId} not found in Pokemon data`);
     return;
@@ -142,7 +145,7 @@ function processEvolutionNodes(
   // Add current Pokemon to the chain (only for the first node in the chain)
   if (isFirstNode) {
     chain.push({
-      pokemon: pokemonName
+      pokemon: pokemonName,
     });
   }
 
@@ -150,14 +153,14 @@ function processEvolutionNodes(
   for (const evolution of node.evolves_to) {
     const evoSpeciesUrl = evolution.species.url;
     const evoSpeciesId = extractPokemonId(evoSpeciesUrl);
-    
+
     if (!evoSpeciesId) {
       console.warn(`Could not extract Pokemon ID from URL: ${evoSpeciesUrl}`);
       continue;
     }
 
     const evoPokemonName = getPokemonNameById(evoSpeciesId, pokemonData);
-    
+
     if (!evoPokemonName) {
       console.warn(`Pokemon with ID ${evoSpeciesId} not found in Pokemon data`);
       continue;
@@ -167,7 +170,7 @@ function processEvolutionNodes(
     const evolutionDetail = evolution.evolution_details[0]; // Take the first evolution detail
     let trigger: string | undefined;
     let triggerDetail: any | undefined;
-    
+
     if (evolutionDetail) {
       const processedDetail = processEvolutionDetail(evolutionDetail);
       trigger = processedDetail.trigger;
@@ -178,7 +181,7 @@ function processEvolutionNodes(
     chain.push({
       pokemon: evoPokemonName,
       trigger,
-      triggerDetail
+      triggerDetail,
     });
 
     // Process next evolution in the chain (pass false to indicate it's not the first node)
@@ -193,17 +196,22 @@ function processEvolutionNodes(
  * Process a single evolution chain
  */
 function processEvolutionChain(
-  evolutionChain: EvolutionChain, 
-  pokemonData: Pokemon[]
+  evolutionChain: EvolutionChain,
+  pokemonData: Pokemon[],
 ): { chain: ProcessedEvolutionNode[]; pokemonNames: string[] } {
   const processedChain: ProcessedEvolutionNode[] = [];
-  
+
   // Process the evolution chain recursively
-  processEvolutionNodes(evolutionChain.chain, processedChain, pokemonData, true);
-  
+  processEvolutionNodes(
+    evolutionChain.chain,
+    processedChain,
+    pokemonData,
+    true,
+  );
+
   // Extract Pokemon names from the chain
-  const pokemonNames = processedChain.map(node => node.pokemon);
-  
+  const pokemonNames = processedChain.map((node) => node.pokemon);
+
   return { chain: processedChain, pokemonNames };
 }
 
@@ -211,75 +219,84 @@ function processEvolutionChain(
  * Main function to process all evolution data
  */
 async function processAllEvolutionData(): Promise<void> {
-  console.log('Starting to process evolution data...');
-  
+  console.log("Starting to process evolution data...");
+
   // Load Pokemon data
   if (!fs.existsSync(POKEMON_FILE)) {
     console.error(`Pokemon data file not found: ${POKEMON_FILE}`);
-    console.error('Please run the Pokemon data ETL process first');
+    console.error("Please run the Pokemon data ETL process first");
     process.exit(1);
   }
-  
+
   const pokemonData: Pokemon[] = fs.readJsonSync(POKEMON_FILE);
   console.log(`Loaded ${pokemonData.length} Pokemon from ${POKEMON_FILE}`);
-  
+
   // Get all evolution chain files
   if (!fs.existsSync(EVOLUTION_DIR)) {
     console.error(`Evolution data directory not found: ${EVOLUTION_DIR}`);
-    console.error('Please run the evolution data ETL process first');
+    console.error("Please run the evolution data ETL process first");
     process.exit(1);
   }
-  
-  const files = fs.readdirSync(EVOLUTION_DIR)
-    .filter(file => file.endsWith('.json'))
+
+  const files = fs
+    .readdirSync(EVOLUTION_DIR)
+    .filter((file) => file.endsWith(".json"))
     .sort((a, b) => {
-      const idA = parseInt(a.split('.')[0] || '0');
-      const idB = parseInt(b.split('.')[0] || '0');
+      const idA = parseInt(a.split(".")[0] || "0");
+      const idB = parseInt(b.split(".")[0] || "0");
       return idA - idB;
     });
-  
+
   console.log(`Found ${files.length} evolution chain files to process`);
-  
+
   // Process each evolution chain
   const evolutionMap: Record<string, ProcessedEvolution> = {};
-  
+
   for (const file of files) {
     const filePath = path.join(EVOLUTION_DIR, file);
     const evolutionChain: EvolutionChain = fs.readJsonSync(filePath);
-    
+
     try {
-      const { chain, pokemonNames } = processEvolutionChain(evolutionChain, pokemonData);
-      
+      const { chain, pokemonNames } = processEvolutionChain(
+        evolutionChain,
+        pokemonData,
+      );
+
       // Add evolution data to each Pokemon in the chain
       for (const pokemonName of pokemonNames) {
         evolutionMap[pokemonName] = { chain };
       }
-      
-      console.log(`Processed evolution chain #${evolutionChain.id} with ${pokemonNames.length} Pokemon`);
+
+      console.log(
+        `Processed evolution chain #${evolutionChain.id} with ${pokemonNames.length} Pokemon`,
+      );
     } catch (error) {
-      console.error(`Error processing evolution chain #${evolutionChain.id}:`, error);
+      console.error(
+        `Error processing evolution chain #${evolutionChain.id}:`,
+        error,
+      );
     }
   }
-  
+
   // Add evolution data to Pokemon
   let updatedCount = 0;
-  
+
   for (let i = 0; i < pokemonData.length; i++) {
     const pokemon = pokemonData[i];
     if (pokemon && pokemon.name) {
       const evolution = evolutionMap[pokemon.name];
-      
+
       if (evolution) {
         // Add evolution data to the Pokemon
         pokemonData[i] = {
           ...pokemon,
-          evolution: evolution.chain
+          evolution: evolution.chain,
         };
         updatedCount++;
       }
     }
   }
-  
+
   // Save the updated Pokemon data
   fs.writeJsonSync(OUTPUT_FILE, pokemonData, { spaces: 2 });
   console.log(`Updated ${updatedCount} Pokemon with evolution data`);
@@ -289,9 +306,9 @@ async function processAllEvolutionData(): Promise<void> {
 // Run the main function
 processAllEvolutionData()
   .then(() => {
-    console.log('Evolution data processing completed successfully!');
+    console.log("Evolution data processing completed successfully!");
   })
   .catch((error) => {
-    console.error('Error in processing:', error);
+    console.error("Error in processing:", error);
     process.exit(1);
   });

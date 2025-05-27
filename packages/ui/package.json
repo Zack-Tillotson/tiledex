@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx",
-    "./src/pokemon-card": "./src/pokemon-card/index.ts",
-    "./src/pokemon-detail": "./src/pokemon-detail/index.ts",
-    "./pokemon-card": "./src/pokemon-card/index.ts",
-    "./pokemon-detail": "./src/pokemon-detail/index.ts"
+    ".": "./src/index.ts",
+    "./pokemon-card": "./src/pokemon-card/pokemon-card.tsx",
+    "./pokemon-detail": "./src/pokemon-detail/pokemon-detail.tsx",
+    "./pokemon-type": "./src/pokemon-type/pokemon-type.tsx",
+    "./pokemon-type/type-validation": "./src/pokemon-type/type-validation.ts",
+    "./pokemon-grid": "./src/pokemon-grid/pokemon-grid.tsx",
+    "./types-grid": "./src/types-grid/index.ts",
+    "./styles": "./src/styles/index.css"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

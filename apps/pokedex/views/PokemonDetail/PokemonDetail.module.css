@@ -2,11 +2,10 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .backLinkContainer {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2);
 }
 
 .backLink {
@@ -34,12 +33,6 @@
 .error h1 {
   color: #e74c3c;
   margin-bottom: 1rem;
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
 }
 
 .typeLink {

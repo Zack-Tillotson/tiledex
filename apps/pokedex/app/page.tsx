@@ -11,7 +11,7 @@ export default function Home() {
       <p className={styles.description}>
         Explore information about various Pokémon species from all generations
       </p>
-      
+
       <div className={styles.cardGrid}>
         <Link href="/pokedex" className={styles.card}>
           <div className={styles.cardContent}>
@@ -24,7 +24,7 @@ export default function Home() {
             </div>
           </div>
         </Link>
-        
+
         {/* More cards can be added here in the future */}
       </div>
     </div>

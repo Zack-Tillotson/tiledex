@@ -1,4 +1,5 @@
 import { type JSX } from "react";
+import styles from "./text.module.css";
 
 type TextVariant = "body" | "caption" | "label" | "small";
 
@@ -12,17 +13,11 @@ interface TextProps {
 export function Text({
   children,
   variant = "body",
-  className,
+  className = "",
   as: Component = "p",
 }: TextProps): JSX.Element {
-  const variantClasses = {
-    body: "text-base",
-    caption: "text-sm",
-    label: "text-base font-medium",
-    small: "text-xs",
-  };
-
-  const combinedClassName = `${variantClasses[variant]} ${className || ""}`.trim();
+  const combinedClassName =
+    `${styles.text} ${styles[variant]} ${className}`.trim();
 
   return <Component className={combinedClassName}>{children}</Component>;
 }

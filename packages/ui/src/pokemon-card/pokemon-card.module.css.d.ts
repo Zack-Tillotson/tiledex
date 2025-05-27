@@ -1,33 +1,12 @@
 declare const styles: {
-  readonly card: string;
-  readonly imageContainer: string;
-  readonly pokemonImage: string;
   readonly content: string;
-  readonly pokemonName: string;
-  readonly pokemonInfo: string;
+  readonly imageContainer: string;
+  readonly image: string;
+  readonly info: string;
+  readonly id: string;
+  readonly name: string;
   readonly types: string;
   readonly type: string;
-  readonly attributes: string;
-  readonly linkContainer: string;
-  readonly link: string;
-  readonly normal: string;
-  readonly fire: string;
-  readonly water: string;
-  readonly electric: string;
-  readonly grass: string;
-  readonly ice: string;
-  readonly fighting: string;
-  readonly poison: string;
-  readonly ground: string;
-  readonly flying: string;
-  readonly psychic: string;
-  readonly bug: string;
-  readonly rock: string;
-  readonly ghost: string;
-  readonly dragon: string;
-  readonly dark: string;
-  readonly steel: string;
-  readonly fairy: string;
 };
 
 export default styles;

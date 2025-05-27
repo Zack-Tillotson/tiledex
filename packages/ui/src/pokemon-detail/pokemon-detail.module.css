@@ -1,20 +1,15 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .compactContainer {
   display: flex;
   align-items: center;
-  padding: 1rem;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  max-width: 800px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .section {
@@ -22,7 +17,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2);
 }
 
 .overviewContainer {
@@ -115,32 +110,31 @@
 .content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: var(--spacing-8);
 }
 
 .sectionTitle {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.5rem;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 2px solid var(--charcoal-100);
 }
 
 /* Images Section */
 .imagesSection {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .imagesGrid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-6);
   width: 100%;
 }
 
 .spriteRow {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: var(--spacing-6);
   flex-wrap: wrap;
 }
 
@@ -148,9 +142,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
   transition: transform 0.2s;
   width: 100%;
   max-width: 250px;
@@ -162,8 +156,8 @@
 }
 
 .imageTitle {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-2);
   text-align: center;
 }
 
@@ -175,37 +169,37 @@
 
 /* Info Section */
 .infoSection {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: var(--spacing-6);
 }
 
 .infoItem {
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: var(--charcoal-100);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
   text-align: center;
 }
 
 .infoTitle {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #666;
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-2);
+  color: var(--charcoal-600);
 }
 
 .infoValue {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
 }
 
 /* Abilities Section */
 .abilitiesSection {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .abilitiesList {
@@ -213,37 +207,37 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--spacing-4);
 }
 
 .abilityItem {
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  background-color: var(--charcoal-100);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-base);
   text-transform: capitalize;
 }
 
 .hiddenAbility {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: var(--font-size-sm);
+  color: var(--charcoal-600);
   font-style: italic;
 }
 
 /* Stats Section */
 .statsSection {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .statsGrid {
   display: grid;
-  gap: 1rem;
+  gap: var(--spacing-4);
 }
 
 .statSeparator {
   height: 1px;
-  background-color: #e0e0e0;
-  margin: 0.75rem 0;
+  background-color: var(--charcoal-100);
+  margin: var(--spacing-3) 0;
   grid-column: 1 / -1;
 }
 
@@ -251,41 +245,41 @@
   display: grid;
   grid-template-columns: 120px 1fr 50px;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-4);
 }
 
 .statName {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin: 0;
   text-transform: capitalize;
 }
 
 .statBarContainer {
   height: 10px;
-  background-color: #eee;
-  border-radius: 5px;
+  background-color: var(--charcoal-100);
+  border-radius: var(--radius-full);
   overflow: hidden;
 }
 
 .statBar {
   height: 100%;
-  border-radius: 5px;
+  border-radius: var(--radius-full);
 }
 
 .statValue {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-align: right;
 }
 
 /* Evolutions Section */
 .evolutionsSection {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .evolutionsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: var(--spacing-6);
   justify-content: center;
 }
 
@@ -293,9 +287,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: var(--charcoal-100);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
   width: 150px;
   transition: transform 0.2s;
 }
@@ -305,9 +299,9 @@
 }
 
 .evolutionRelation {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--charcoal-600);
+  margin-bottom: var(--spacing-2);
   text-align: center;
 }
 
@@ -317,7 +311,7 @@
   align-items: center;
   width: 80px;
   height: 80px;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-2);
 }
 
 .evolutionImage {
@@ -325,7 +319,7 @@
 }
 
 .evolutionName {
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin: 0;
   text-transform: capitalize;
   text-align: center;
@@ -345,12 +339,8 @@
 }
 
 @media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
-  
   .name {
-    font-size: 2rem;
+    font-size: var(--font-size-4xl);
   }
   
   .imagesGrid,
@@ -371,51 +361,51 @@
 .attributesContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
 }
 
 .attributeItem {
   background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .attributeLabel {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-sm);
+  color: var(--charcoal-600);
+  margin: 0 0 var(--spacing-2) 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .attributeValue {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
-  color: #333;
+  color: var(--charcoal-900);
 }
 
 .abilitiesList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
 }
 
 .abilityTag {
-  background-color: #e9ecef;
-  border-radius: 16px;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.9rem;
-  color: #495057;
+  background-color: #f8f9fa;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--charcoal-600);
   display: inline-flex;
   align-items: center;
 }
 
 .hiddenTag {
-  font-size: 0.8rem;
-  color: #868e96;
+  font-size: var(--font-size-xs);
+  color: var(--charcoal-500);
   font-style: italic;
 }

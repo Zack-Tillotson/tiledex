@@ -1,6 +1,5 @@
 .card {
   border-radius: 12px;
-  padding: 1.5rem;
   color: white;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -18,10 +17,20 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.content {
+  padding: var(--spacing-2);
+  color: white;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .typeName {
   font-size: 1.8rem;
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
   text-transform: capitalize;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -30,9 +39,9 @@
   font-size: 1rem;
   font-weight: 500;
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 0.35rem 0.75rem;
-  border-radius: 16px;
-  margin-top: 0.5rem;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  margin-top: var(--spacing-2);
 }
 
 .link {

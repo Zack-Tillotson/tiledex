@@ -1,1 +1,1 @@
-export * from './PokemonDetail';
+export * from "./PokemonDetail";

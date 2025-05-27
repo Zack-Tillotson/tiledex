@@ -1,7 +1,6 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .title {
@@ -73,19 +72,10 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-  
   .title {
     font-size: 2rem;
   }
-  
-  .typesGrid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-  
+    
   .typeCard {
     height: 120px;
   }

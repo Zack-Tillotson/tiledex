@@ -21,6 +21,7 @@ The package provides TypeScript interfaces for Pokemon data and utility function
 ## Development
 
 To update the data in this package:
+
 1. Run the data fetching scripts (to be implemented)
 2. Build the package
 3. Use the updated data in your application

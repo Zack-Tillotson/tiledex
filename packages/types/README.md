@@ -12,10 +12,10 @@ Import types from this package in other packages and applications:
 
 ```typescript
 // Import specific types
-import { Pokemon, PokemonType } from '@repo/types';
+import { Pokemon, PokemonType } from "@repo/types";
 
 // Or import from a specific category
-import { Pokemon, PokemonType } from '@repo/types/pokemon';
+import { Pokemon, PokemonType } from "@repo/types/pokemon";
 ```
 
 ## Structure
@@ -29,6 +29,7 @@ import { Pokemon, PokemonType } from '@repo/types/pokemon';
 When adding new shared types to the project, add them to this package instead of defining them in individual packages or applications. This ensures type consistency across the monorepo.
 
 Follow these guidelines:
+
 1. Group related types in appropriate subdirectories
 2. Use descriptive names and add JSDoc comments
 3. Create index files that re-export types for easier imports

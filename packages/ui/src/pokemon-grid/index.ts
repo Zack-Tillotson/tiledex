@@ -1,1 +1,1 @@
-export * from './pokemon-grid';
+export * from "./pokemon-grid";

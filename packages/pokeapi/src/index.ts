@@ -5,13 +5,31 @@
  */
 
 // Import types from the types package
-import { Pokemon, PokemonType } from '@repo/types';
+import { Pokemon, PokemonType } from "@repo/types";
 
 // Import image utilities
-import { useLocalImagesForPokemon } from './utils/imageUtils';
+import { useLocalImagesForPokemon } from "./utils/imageUtils";
+
+// Import generations utilities
+import {
+  generations,
+  getGenerationById,
+  getGenerationByPokemonId,
+  getGenerationRomanNumeral,
+  type GenerationData,
+} from "./utils/generations";
 
 // Re-export types for convenience
-export type { Pokemon, PokemonType } from '@repo/types';
+export type { Pokemon, PokemonType } from "@repo/types";
+export type { GenerationData } from "./utils/generations";
+
+// Re-export generations utilities
+export {
+  generations,
+  getGenerationById,
+  getGenerationByPokemonId,
+  getGenerationRomanNumeral,
+};
 
 /**
  * Type information interface
@@ -35,18 +53,22 @@ try {
   // In a production environment, this would be imported directly
   // For now, we'll handle it dynamically to avoid issues if the data doesn't exist yet
   // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-explicit-any
-  const data = require('./data/pokemon.json') as any;
+  const data = require("./data/pokemon.json") as any;
   pokemonData = data;
 } catch (error) {
-  console.warn('Pokemon data not found. Run the ETL process to generate the data.');
+  console.warn(
+    "Pokemon data not found. Run the ETL process to generate the data.",
+  );
 }
 
 try {
   // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-explicit-any
-  const data = require('./data/types.json') as any;
+  const data = require("./data/types.json") as any;
   typeData = data;
 } catch (error) {
-  console.warn('Type data not found. Run the ETL process to generate the data.');
+  console.warn(
+    "Type data not found. Run the ETL process to generate the data.",
+  );
 }
 
 /**
@@ -55,7 +77,7 @@ try {
  * @returns The Pokemon data or undefined if not found
  */
 export const getPokemon = (id: number): Pokemon | undefined => {
-  const pokemon = pokemonData.find(pokemon => pokemon.id === id);
+  const pokemon = pokemonData.find((pokemon) => pokemon.id === id);
   if (pokemon) {
     return useLocalImagesForPokemon(pokemon);
   }
@@ -69,11 +91,12 @@ export const getPokemon = (id: number): Pokemon | undefined => {
  */
 export const searchPokemon = (query: string): Pokemon[] => {
   const normalizedQuery = query.toLowerCase();
-  const results = pokemonData.filter(pokemon => 
-    pokemon.name.toLowerCase().includes(normalizedQuery));
-  
+  const results = pokemonData.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(normalizedQuery),
+  );
+
   // Apply local image paths to results
-  return results.map(pokemon => useLocalImagesForPokemon(pokemon));
+  return results.map((pokemon) => useLocalImagesForPokemon(pokemon));
 };
 
 /**
@@ -82,7 +105,7 @@ export const searchPokemon = (query: string): Pokemon[] => {
  */
 export const getAllPokemon = (): Pokemon[] => {
   // Apply local image paths to all Pokemon
-  return pokemonData.map(pokemon => useLocalImagesForPokemon(pokemon));
+  return pokemonData.map((pokemon) => useLocalImagesForPokemon(pokemon));
 };
 
 /**
@@ -111,23 +134,26 @@ export interface PaginatedPokemonResult {
  * @param pageSize The number of Pokemon per page
  * @returns An object containing the paginated Pokemon and pagination metadata
  */
-export const getPaginatedPokemon = (page: number = 1, pageSize: number = 20): PaginatedPokemonResult => {
+export const getPaginatedPokemon = (
+  page: number = 1,
+  pageSize: number = 20,
+): PaginatedPokemonResult => {
   const startIndex = (page - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const paginatedData = pokemonData.slice(startIndex, endIndex);
   const totalPages = Math.ceil(pokemonData.length / pageSize);
-  
+
   return {
     // Apply local image paths to paginated Pokemon
-    pokemon: paginatedData.map(pokemon => useLocalImagesForPokemon(pokemon)),
+    pokemon: paginatedData.map((pokemon) => useLocalImagesForPokemon(pokemon)),
     pagination: {
       currentPage: page,
       totalPages,
       totalItems: pokemonData.length,
       pageSize,
       hasNextPage: page < totalPages,
-      hasPreviousPage: page > 1
-    }
+      hasPreviousPage: page > 1,
+    },
   };
 };
 
@@ -138,11 +164,12 @@ export const getPaginatedPokemon = (page: number = 1, pageSize: number = 20): Pa
  */
 export const getPokemonByType = (type: string): Pokemon[] => {
   const normalizedType = type.toLowerCase();
-  const results = pokemonData.filter(pokemon => 
-    pokemon.types.some((t: string) => t.toLowerCase() === normalizedType));
-  
+  const results = pokemonData.filter((pokemon) =>
+    pokemon.types.some((t: string) => t.toLowerCase() === normalizedType),
+  );
+
   // Apply local image paths to results
-  return results.map(pokemon => useLocalImagesForPokemon(pokemon));
+  return results.map((pokemon) => useLocalImagesForPokemon(pokemon));
 };
 
 /**
@@ -160,7 +187,7 @@ export const getAllTypes = (): TypeInfo[] => {
  */
 export const getTypeByName = (name: string): TypeInfo | undefined => {
   const normalizedName = name.toLowerCase();
-  return typeData.find(type => type.name.toLowerCase() === normalizedName);
+  return typeData.find((type) => type.name.toLowerCase() === normalizedName);
 };
 
 /**
@@ -169,20 +196,20 @@ export const getTypeByName = (name: string): TypeInfo | undefined => {
  */
 export const getTypeCounts = (): Record<string, number> => {
   const counts: Record<string, number> = {};
-  
+
   // Initialize counts for all types
-  typeData.forEach(type => {
+  typeData.forEach((type) => {
     counts[type.name] = 0;
   });
-  
+
   // Count Pokémon for each type
-  pokemonData.forEach(pokemon => {
-    pokemon.types.forEach(type => {
+  pokemonData.forEach((pokemon) => {
+    pokemon.types.forEach((type) => {
       if (counts[type] !== undefined) {
         counts[type]++;
       }
     });
   });
-  
+
   return counts;
 };
