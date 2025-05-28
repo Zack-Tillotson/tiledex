@@ -18,7 +18,7 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  apps/pokedex:
+  apps/web:
     dependencies:
       '@repo/pokeapi':
         specifier: workspace:*

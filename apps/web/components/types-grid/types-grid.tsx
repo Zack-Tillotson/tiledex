@@ -36,4 +36,4 @@ export function TypesGrid({
   );
 }
 
-export default TypesGrid;
+export default TypesGrid; 

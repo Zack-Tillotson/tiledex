@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "apps/pokedex/out",
+    "public": "apps/web/out",
     "ignore": [
       "firebase.json",
       "**/.*",

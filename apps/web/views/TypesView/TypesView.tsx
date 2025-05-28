@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./TypesView.module.css";
-import { TypesGrid } from "@repo/ui/types-grid";
+import { TypesGrid } from "../../components/types-grid";
 import { getPokemonByType } from "@repo/pokeapi";
 import { POKEMON_TYPE_COLORS, PokemonTypeKey } from "@repo/types";
 

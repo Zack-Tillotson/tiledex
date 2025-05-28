@@ -9,7 +9,7 @@ const path = require('path');
 const SOURCE_DIR = path.join(__dirname, '../src/images');
 
 // Target directory (Next.js public directory)
-const TARGET_DIR = path.join(__dirname, '../../../apps/pokedex/public/images');
+const TARGET_DIR = path.join(__dirname, '../../../apps/web/public/images');
 
 // Sprite types
 const SPRITE_TYPES = [
