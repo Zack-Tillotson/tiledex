@@ -1,0 +1,38 @@
+---
+description: 
+globs: apps/web/app/**/page.tsx
+alwaysApply: false
+---
+# Page Component Rules
+
+Pages are server components that handle route orchestration - they render views.
+
+## Guidelines
+- Must be server components
+- Only contain orchestration logic (props passing, params)
+- Must render view components
+- No direct style imports
+
+## Examples
+
+✅ Good:
+```tsx
+// app/pokemon/[id]/page.tsx
+export default function PokemonPage({ params }) {
+  return <PokemonView pokemonId={params.id} />;
+}
+```
+
+❌ Bad:
+```tsx
+// app/pokemon/[id]/page.tsx
+'use client';
+
+import styles from './page.module.css';
+
+export default function PokemonPage({ params }) {
+  const [pokemon, setPokemon] = useState(null);
+  // Client-side state management and styles don't belong in pages
+  return <div className={styles.container}>{/* ... */}</div>;
+}
+```

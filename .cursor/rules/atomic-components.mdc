@@ -1,0 +1,69 @@
+---
+description: 
+globs: packages/ui/**
+alwaysApply: false
+---
+# Atomic Component Rules
+
+Atomic components are reusable, generic components that define basic building blocks including styles and functionality.
+
+## Guidelines
+- Must be in the UI package
+- Must have associated styles
+- Must have unit tests.
+- Must be exported from package index
+- Must have JSDoc documentation
+
+## Examples
+
+✅ Good:
+```tsx
+// packages/ui/src/button/button.tsx
+/**
+ * Button component with various styles and states
+ * @param variant - The visual style of the button
+ * @param size - The size of the button
+ * @param children - The content to render inside the button
+ */
+interface ButtonProps {
+  variant?: 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
+  children: React.ReactNode;
+}
+
+export function Button({ variant = 'primary', size = 'medium', children }: ButtonProps) {
+  return (
+    <button className={styles[variant]} data-size={size}>
+      {children}
+    </button>
+  );
+}
+```
+## Style Examples
+
+✅ Good:
+```css
+/* packages/ui/src/button/button.module.css */
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  border-radius: var(--radius-md);
+}
+
+[data-size='small'] {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+```
+
+❌ Bad:
+```css
+/* Wrong location or missing styles */
+.button {
+  /* Hard-coded values instead of design tokens */
+  background: #ff0000;
+  padding: 10px;
+  font-size: 14px;
+}
+```
