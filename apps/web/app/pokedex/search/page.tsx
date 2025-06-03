@@ -1,4 +1,4 @@
-import { SearchView } from "../../../views/SearchView";
+import { SearchView } from "@repo/pokedex/SearchView";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

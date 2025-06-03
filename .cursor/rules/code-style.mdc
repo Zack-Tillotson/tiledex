@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Code Style
+
+This repository uses the Prettier code style. All .ts, .tsx, .css, .md, .mdc, and .json should follow the standard Prettier conventions.

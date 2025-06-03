@@ -1,4 +1,4 @@
-import { PokemonGrid } from "../../../../views/PokemonGrid";
+import { PokemonGrid } from "@repo/pokedex/PokemonGrid";
 import { notFound } from "next/navigation";
 import {
   generations,
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 // Generate metadata for the page
 // @ts-expect-error - Next.js App Router type issues
 export async function generateMetadata({ params }): Promise<Metadata> {
-  const generationId = parseInt(params.generation, 10);
+  const generationId = parseInt((await params).generation, 10);
   const generation = getGenerationById(generationId);
 
   if (!generation) {
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 // @ts-expect-error - Next.js App Router type issues
 export default async function PokedexGenerationPage({ params, searchParams }) {
   // Parse the generation parameter
-  const generationId = parseInt(params.generation, 10);
+  const generationId = parseInt((await params).generation, 10);
   const generation = getGenerationById(generationId);
 
   if (!generation) {

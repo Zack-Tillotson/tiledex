@@ -1,9 +1,5 @@
-import { PokemonType } from "../../../views/PokemonType/PokemonType";
+import { PokemonType } from "@repo/pokedex/PokemonType";
 import { getAllTypes } from "@repo/pokeapi";
-import { Metadata } from "next";
-
-// Force static rendering for this page
-export const dynamic = "force-static";
 
 // Generate metadata for the page
 // @ts-expect-error - Next.js App Router type issues

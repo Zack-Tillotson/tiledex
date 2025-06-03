@@ -1,0 +1,19 @@
+.container {
+  padding: var(--spacing-4);
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}

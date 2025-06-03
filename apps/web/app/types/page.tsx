@@ -1,4 +1,4 @@
-import { TypesView } from "../../views/TypesView/TypesView";
+import { TypesView } from "@repo/pokedex/TypesView";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# View Component Rules
+
+Views are server components that contain business logic and render UI components, they are meant to be self contained and isolated components which handle data, state, and UI rendering.
+
+## Guidelines
+- Must be located in the src/views/ folder with their own containing folder.
+- Must be server components
+- No style imports - styles should be included in the UI components
+- Must have unit tests and will typically have end-to-end tests; the tests will focus on validating orchestration like prop passing and rendering child components correctly.
+- Should render UI components
+- Must have JSDoc documentation
+
+## Examples
+
+✅ Good:
+```tsx
+// views/PokemonView.tsx
+export function PokemonView({ id }: { id: string }) {
+  const pokemon = usePokemonData(id);
+  return (
+    <PokemonDetail 
+      pokemon={pokemon}
+      onFavorite={handleFavorite}
+    />
+  );
+}
+```

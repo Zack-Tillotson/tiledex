@@ -1,5 +1,5 @@
 import React from "react";
-import { PokemonDetail } from "../../../../views/PokemonDetail";
+import { PokemonDetail } from "@repo/pokedex/PokemonDetail";
 import { getAllPokemon } from "@repo/pokeapi";
 
 // @ts-expect-error - Next.js App Router type issues
