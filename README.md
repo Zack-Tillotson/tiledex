@@ -1,85 +1,111 @@
-# Turborepo starter
+# Tiledex - A Modern Pokédex Application
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern, performant Pokédex application built with Next.js and TypeScript, featuring a tile-based interface for exploring Pokémon.
 
-## Using this example
+## Features
 
-Run the following command:
+- 🎮 Interactive tile-based Pokémon exploration
+- ⚡ Fast and responsive UI with Next.js App Router
+- 🎨 Modern, component-based architecture with reusable UI components
+- 📱 Fully responsive design that works on all devices
+- 🔍 Local PokeAPI data for blazing-fast performance
+- 🌐 Server-side rendering for optimal performance
 
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: CSS Modules with design tokens
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Monorepo Tools**: [Turborepo](https://turborepo.org/)
+- **Hosting**: Firebase Hosting
+- **Development Tools**:
+  - ESLint for code linting
+  - Prettier for code formatting
+  - TypeScript for static type checking
+
+## Project Structure
+
+The project is organized as a monorepo with the following structure:
+
+### Apps
+- `web`: The main Next.js application (Pokédex interface)
+
+### Packages
+- `@repo/ui`: Shared React component library
+- `@repo/pokeapi`: Static PokeAPI data package
+- `@repo/types`: Shared TypeScript types
+- `@repo/pokedex`: Core Pokédex functionality
+- `@repo/eslint-config`: Shared ESLint configuration
+- `@repo/typescript-config`: Shared TypeScript configuration
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- pnpm >= 9.0.0
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   cd tiledex
+   ```
+
+2. Install dependencies:
+   ```sh
+   pnpm install
+   ```
+
+### Development
+
+Run the development server:
 ```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/pokeapi`: a package containing static data from the [PokeAPI](https://pokeapi.co/) website for use in the Pokedex application
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
 pnpm dev
 ```
 
-### Remote Caching
+The application will be available at [http://localhost:3042](http://localhost:3042)
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+### Building
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+Build all packages and applications:
+```sh
+pnpm build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Deployment
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
+Deploy to Firebase Hosting:
+```sh
+pnpm deploy
 ```
-npx turbo link
-```
 
-## Useful Links
+## Development Guidelines
 
-Learn more about the power of Turborepo:
+- Follow the component architecture guidelines:
+  - Atomic components in `@repo/ui`
+  - UI components for presentation
+  - View components for business logic
+  - Custom hooks for reusable logic
+- Use CSS Modules for styling
+- Write unit tests for all components and hooks
+- Follow the Prettier code style
+- Ensure type safety with TypeScript
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+## Contributing
+
+1. Create a new branch for your feature
+2. Make your changes
+3. Run tests and type checking:
+   ```sh
+   pnpm lint
+   pnpm check-types
+   ```
+4. Create a pull request
+
+## License
+
+This project is proprietary and confidential.
