@@ -1,0 +1,31 @@
+{
+  "id": 93,
+  "name": "hydration",
+  "description": "This Pokémon is cured of any major status ailment after each turn during rain.",
+  "flavor_text": "Heals status conditions if\nit’s raining.",
+  "pokemon_ids": [
+    86,
+    87,
+    131,
+    134,
+    238,
+    278,
+    339,
+    340,
+    368,
+    370,
+    489,
+    490,
+    535,
+    536,
+    580,
+    581,
+    594,
+    616,
+    617,
+    704,
+    705,
+    706,
+    10204
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": 155,
+  "name": "rattled",
+  "description": "This Pokémon's Speed rises one stage with each hit from a damaging dark-, ghost-, or bug-type move.",
+  "flavor_text": "Some move types scare\nit and boost its Speed stat.",
+  "pokemon_ids": [
+    129,
+    165,
+    185,
+    206,
+    209,
+    210,
+    261,
+    293,
+    366,
+    438,
+    613,
+    835,
+    848,
+    960,
+    961,
+    982,
+    999,
+    10107,
+    10108,
+    10247,
+    10255
+  ]
+}

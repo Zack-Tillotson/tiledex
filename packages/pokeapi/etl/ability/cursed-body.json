@@ -1,0 +1,23 @@
+{
+  "id": 130,
+  "name": "cursed-body",
+  "description": "Moves that hit this Pokémon have a 30% chance of being Disabled afterward.",
+  "flavor_text": "May disable a move used\non the Pokémon.",
+  "pokemon_ids": [
+    94,
+    353,
+    354,
+    478,
+    592,
+    593,
+    854,
+    855,
+    885,
+    886,
+    887,
+    10115,
+    10149,
+    10173,
+    10202
+  ]
+}

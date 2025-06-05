@@ -1,0 +1,15 @@
+{
+  "id": 13,
+  "name": "cloud-nine",
+  "description": "While this Pokémon is in battle, weather can still be in play, but will not have any of its effects.\n\nThis ability functions identically to air lock.",
+  "flavor_text": "Eliminates the effects of\nweather.",
+  "pokemon_ids": [
+    54,
+    55,
+    108,
+    333,
+    334,
+    463,
+    780
+  ]
+}

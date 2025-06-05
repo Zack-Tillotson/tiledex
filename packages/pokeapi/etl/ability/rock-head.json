@@ -1,0 +1,32 @@
+{
+  "id": 69,
+  "name": "rock-head",
+  "description": "This Pokémon does not receive recoil damage from its recoil moves.\n\nstruggle's recoil is unaffected.  This ability does not prevent crash damage from missing with jump kick or high jump kick.",
+  "flavor_text": "Protects the Pokémon\nfrom recoil damage.",
+  "pokemon_ids": [
+    74,
+    75,
+    76,
+    95,
+    104,
+    105,
+    111,
+    112,
+    142,
+    185,
+    208,
+    304,
+    305,
+    306,
+    369,
+    371,
+    372,
+    438,
+    697,
+    10016,
+    10115,
+    10149,
+    10229,
+    10230
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": 172,
+  "name": "competitive",
+  "description": "Raises Special Attack by two stages upon having any stat lowered.",
+  "flavor_text": "Boosts the Sp. Atk stat when\na stat is lowered.",
+  "pokemon_ids": [
+    39,
+    40,
+    174,
+    350,
+    393,
+    394,
+    395,
+    574,
+    575,
+    576,
+    836,
+    940,
+    941,
+    10025,
+    10169
+  ]
+}

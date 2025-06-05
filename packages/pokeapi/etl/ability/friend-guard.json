@@ -1,0 +1,18 @@
+{
+  "id": 132,
+  "name": "friend-guard",
+  "description": "All friendly Pokémon take 0.75× as much direct damage from moves while this Pokémon is in battle.\n\nThis effect stacks if multiple allied Pokémon have it.",
+  "flavor_text": "Reduces damage done\nto allies.",
+  "pokemon_ids": [
+    35,
+    39,
+    173,
+    174,
+    440,
+    664,
+    665,
+    666,
+    925,
+    10257
+  ]
+}

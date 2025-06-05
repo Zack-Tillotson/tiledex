@@ -1,0 +1,29 @@
+{
+  "id": 61,
+  "name": "shed-skin",
+  "description": "After each turn, this Pokémon has a 33% of being cured of any major status ailment.",
+  "flavor_text": "The Pokémon may heal its\nown status conditions.",
+  "pokemon_ids": [
+    11,
+    14,
+    23,
+    24,
+    147,
+    148,
+    247,
+    266,
+    268,
+    336,
+    401,
+    412,
+    559,
+    560,
+    588,
+    665,
+    843,
+    844,
+    953,
+    967,
+    10218
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": 60,
+  "name": "sticky-hold",
+  "description": "This Pokémon's hold item cannot be removed by other Pokémon.\n\nDamaging moves that would remove this Pokémon's item can still inflict damage against this Pokémon, e.g. knock off or pluck.  This Pokémon can still use moves that involve the loss of its own item, e.g. fling or trick.\n\nOverworld: If the lead Pokémon has this ability, the encounter rate while fishing is increased.",
+  "flavor_text": "Protects the Pokémon\nfrom item theft.",
+  "pokemon_ids": [
+    88,
+    89,
+    316,
+    317,
+    422,
+    423,
+    568,
+    617,
+    1011,
+    1019
+  ]
+}

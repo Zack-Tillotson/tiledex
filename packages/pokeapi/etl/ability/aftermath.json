@@ -1,0 +1,19 @@
+{
+  "id": 106,
+  "name": "aftermath",
+  "description": "When this Pokémon is knocked out by a move that makes contact, the move's user takes 1/4 its maximum HP in damage.",
+  "flavor_text": "Damages the attacker\nlanding the finishing hit.",
+  "pokemon_ids": [
+    100,
+    101,
+    425,
+    426,
+    434,
+    435,
+    568,
+    569,
+    10207,
+    10231,
+    10232
+  ]
+}

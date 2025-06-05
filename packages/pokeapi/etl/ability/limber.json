@@ -1,0 +1,22 @@
+{
+  "id": 7,
+  "name": "limber",
+  "description": "This Pokémon cannot be paralyzed.\n\nIf a Pokémon is paralyzed and acquires this ability, its paralysis is healed; this includes when regaining a lost ability upon leaving battle.",
+  "flavor_text": "Protects the Pokémon\nfrom paralysis.",
+  "pokemon_ids": [
+    53,
+    106,
+    132,
+    427,
+    428,
+    431,
+    509,
+    510,
+    618,
+    701,
+    747,
+    748,
+    852,
+    853
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 38,
+  "name": "poison-point",
+  "description": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being poisoned.",
+  "flavor_text": "Contact with the Pokémon\nmay poison the attacker.",
+  "pokemon_ids": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    117,
+    211,
+    315,
+    406,
+    407,
+    543,
+    544,
+    545,
+    690,
+    691,
+    904,
+    980,
+    10234,
+    10253
+  ]
+}

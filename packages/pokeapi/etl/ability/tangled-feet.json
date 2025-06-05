@@ -1,0 +1,17 @@
+{
+  "id": 77,
+  "name": "tangled-feet",
+  "description": "When this Pokémon is confused, it has twice its evasion.",
+  "flavor_text": "Raises evasion if the\nPokémon is confused.",
+  "pokemon_ids": [
+    16,
+    17,
+    18,
+    84,
+    85,
+    327,
+    441,
+    866,
+    973
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 91,
+  "name": "adaptability",
+  "description": "This Pokémon inflicts twice as much damage with moves whose types match its own, rather than the usual same-type attack bonus of 1.5×.",
+  "flavor_text": "Powers up moves of the\nsame type as the Pokémon.",
+  "pokemon_ids": [
+    133,
+    341,
+    342,
+    349,
+    474,
+    550,
+    690,
+    691,
+    734,
+    735,
+    902,
+    10016,
+    10059,
+    10090,
+    10121,
+    10159,
+    10205,
+    10247,
+    10248
+  ]
+}

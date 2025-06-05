@@ -6,6 +6,7 @@ import {
   type GenerationData,
 } from "@repo/pokeapi";
 import { Metadata } from "next";
+import { Header } from "@repo/ui";
 
 // Force static rendering for this page
 export const dynamic = "force-static";
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 }
 
 // @ts-expect-error - Next.js App Router type issues
-export default async function PokedexGenerationPage({ params, searchParams }) {
+export default async function PokedexGenerationPage({ params }) {
   // Parse the generation parameter
   const generationId = parseInt((await params).generation, 10);
   const generation = getGenerationById(generationId);
@@ -47,29 +48,10 @@ export default async function PokedexGenerationPage({ params, searchParams }) {
     notFound();
   }
 
-  // Helper function to get the first value from a string or array of strings
-  const getParamValue = (
-    param: string | string[] | undefined,
-  ): string | undefined => {
-    if (!param) return undefined;
-    return Array.isArray(param) ? param[0] : param;
-  };
-
-  // Extract filter parameters from URL
-  const nameParam = getParamValue(searchParams?.name) || "";
-  const mainTypeParam = getParamValue(searchParams?.mainType) || "";
-
-  const initialFilters = {
-    ...(nameParam ? { name: nameParam } : {}),
-    ...(mainTypeParam ? { mainType: mainTypeParam } : {}),
-  };
-
   return (
-    <PokemonGrid
-      startIndex={generation.startId}
-      endIndex={generation.endId}
-      initialFilters={initialFilters}
-      showFilters={false}
-    />
+    <>
+      <Header level={1}>{generation.name}</Header>
+      <PokemonGrid generation={generationId} />
+    </>
   );
 }

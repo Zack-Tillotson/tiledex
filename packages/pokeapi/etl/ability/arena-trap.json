@@ -1,0 +1,11 @@
+{
+  "id": 71,
+  "name": "arena-trap",
+  "description": "While this Pokémon is in battle, opposing Pokémon cannot flee or switch out.  flying-type Pokémon and Pokémon in the air, e.g. due to levitate or magnet rise, are unaffected.\n\nPokémon with run away can still flee.  Pokémon can still switch out with the use of a move or item.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled.",
+  "flavor_text": "Prevents opposing Pokémon\nfrom fleeing.",
+  "pokemon_ids": [
+    50,
+    51,
+    328
+  ]
+}

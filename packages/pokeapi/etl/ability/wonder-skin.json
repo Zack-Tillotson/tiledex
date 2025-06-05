@@ -1,0 +1,13 @@
+{
+  "id": 147,
+  "name": "wonder-skin",
+  "description": "Non-damaging moves have exactly 50% base accuracy against this Pokémon.",
+  "flavor_text": "Makes status moves\nmore likely to miss.",
+  "pokemon_ids": [
+    49,
+    300,
+    301,
+    561,
+    779
+  ]
+}

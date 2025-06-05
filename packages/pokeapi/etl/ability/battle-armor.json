@@ -1,0 +1,19 @@
+{
+  "id": 4,
+  "name": "battle-armor",
+  "description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to shell armor.",
+  "flavor_text": "Protects the Pokémon\nfrom critical hits.",
+  "pokemon_ids": [
+    104,
+    105,
+    140,
+    141,
+    347,
+    348,
+    451,
+    452,
+    772,
+    863,
+    870
+  ]
+}

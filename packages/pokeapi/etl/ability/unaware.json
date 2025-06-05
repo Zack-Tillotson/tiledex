@@ -1,0 +1,23 @@
+{
+  "id": 109,
+  "name": "unaware",
+  "description": "This Pokémon ignores other Pokémon's stat modifiers for the purposes of damage and accuracy calculation.\n\nEffectively, this affects modifiers of every stat except Speed.\n\nThe power of punishment and stored power is calculated as usual.  When this Pokémon hurts itself in confusion, its stat modifiers affect damage as usual.",
+  "flavor_text": "Ignores the opposing\nPokémon’s stat changes.",
+  "pokemon_ids": [
+    36,
+    194,
+    195,
+    399,
+    400,
+    527,
+    528,
+    771,
+    789,
+    909,
+    910,
+    911,
+    977,
+    980,
+    10253
+  ]
+}

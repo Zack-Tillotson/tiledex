@@ -1,0 +1,18 @@
+{
+  "id": 94,
+  "name": "solar-power",
+  "description": "During strong sunlight, this Pokémon has 1.5× its Special Attack but takes 1/8 of its maximum HP in damage after each turn.",
+  "flavor_text": "Boosts the Sp. Atk stat in sunny\nweather, but HP decreases.",
+  "pokemon_ids": [
+    4,
+    5,
+    6,
+    191,
+    192,
+    357,
+    694,
+    695,
+    10048,
+    10196
+  ]
+}

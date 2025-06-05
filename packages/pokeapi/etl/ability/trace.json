@@ -1,0 +1,14 @@
+{
+  "id": 36,
+  "name": "trace",
+  "description": "When this Pokémon enters battle, it copies a random opponent's ability.\n\nThis ability cannot copy flower gift, forecast, illusion, imposter, multitype, trace, wonder guard, or zen mode.",
+  "flavor_text": "The Pokémon copies an\nopposing Pokémon’s Ability.",
+  "pokemon_ids": [
+    137,
+    233,
+    280,
+    281,
+    282,
+    10037
+  ]
+}

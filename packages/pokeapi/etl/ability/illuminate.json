@@ -1,0 +1,16 @@
+{
+  "id": 35,
+  "name": "illuminate",
+  "description": "Overworld: If the lead Pokémon has this ability, the wild encounter rate is doubled.\n\nThis ability has no effect in battle.",
+  "flavor_text": "Raises the likelihood of\nmeeting wild Pokémon.",
+  "pokemon_ids": [
+    120,
+    121,
+    170,
+    171,
+    313,
+    505,
+    755,
+    756
+  ]
+}

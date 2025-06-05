@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "name": "volt-absorb",
+  "description": "Whenever an electric-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it.\n\nThis ability will not take effect if this Pokémon is ground-type and thus immune to Electric moves.  Electric moves will ignore this Pokémon's substitute.\n\nThis effect includes non-damaging moves, i.e. thunder wave.",
+  "flavor_text": "Restores HP if hit by an\nElectric-type move.",
+  "pokemon_ids": [
+    135,
+    170,
+    171,
+    312,
+    417,
+    807,
+    880,
+    881,
+    922,
+    923,
+    940,
+    941,
+    10020
+  ]
+}

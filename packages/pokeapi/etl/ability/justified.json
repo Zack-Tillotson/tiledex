@@ -1,0 +1,18 @@
+{
+  "id": 154,
+  "name": "justified",
+  "description": "Whenever a dark-type move hits this Pokémon, its Attack rises one stage.\n\nThe move is not negated in any way.",
+  "flavor_text": "Boosts the Attack stat when\nit’s hit by a Dark-type move.",
+  "pokemon_ids": [
+    58,
+    59,
+    359,
+    448,
+    475,
+    638,
+    639,
+    640,
+    647,
+    10024
+  ]
+}

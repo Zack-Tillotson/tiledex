@@ -1,0 +1,26 @@
+{
+  "id": 43,
+  "name": "soundproof",
+  "description": "This Pokémon is immune to moves flagged as being sound-based.\n\nheal bell is unaffected.  uproar still prevents this Pokémon from sleeping.  This Pokémon can still receive a Perish Song counter through baton pass, and will retain a Perish Song counter if it acquires this ability after Perish Song is used.\n\nhowl, roar of time, sonic boom, and yawn are not flagged as sound-based.",
+  "flavor_text": "Gives full immunity to all\nsound-based moves.",
+  "pokemon_ids": [
+    100,
+    101,
+    122,
+    293,
+    294,
+    295,
+    410,
+    411,
+    439,
+    459,
+    460,
+    626,
+    782,
+    783,
+    784,
+    10146,
+    10231,
+    10232
+  ]
+}

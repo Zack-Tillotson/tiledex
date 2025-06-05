@@ -1,0 +1,19 @@
+{
+  "id": 143,
+  "name": "poison-touch",
+  "description": "This Pokémon's contact moves have a 30% chance of poisoning the target with each hit.\n\nThis counts as an extra effect for the purposes of shield dust.  This ability takes effect before mummy.",
+  "flavor_text": "May poison a target when the\nPokémon makes contact.",
+  "pokemon_ids": [
+    88,
+    89,
+    453,
+    454,
+    537,
+    690,
+    691,
+    903,
+    945,
+    10112,
+    10113
+  ]
+}

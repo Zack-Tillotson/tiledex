@@ -1,0 +1,31 @@
+{
+  "id": 49,
+  "name": "flame-body",
+  "description": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being burned.\n\nOverworld: If any Pokémon in the party has this ability, each egg in the party has its hatch counter decreased by 2 (rather than 1) each step cycle, making eggs hatch roughly twice as quickly.  This effect does not stack if multiple Pokémon have this ability or magma armor.",
+  "flavor_text": "Contact with the Pokémon\nmay burn the attacker.",
+  "pokemon_ids": [
+    77,
+    78,
+    126,
+    146,
+    218,
+    219,
+    240,
+    467,
+    485,
+    607,
+    608,
+    609,
+    636,
+    637,
+    662,
+    663,
+    838,
+    839,
+    850,
+    851,
+    935,
+    10215,
+    10220
+  ]
+}

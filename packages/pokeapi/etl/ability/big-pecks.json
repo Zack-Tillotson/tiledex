@@ -1,0 +1,23 @@
+{
+  "id": 145,
+  "name": "big-pecks",
+  "description": "This Pokémon's Defense cannot be lowered by other Pokémon.\n\nThis Pokémon can still be passed negative Defense modifiers through heart swap or guard swap.",
+  "flavor_text": "Protects the Pokémon from\nDefense-lowering attacks.",
+  "pokemon_ids": [
+    16,
+    17,
+    18,
+    441,
+    519,
+    520,
+    521,
+    580,
+    581,
+    629,
+    630,
+    661,
+    821,
+    822,
+    962
+  ]
+}

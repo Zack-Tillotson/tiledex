@@ -1,0 +1,31 @@
+{
+  "id": 102,
+  "name": "leaf-guard",
+  "description": "This Pokémon cannot be given a major status ailment during strong sunlight.\n\nThis ability does not heal prior status ailments.  rest will fail altogether with this ability in effect.  yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime.",
+  "flavor_text": "Prevents status conditions\nin sunny weather.",
+  "pokemon_ids": [
+    114,
+    152,
+    153,
+    154,
+    187,
+    188,
+    189,
+    315,
+    406,
+    465,
+    470,
+    541,
+    548,
+    549,
+    753,
+    754,
+    761,
+    762,
+    763,
+    893,
+    10128,
+    10192,
+    10237
+  ]
+}

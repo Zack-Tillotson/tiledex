@@ -1,0 +1,19 @@
+{
+  "id": 99,
+  "name": "no-guard",
+  "description": "Moves used by or against this Pokémon never miss.\n\nOne-hit KO moves are unaffected.  Moves affected by this ability can hit Pokémon during the preparation turn of moves like dig or fly.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is doubled.",
+  "flavor_text": "Ensures attacks by or\nagainst the Pokémon land.",
+  "pokemon_ids": [
+    66,
+    67,
+    68,
+    588,
+    622,
+    623,
+    679,
+    680,
+    10073,
+    10126,
+    10201
+  ]
+}

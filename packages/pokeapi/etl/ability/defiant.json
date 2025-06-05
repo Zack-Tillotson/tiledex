@@ -1,0 +1,24 @@
+{
+  "id": 128,
+  "name": "defiant",
+  "description": "When any of this Pokémon's stats are lowered, its Attack rises by two stages.\n\nIf multiple stats are lowered at once, this ability takes effect with each stat lowered.",
+  "flavor_text": "Boosts the Pokémon’s Attack stat\nwhen its stats are lowered.",
+  "pokemon_ids": [
+    56,
+    57,
+    83,
+    432,
+    624,
+    625,
+    628,
+    641,
+    642,
+    766,
+    862,
+    870,
+    979,
+    983,
+    1017,
+    10170
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 42,
+  "name": "magnet-pull",
+  "description": "While this Pokémon is in battle, opposing steel-type Pokémon cannot flee or switch out.\n\nPokémon with run away can still flee.  Pokémon can still switch out with the use of a move or item.\n\nOverworld: If the lead Pokémon has this ability, Steel-type Pokémon have a higher encounter rate.",
+  "flavor_text": "Prevents Steel-type\nPokémon from escaping.",
+  "pokemon_ids": [
+    81,
+    82,
+    299,
+    462,
+    476,
+    808,
+    10109,
+    10110,
+    10111
+  ]
+}

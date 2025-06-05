@@ -1,0 +1,24 @@
+{
+  "id": 80,
+  "name": "steadfast",
+  "description": "Whenever this Pokémon flinches, its Speed rises one stage.",
+  "flavor_text": "Boosts the Speed stat each time\nthe Pokémon flinches.",
+  "pokemon_ids": [
+    66,
+    67,
+    68,
+    123,
+    236,
+    237,
+    447,
+    448,
+    475,
+    744,
+    745,
+    832,
+    865,
+    10043,
+    10166,
+    10201
+  ]
+}

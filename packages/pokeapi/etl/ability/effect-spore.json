@@ -1,0 +1,19 @@
+{
+  "id": 27,
+  "name": "effect-spore",
+  "description": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed, poisoned, or put to sleep, chosen at random.\n\nNothing is done to compensate if the move's user is immune to one of these ailments; there is simply a lower chance that the move's user will be affected.",
+  "flavor_text": "Contact may poison or\ncause paralysis or sleep.",
+  "pokemon_ids": [
+    45,
+    46,
+    47,
+    285,
+    286,
+    590,
+    591,
+    755,
+    756,
+    829,
+    830
+  ]
+}

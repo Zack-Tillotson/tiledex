@@ -1,0 +1,19 @@
+{
+  "id": 95,
+  "name": "quick-feet",
+  "description": "Whenever this Pokémon has a major status ailment, it has 1.5× its Speed.  This Pokémon is not affected by the usual Speed cut from paralysis.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is halved.",
+  "flavor_text": "Boosts the Speed stat if the\nPokémon has a status condition.",
+  "pokemon_ids": [
+    135,
+    210,
+    216,
+    217,
+    261,
+    262,
+    263,
+    264,
+    285,
+    10174,
+    10175
+  ]
+}

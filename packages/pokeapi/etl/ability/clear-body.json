@@ -1,0 +1,27 @@
+{
+  "id": 29,
+  "name": "clear-body",
+  "description": "This Pokémon cannot have its stats lowered by other Pokémon.\n\nThis ability does not prevent any stat losses other than stat modifiers, such as the Speed cut from paralysis.  This Pokémon can still be passed negative stat modifiers through guard swap, heart swap, or power swap.\n\nThis ability functions identically to white smoke in battle.",
+  "flavor_text": "Prevents other Pokémon\nfrom lowering its stats.",
+  "pokemon_ids": [
+    72,
+    73,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    599,
+    600,
+    601,
+    703,
+    719,
+    885,
+    886,
+    887,
+    932,
+    933,
+    934
+  ]
+}

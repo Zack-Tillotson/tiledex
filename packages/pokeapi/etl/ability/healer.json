@@ -1,0 +1,20 @@
+{
+  "id": 131,
+  "name": "healer",
+  "description": "Friendly Pokémon next to this Pokémon in double and triple battles each have a 30% chance of being cured of any major status ailment after each turn.",
+  "flavor_text": "Sometimes heals an\nally’s status condition.",
+  "pokemon_ids": [
+    113,
+    182,
+    242,
+    531,
+    594,
+    682,
+    683,
+    856,
+    857,
+    858,
+    10069,
+    10221
+  ]
+}

@@ -15,7 +15,12 @@
     "download-images:range": "ts-node etl/downloadPokemonImages.ts --rangeStart $1 --rangeEnd $2",
     "copy-images": "node scripts/copy-images-to-public.js",
     "etl": "pnpm fetch-data && pnpm process-data",
-    "etl:range": "pnpm fetch-data:range $1 $2 && pnpm process-data"
+    "etl:range": "pnpm fetch-data:range $1 $2 && pnpm process-data",
+    "fetch-abilities": "ts-node etl/fetchAbilityData.ts",
+    "fetch-abilities:refresh": "ts-node etl/fetchAbilityData.ts --refresh",
+    "fetch-abilities:range": "ts-node etl/fetchAbilityData.ts --rangeStart $1 --rangeEnd $2",
+    "fetch-abilities:ability": "ts-node etl/fetchAbilityData.ts --ability=\"$1\"",
+    "fetch-abilities:ability:refresh": "ts-node etl/fetchAbilityData.ts --ability=\"$1\" --refresh"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -25,6 +30,7 @@
     "@types/yargs": "^17.0.32",
     "eslint": "^9.26.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
     "typescript": "5.8.2"
   },
   "dependencies": {

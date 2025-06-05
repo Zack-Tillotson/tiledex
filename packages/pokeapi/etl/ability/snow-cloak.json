@@ -1,0 +1,23 @@
+{
+  "id": 81,
+  "name": "snow-cloak",
+  "description": "During hail, this Pokémon has 1.25× its evasion, and it does not take hail damage regardless of type.\n\nThe evasion bonus does not count as a stat modifier.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is halved in snow.",
+  "flavor_text": "Boosts evasion in a\nhailstorm.",
+  "pokemon_ids": [
+    144,
+    220,
+    221,
+    471,
+    473,
+    478,
+    582,
+    583,
+    613,
+    614,
+    974,
+    10101,
+    10102,
+    10103,
+    10104
+  ]
+}

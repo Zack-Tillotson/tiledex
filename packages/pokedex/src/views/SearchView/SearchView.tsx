@@ -6,18 +6,18 @@ import { SearchForm } from "../SearchForm";
 import { PokemonGrid } from "../PokemonGrid";
 
 import styles from "./SearchView.module.css";
+import { Header } from "@repo/ui";
 
 export function SearchView() {
-  const { searchTerm, searchResults, performSearch, clearSearch } =
-    useSearchStore();
+  const { searchTerm, performSearch, clearSearch } = useSearchStore();
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Search Pokémon</h1>
+      <Header>Search Pokémon</Header>
 
       <SearchForm onSearch={performSearch} onClear={clearSearch} />
 
-      {searchTerm && <PokemonGrid pokemon={searchResults} />}
+      {searchTerm && <PokemonGrid name={searchTerm} />}
     </div>
   );
 }

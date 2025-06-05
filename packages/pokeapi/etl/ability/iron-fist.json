@@ -1,0 +1,27 @@
+{
+  "id": 89,
+  "name": "iron-fist",
+  "description": "Moves flagged as being punch-based have 1.2× their base power for this Pokémon.\n\nsucker punch is not flagged as punch-based; its original, Japanese name only means \"surprise attack\".",
+  "flavor_text": "Powers up punching moves.",
+  "pokemon_ids": [
+    107,
+    166,
+    390,
+    391,
+    392,
+    532,
+    533,
+    534,
+    622,
+    623,
+    674,
+    675,
+    739,
+    740,
+    809,
+    921,
+    922,
+    923,
+    10208
+  ]
+}

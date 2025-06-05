@@ -1,0 +1,18 @@
+{
+  "id": 92,
+  "name": "skill-link",
+  "description": "This Pokémon always hits five times with two-to-five-hit moves, such as icicle spear.  It also bypasses the accuracy checks on triple kick's second and third hits.",
+  "flavor_text": "Increases the number of times\nmulti-strike moves hit.",
+  "pokemon_ids": [
+    90,
+    91,
+    190,
+    424,
+    572,
+    573,
+    731,
+    732,
+    733,
+    10047
+  ]
+}

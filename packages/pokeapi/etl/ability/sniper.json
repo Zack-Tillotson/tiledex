@@ -1,0 +1,26 @@
+{
+  "id": 97,
+  "name": "sniper",
+  "description": "This Pokémon inflicts triple damage with critical hits, rather than the usual double damage.",
+  "flavor_text": "Powers up moves if they\nbecome critical hits.",
+  "pokemon_ids": [
+    15,
+    21,
+    22,
+    116,
+    117,
+    167,
+    168,
+    223,
+    224,
+    230,
+    451,
+    452,
+    688,
+    689,
+    816,
+    817,
+    818,
+    10211
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": 133,
+  "name": "weak-armor",
+  "description": "Whenever a physical move hits this Pokémon, its Speed rises one stage and its Defense falls one stage.\n\nThis ability triggers on every hit of a multiple-hit move.",
+  "flavor_text": "Physical attacks lower its Defense\nstat and raise its Speed stat.",
+  "pokemon_ids": [
+    95,
+    138,
+    139,
+    140,
+    141,
+    218,
+    219,
+    227,
+    524,
+    525,
+    557,
+    558,
+    569,
+    582,
+    583,
+    584,
+    629,
+    630,
+    854,
+    855,
+    864,
+    936,
+    937,
+    10173,
+    10207
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 88,
+  "name": "download",
+  "description": "When this Pokémon enters battle, its Attack or Special Attack, whichever corresponds to its opponents' weaker total defensive stat, rises one stage.  In the event of a tie, Special Attack is raised.\n\nThis ability also takes effect when acquired during a battle.",
+  "flavor_text": "Adjusts power based on an\nopposing Pokémon’s stats.",
+  "pokemon_ids": [
+    137,
+    233,
+    474,
+    649
+  ]
+}

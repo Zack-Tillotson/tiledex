@@ -1,0 +1,22 @@
+{
+  "id": 44,
+  "name": "rain-dish",
+  "description": "This Pokémon heals for 1/16 of its maximum HP after each turn during rain.",
+  "flavor_text": "The Pokémon gradually\nregains HP in rain.",
+  "pokemon_ids": [
+    7,
+    8,
+    9,
+    72,
+    73,
+    270,
+    271,
+    272,
+    278,
+    279,
+    283,
+    755,
+    756,
+    10197
+  ]
+}

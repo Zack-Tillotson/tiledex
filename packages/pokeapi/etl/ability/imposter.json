@@ -1,0 +1,9 @@
+{
+  "id": 150,
+  "name": "imposter",
+  "description": "This Pokémon transforms into a random opponent upon entering battle.  This effect is identical to the move transform.",
+  "flavor_text": "The Pokémon transforms itself\ninto the Pokémon it’s facing.",
+  "pokemon_ids": [
+    132
+  ]
+}

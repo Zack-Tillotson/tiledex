@@ -1,0 +1,23 @@
+{
+  "id": 32,
+  "name": "serene-grace",
+  "description": "This Pokémon's moves have twice their usual effect chance.\n\nAn effect chance is a move's chance to inflict a status ailment, cause a stat change, or make the target flinch in addition to the move's main effect.  For example, flamethrower's chance of burning the target is doubled, but protect's chance of success and air cutter's increased critical hit rate are unaffected.\n\nsecret power is unaffected.",
+  "flavor_text": "Boosts the likelihood of\nadditional effects occurring.",
+  "pokemon_ids": [
+    113,
+    175,
+    176,
+    206,
+    242,
+    385,
+    440,
+    468,
+    585,
+    586,
+    648,
+    982,
+    10006,
+    10018,
+    10255
+  ]
+}

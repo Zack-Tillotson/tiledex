@@ -1,0 +1,26 @@
+{
+  "id": 79,
+  "name": "rivalry",
+  "description": "This Pokémon inflicts 1.25× as much regular damage against Pokémon of the same gender and 0.75× as much regular damage against Pokémon of the opposite gender.\n\nIf either Pokémon is genderless, damage is unaffected.",
+  "flavor_text": "Deals more damage to Pokémon\nof the same gender.",
+  "pokemon_ids": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    267,
+    403,
+    404,
+    405,
+    519,
+    520,
+    521,
+    610,
+    611,
+    612,
+    667,
+    668
+  ]
+}

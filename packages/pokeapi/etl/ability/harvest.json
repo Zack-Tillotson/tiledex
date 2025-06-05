@@ -1,0 +1,17 @@
+{
+  "id": 139,
+  "name": "harvest",
+  "description": "After each turn, if the last item this Pokémon consumed was a Berry and it is not currently holding an item, it has a 50% chance of regaining that Berry, or a 100% chance during strong sunlight.",
+  "flavor_text": "May create another\nBerry after one is used.",
+  "pokemon_ids": [
+    102,
+    103,
+    357,
+    708,
+    709,
+    928,
+    929,
+    930,
+    10114
+  ]
+}

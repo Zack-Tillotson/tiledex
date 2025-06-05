@@ -1,0 +1,22 @@
+{
+  "id": 41,
+  "name": "water-veil",
+  "description": "This Pokémon cannot be burned.\n\nIf a Pokémon is burned and acquires this ability, its burn is healed; this includes when regaining a lost ability upon leaving battle.",
+  "flavor_text": "Prevents the Pokémon\nfrom getting a burn.",
+  "pokemon_ids": [
+    118,
+    119,
+    226,
+    320,
+    321,
+    367,
+    418,
+    419,
+    456,
+    457,
+    458,
+    963,
+    963,
+    977
+  ]
+}

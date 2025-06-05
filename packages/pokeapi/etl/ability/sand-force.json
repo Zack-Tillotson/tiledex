@@ -1,0 +1,26 @@
+{
+  "id": 159,
+  "name": "sand-force",
+  "description": "During a sandstorm, this Pokémon's rock-, ground-, and steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type.",
+  "flavor_text": "Boosts certain moves’\npower in a sandstorm.",
+  "pokemon_ids": [
+    50,
+    51,
+    299,
+    422,
+    423,
+    449,
+    450,
+    476,
+    524,
+    525,
+    526,
+    529,
+    530,
+    645,
+    10058,
+    10072,
+    10105,
+    10106
+  ]
+}

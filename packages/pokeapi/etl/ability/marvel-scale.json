@@ -1,0 +1,11 @@
+{
+  "id": 63,
+  "name": "marvel-scale",
+  "description": "Whenever this Pokémon has a major status ailment, it has 1.5× its Defense.\n\nThis bonus does not count as a stat modifier.",
+  "flavor_text": "Boosts the Defense stat if the\nPokémon has a status condition.",
+  "pokemon_ids": [
+    147,
+    148,
+    350
+  ]
+}

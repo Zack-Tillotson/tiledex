@@ -1,0 +1,21 @@
+{
+  "id": 120,
+  "name": "reckless",
+  "description": "This Pokémon's recoil moves and crash moves have 1.2× their base power.\n\nstruggle is unaffected.\n\nThe \"crash moves\" are the moves that damage the user upon missing: jump kick and high jump kick.",
+  "flavor_text": "Powers up moves that\nhave recoil damage.",
+  "pokemon_ids": [
+    106,
+    111,
+    112,
+    396,
+    397,
+    398,
+    464,
+    500,
+    550,
+    619,
+    620,
+    626,
+    862
+  ]
+}

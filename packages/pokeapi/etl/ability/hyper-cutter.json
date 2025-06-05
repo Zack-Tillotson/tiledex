@@ -1,0 +1,20 @@
+{
+  "id": 52,
+  "name": "hyper-cutter",
+  "description": "This Pokémon's Attack cannot be lowered by other Pokémon.\n\nThis ability does not prevent any Attack losses other than stat modifiers, such as the Attack cut from a burn.  This Pokémon can still be passed negative Attack modifiers through heart swap or power swap.",
+  "flavor_text": "Prevents other Pokémon\nfrom lowering its Attack stat.",
+  "pokemon_ids": [
+    98,
+    99,
+    127,
+    207,
+    303,
+    328,
+    341,
+    342,
+    472,
+    739,
+    740,
+    10203
+  ]
+}

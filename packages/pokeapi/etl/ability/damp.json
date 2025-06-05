@@ -1,0 +1,28 @@
+{
+  "id": 6,
+  "name": "damp",
+  "description": "While this Pokémon is in battle, self destruct and explosion will fail and aftermath will not take effect.",
+  "flavor_text": "Prevents the use of\nself-destructing moves.",
+  "pokemon_ids": [
+    46,
+    47,
+    54,
+    55,
+    60,
+    61,
+    62,
+    116,
+    117,
+    186,
+    194,
+    195,
+    230,
+    258,
+    259,
+    260,
+    592,
+    593,
+    938,
+    939
+  ]
+}

@@ -64,3 +64,36 @@ export interface PokemonResponse {
  * This matches the Pokemon interface from @repo/types
  */
 export type ProcessedPokemon = Pokemon;
+
+/**
+ * Raw ability data from the PokeAPI
+ */
+export interface AbilityResponse {
+  id: number;
+  name: string;
+  effect_entries: {
+    effect: string;
+    language: {
+      name: string;
+    };
+  }[];
+  flavor_text_entries: {
+    flavor_text: string;
+    language: {
+      name: string;
+    };
+    version_group: {
+      name: string;
+    };
+  }[];
+}
+
+/**
+ * Processed ability data for the package
+ */
+export interface ProcessedAbility {
+  id: number;
+  name: string;
+  description: string;
+  flavor_text: string;
+}

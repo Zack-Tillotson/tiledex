@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "stench",
+  "description": "This Pokémon's damaging moves have a 10% chance to make the target flinch with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this Pokémon is first in the party.",
+  "flavor_text": "The stench may cause\nthe target to flinch.",
+  "pokemon_ids": [
+    44,
+    88,
+    89,
+    109,
+    110,
+    434,
+    435,
+    568,
+    569,
+    10207
+  ]
+}

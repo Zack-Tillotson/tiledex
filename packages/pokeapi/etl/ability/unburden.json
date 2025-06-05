@@ -1,0 +1,25 @@
+{
+  "id": 84,
+  "name": "unburden",
+  "description": "When this Pokémon uses or loses its held item, its Speed is doubled.  If it gains another item or leaves battle, this bonus is lost.\n\nThis includes when the Pokémon drops its item because of knock off.  This bonus does not count as a stat modifier.  There is no notification when this ability takes effect.",
+  "flavor_text": "Boosts the Speed stat if its\nheld item is used or lost.",
+  "pokemon_ids": [
+    106,
+    252,
+    253,
+    254,
+    425,
+    426,
+    509,
+    510,
+    617,
+    684,
+    685,
+    701,
+    827,
+    828,
+    903,
+    944,
+    945
+  ]
+}

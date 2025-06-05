@@ -1,0 +1,23 @@
+{
+  "id": 113,
+  "name": "scrappy",
+  "description": "This Pokémon ignores ghost-type Pokémon's immunity to normal- and fighting-type moves.\n\nGhost Pokémon's other types affect damage as usual.",
+  "flavor_text": "Makes Normal- and Fighting-type\nmoves hit Ghost-type Pokémon.",
+  "pokemon_ids": [
+    115,
+    241,
+    276,
+    277,
+    294,
+    295,
+    507,
+    508,
+    674,
+    675,
+    865,
+    973,
+    10088,
+    10166,
+    10244
+  ]
+}

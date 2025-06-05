@@ -1,0 +1,12 @@
+{
+  "id": 64,
+  "name": "liquid-ooze",
+  "description": "Whenever a Pokémon would heal after hitting this Pokémon with a leeching move like absorb, it instead loses as many HP as it would usually gain.\n\ndream eater is unaffected.",
+  "flavor_text": "Damages attackers\nusing any draining move.",
+  "pokemon_ids": [
+    72,
+    73,
+    316,
+    317
+  ]
+}

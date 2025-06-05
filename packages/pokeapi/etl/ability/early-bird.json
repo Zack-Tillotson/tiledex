@@ -1,0 +1,24 @@
+{
+  "id": 48,
+  "name": "early-bird",
+  "description": "This Pokémon's remaining sleep turn count falls by 2 rather than 1.\n\nIf this Pokémon's sleep counter is at 1, it will fall to 0 and then the Pokémon will wake up.",
+  "flavor_text": "The Pokémon awakens\nquickly from sleep.",
+  "pokemon_ids": [
+    84,
+    85,
+    115,
+    165,
+    166,
+    177,
+    178,
+    191,
+    192,
+    203,
+    228,
+    229,
+    273,
+    274,
+    928,
+    929
+  ]
+}
