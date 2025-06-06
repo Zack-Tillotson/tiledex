@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./pokemon-type.module.css";
 import { PokemonCard } from "../pokemon-card";
 import {

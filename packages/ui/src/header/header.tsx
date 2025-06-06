@@ -1,3 +1,4 @@
+import React from "react";
 import { type JSX } from "react";
 import styles from "./header.module.css";
 

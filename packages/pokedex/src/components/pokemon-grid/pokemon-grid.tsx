@@ -1,3 +1,4 @@
+import React from "react";
 import { type Pokemon } from "@repo/types";
 import { Link } from "@repo/ui";
 

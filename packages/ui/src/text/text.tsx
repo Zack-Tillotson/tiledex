@@ -1,4 +1,4 @@
-import { type JSX } from "react";
+import React, { type JSX } from "react";
 import textStyles from "./text.module.css";
 
 /**

@@ -1,3 +1,4 @@
+import React from "react";
 import { type JSX } from "react";
 import NextLink from "next/link";
 import styles from "./styles.module.css";
