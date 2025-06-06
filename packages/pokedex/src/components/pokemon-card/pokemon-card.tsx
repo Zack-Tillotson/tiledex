@@ -25,7 +25,6 @@ interface PokemonCardProps {
   pokemon: Pokemon;
   className?: string;
   onClick?: () => void;
-  linkComponent?: React.ComponentType<any>;
   href?: string;
 }
 
@@ -33,14 +32,12 @@ export function PokemonCard({
   pokemon,
   className = "",
   onClick,
-  linkComponent,
   href,
 }: PokemonCardProps): React.ReactElement {
   return (
     <Card
       className={className}
       onClick={onClick}
-      linkComponent={linkComponent}
       href={href}
     >
       <div className={styles.content}>

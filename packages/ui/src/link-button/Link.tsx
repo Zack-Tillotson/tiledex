@@ -1,28 +1,30 @@
-import React from "react";
-import { type JSX } from "react";
+"use client";
+
+import React, { type ReactNode } from "react";
 import NextLink from "next/link";
+import { type CustomLinkProps } from "./types";
 import styles from "./styles.module.css";
-import { type LinkProps } from "./types";
 
 export function Link({
+  href,
   children,
-  variant = "primary",
-  size = "medium",
   className = "",
   disabled = false,
-  href,
-}: LinkProps): JSX.Element {
-  const combinedClassName =
-    `${styles.base} ${styles[variant]} ${styles[size]} ${className}`.trim();
+  onClick,
+}: CustomLinkProps) {
+  
+  const classes = `${styles.base} ${className}`.trim();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) {
+      e.preventDefault();
+      return;
+    }
+    onClick?.();
+  };
 
   return (
-    <NextLink
-      href={href}
-      className={combinedClassName}
-      aria-disabled={disabled}
-      tabIndex={disabled ? -1 : undefined}
-      onClick={disabled ? (e) => e.preventDefault() : undefined}
-    >
+    <NextLink href={href} className={classes} onClick={handleClick}>
       {children}
     </NextLink>
   );

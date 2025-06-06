@@ -33,7 +33,6 @@ export function GenerationGrid() {
         {generations.map((gen: GenerationData) => (
           <Card
             key={gen.id}
-            linkComponent={Link}
             href={`/pokedex/generation/${gen.id}`}
             className={styles.card}
           >

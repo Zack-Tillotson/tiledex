@@ -1,6 +1,5 @@
 import React from "react";
 import { type Pokemon } from "@repo/types";
-import { Link } from "@repo/ui";
 
 import { PokemonCard } from "../../components/pokemon-card";
 
@@ -19,7 +18,6 @@ export function PokemonGrid({ pokemon }: PokemonGridProps) {
             key={poke.id}
             pokemon={poke}
             href={`/pokedex/pokemon/${poke.id}`}
-            linkComponent={Link}
           />
         ))
       ) : (

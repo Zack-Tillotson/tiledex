@@ -27,8 +27,10 @@
     "@repo/typescript-config": "workspace:*",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.10.5",
+    "@types/node-fetch": "2",
     "@types/yargs": "^17.0.32",
     "eslint": "^9.26.0",
+    "node-fetch": "2",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",
     "typescript": "5.8.2"

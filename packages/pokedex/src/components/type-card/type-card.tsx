@@ -8,7 +8,6 @@ export interface TypeCardProps {
   count: number;
   className?: string;
   onClick?: () => void;
-  linkComponent?: React.ComponentType<any>;
   href?: string;
 }
 
@@ -17,14 +16,12 @@ export function TypeCard({
   count,
   className = "",
   onClick,
-  linkComponent,
   href,
 }: TypeCardProps): React.ReactElement {
   return (
     <Card
       className={className}
       onClick={onClick}
-      linkComponent={linkComponent}
       href={href}
       style={{ backgroundColor: getPokemonTypeColor(type) }}
     >

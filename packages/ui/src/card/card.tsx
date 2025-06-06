@@ -1,5 +1,5 @@
-import React from "react";
-import { type JSX } from "react";
+import React, { type JSX } from "react";
+import Link from "next/link";
 import cardStyles from "./card.module.css";
 
 /**
@@ -7,7 +7,6 @@ import cardStyles from "./card.module.css";
  * @param className - Additional CSS class to apply to the card
  * @param children - Content to render inside the card
  * @param onClick - Optional click handler for interactive cards
- * @param linkComponent - Optional component to render the card as a link
  * @param href - URL for the link when using linkComponent
  * @param style - Optional inline styles
  */
@@ -15,7 +14,6 @@ interface CardProps {
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
-  linkComponent?: React.ComponentType<any>;
   href?: string;
   style?: React.CSSProperties;
 }
@@ -30,11 +28,10 @@ export function Card({
   className = "",
   children,
   onClick,
-  linkComponent: LinkComponent,
   href,
   style,
 }: CardProps): JSX.Element {
-  const isInteractive = Boolean(onClick || (LinkComponent && href));
+  const isInteractive = Boolean(onClick || href);
   const baseClassName = `${styles.card} ${isInteractive ? styles.interactive : ""} ${className}`.trim();
 
   const cardContent = (
@@ -52,16 +49,14 @@ export function Card({
     </div>
   );
 
-  if (LinkComponent && href) {
+  if (href) {
     return (
-      <LinkComponent
+      <Link
         href={href}
         className={styles.link}
-        variant="inline"
-        size="none"
       >
         {cardContent}
-      </LinkComponent>
+      </Link>
     );
   }
 

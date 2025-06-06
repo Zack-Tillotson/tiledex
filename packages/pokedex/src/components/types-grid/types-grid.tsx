@@ -10,14 +10,12 @@ export interface TypeInfo {
 interface TypesGridProps {
   types: TypeInfo[];
   className?: string;
-  linkComponent?: React.ComponentType<any>;
   getTypeHref?: (type: string) => string;
 }
 
 export function TypesGrid({
   types,
   className = "",
-  linkComponent,
   getTypeHref,
 }: TypesGridProps): React.ReactElement {
   return (
@@ -27,7 +25,6 @@ export function TypesGrid({
           <TypeCard
             type={type.name}
             count={type.count}
-            linkComponent={linkComponent}
             href={getTypeHref ? getTypeHref(type.name) : undefined}
           />
         </div>

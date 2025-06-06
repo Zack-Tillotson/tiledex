@@ -33,7 +33,6 @@ export function TypesView() {
 
       <TypesGrid
         types={typeInfoList}
-        linkComponent={Link}
         getTypeHref={(type: string) => `/types/${type}`}
       />
     </div>
