@@ -14,6 +14,7 @@ export interface ButtonProps extends BaseProps {
   type?: "button" | "submit" | "reset";
 }
 
-export interface LinkProps extends BaseProps {
+export interface CustomLinkProps extends BaseProps {
   href: string;
+  onClick?: () => void;
 }
