@@ -126,6 +126,20 @@ export const generations: GenerationData[] = [
       type: "Fire",
     },
   },
+  {
+    id: 9,
+    name: "Generation IX",
+    startId: 899,
+    endId: 1025,
+    region: "Paldea",
+    years: "2022-Present",
+    iconicPokemon: {
+      id: 906,
+      name: "Sprigatito",
+      imageUrl: "/images/official_artwork/906.png",
+      type: "Grass",
+    },
+  },
 ];
 
 export function getGenerationById(id: number): GenerationData | undefined {
@@ -141,6 +155,6 @@ export function getGenerationByPokemonId(
 }
 
 export function getGenerationRomanNumeral(id: number): string {
-  const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+  const romanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
   return romanNumerals[id - 1] || id.toString();
 }

@@ -20,6 +20,7 @@ import {
 import * as PokemonDomain from "./domains/pokemon";
 import * as TypesDomain from "./domains/types";
 import * as AbilitiesDomain from "./domains/abilities";
+import * as GenerationDomain from "./domains/generation";
 
 // Re-export types for convenience
 export type { Pokemon, PokemonType } from "@repo/types";
@@ -27,6 +28,7 @@ export type { GenerationData } from "./utils/generations";
 export type { TypeInfo } from "./domains/types";
 export type { AbilityInfo } from "./domains/abilities";
 export type { PaginationData, PaginatedPokemonResult } from "./domains/pokemon";
+export type { Generation, GenerationsData } from "./domains/generation";
 
 // Re-export generations utilities
 export {
@@ -59,4 +61,12 @@ export const {
   getAbilityById,
   getPokemonByAbility,
   getAbilityCounts,
-} = AbilitiesDomain; 
+} = AbilitiesDomain;
+
+// Re-export Generation domain functionality
+export const {
+  getGenerations,
+  getGeneration,
+  getGenerationByPokemonId: getGenerationByPokemonIdFromDomain,
+  getGenerationRomanNumeral: getGenerationRomanNumeralFromDomain,
+} = GenerationDomain; 

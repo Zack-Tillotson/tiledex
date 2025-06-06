@@ -1,4 +1,4 @@
-import { getAllPokemon, searchPokemon, getGenerationById, type Pokemon } from "@repo/pokeapi";
+import { getAllPokemon, searchPokemon, getGeneration, type Pokemon } from "@repo/pokeapi";
 
 interface PokemonFilterOptions {
   range?: string; // Format: "start-end"
@@ -26,18 +26,6 @@ function parseRange(range: string): FilterRange | null {
   };
 }
 
-function getGenerationRange(generation: number): FilterRange | null {
-  const genData = getGenerationById(generation);
-  if (!genData) {
-    return null;
-  }
-
-  return {
-    startIndex: genData.startId - 1, // Convert to 0-based index
-    endIndex: genData.endId,
-  };
-}
-
 export function usePokemonFilter({
   range,
   generation,
@@ -50,21 +38,25 @@ export function usePokemonFilter({
   const allPokemon = getAllPokemon();
   let filteredPokemon = allPokemon;
 
-  // 2. Determine the range to filter by
-  let filterRange: FilterRange | null = null;
-  
-  if (range) {
-    filterRange = parseRange(range);
-  } else if (generation !== undefined) {
-    filterRange = getGenerationRange(generation);
+  // 2. Apply generation filter if specified
+  if (generation !== undefined) {
+    const genData = getGeneration(generation);
+    if (genData) {
+      // Filter pokemon to only include those in the generation's pokemon array
+      filteredPokemon = filteredPokemon.filter(pokemon => 
+        genData.pokemon.includes(pokemon.id)
+      );
+    }
   }
-
-  // 3. Apply range filter if we have one
-  if (filterRange) {
-    filteredPokemon = filteredPokemon.slice(
-      filterRange.startIndex,
-      filterRange.endIndex
-    );
+  // 3. Apply range filter if we have one (only if no generation is specified)
+  else if (range) {
+    const filterRange = parseRange(range);
+    if (filterRange) {
+      filteredPokemon = filteredPokemon.slice(
+        filterRange.startIndex,
+        filterRange.endIndex
+      );
+    }
   }
 
   // 4. Apply name filter if we have one
