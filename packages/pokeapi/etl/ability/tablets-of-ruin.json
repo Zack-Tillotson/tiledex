@@ -1,0 +1,9 @@
+{
+  "id": 286,
+  "name": "tablets-of-ruin",
+  "description": "The power of the Pokémon’s ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.",
+  "flavor_text": "The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.",
+  "pokemon_ids": [
+    1001
+  ]
+}

@@ -52,3 +52,14 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.abilityLink {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.abilityLink:hover {
+  color: #333;
+  text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+{
+  "id": 180,
+  "name": "symbiosis",
+  "description": "Passes the bearer's held item to an ally when the ally uses up its item.",
+  "flavor_text": "The Pokémon can pass\nan item to an ally.",
+  "pokemon_ids": [
+    669,
+    670,
+    671,
+    765,
+    10061
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": 282,
+  "name": "quark-drive",
+  "description": "Boosts the Pokémon’s most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.",
+  "flavor_text": "Boosts the Pokémon's most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.",
+  "pokemon_ids": [
+    990,
+    991,
+    992,
+    993,
+    994,
+    995,
+    1006,
+    1010,
+    1022,
+    1023
+  ]
+}

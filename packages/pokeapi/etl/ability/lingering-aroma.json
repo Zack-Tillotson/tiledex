@@ -1,0 +1,9 @@
+{
+  "id": 268,
+  "name": "lingering-aroma",
+  "description": "Contact with the Pokémon changes the attacker’s Ability to Lingering Aroma.",
+  "flavor_text": "Contact with the Pokémon changes the attacker's Ability to Lingering Aroma.",
+  "pokemon_ids": [
+    916
+  ]
+}

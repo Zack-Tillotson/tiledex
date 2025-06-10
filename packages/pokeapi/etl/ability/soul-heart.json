@@ -1,0 +1,10 @@
+{
+  "id": 220,
+  "name": "soul-heart",
+  "description": "This Pokémon's Special Attack rises by one stage every time any Pokémon faints.",
+  "flavor_text": "Boosts its Sp. Atk stat every time a Pokémon faints.",
+  "pokemon_ids": [
+    801,
+    10147
+  ]
+}

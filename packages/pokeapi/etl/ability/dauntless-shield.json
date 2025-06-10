@@ -1,0 +1,10 @@
+{
+  "id": 235,
+  "name": "dauntless-shield",
+  "description": "Boosts the Pokémon’s Defense stat the first time the Pokémon enters a battle.",
+  "flavor_text": "Boosts the Pokémon’s Defense stat when the Pokémon\nenters a battle.",
+  "pokemon_ids": [
+    889,
+    10189
+  ]
+}

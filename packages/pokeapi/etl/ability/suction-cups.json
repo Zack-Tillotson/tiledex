@@ -1,0 +1,13 @@
+{
+  "id": 21,
+  "name": "suction-cups",
+  "description": "This Pokémon cannot be forced out of battle by moves such as whirlwind.\n\ndragon tail and circle throw still inflict damage against this Pokémon.\n\nOverworld: If the lead Pokémon has this ability, the success rate while fishing is increased.",
+  "flavor_text": "Negates all moves and items\nthat force switching out.",
+  "pokemon_ids": [
+    224,
+    345,
+    346,
+    686,
+    687
+  ]
+}

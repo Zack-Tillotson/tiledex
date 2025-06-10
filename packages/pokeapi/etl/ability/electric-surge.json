@@ -1,0 +1,10 @@
+{
+  "id": 226,
+  "name": "electric-surge",
+  "description": "When this Pokémon enters battle, it changes the terrain to electric terrain.",
+  "flavor_text": "Turns the ground into Electric Terrain when the\nPokémon enters a battle.",
+  "pokemon_ids": [
+    785,
+    871
+  ]
+}

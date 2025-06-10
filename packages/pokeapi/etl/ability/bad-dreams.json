@@ -1,0 +1,9 @@
+{
+  "id": 123,
+  "name": "bad-dreams",
+  "description": "Opposing Pokémon take 1/8 of their maximum HP in damage after each turn while they are asleep.",
+  "flavor_text": "Reduces the HP of sleeping\nopposing Pokémon.",
+  "pokemon_ids": [
+    491
+  ]
+}

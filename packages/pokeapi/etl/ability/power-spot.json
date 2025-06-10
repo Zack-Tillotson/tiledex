@@ -1,0 +1,9 @@
+{
+  "id": 249,
+  "name": "power-spot",
+  "description": " \"The power of moves used by the allies of the Pokémon with Power Spot is increased by 30%.\"",
+  "flavor_text": "Just being next to the Pokémon powers up moves.",
+  "pokemon_ids": [
+    874
+  ]
+}

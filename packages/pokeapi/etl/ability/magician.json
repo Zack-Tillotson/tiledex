@@ -1,0 +1,14 @@
+{
+  "id": 170,
+  "name": "magician",
+  "description": "Steals the target's held item when the bearer uses a damaging move.",
+  "flavor_text": "The Pokémon steals the held item\nof a Pokémon it hits with a move.",
+  "pokemon_ids": [
+    653,
+    654,
+    655,
+    707,
+    720,
+    10086
+  ]
+}

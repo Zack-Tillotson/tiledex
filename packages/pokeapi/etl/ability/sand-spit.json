@@ -1,0 +1,11 @@
+{
+  "id": 245,
+  "name": "sand-spit",
+  "description": "The Pokémon creates a sandstorm when it’s hit by an attack.",
+  "flavor_text": "The Pokémon creates a sandstorm when it’s hit by\nan attack.",
+  "pokemon_ids": [
+    843,
+    844,
+    10218
+  ]
+}

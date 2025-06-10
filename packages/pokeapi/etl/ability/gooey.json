@@ -1,0 +1,15 @@
+{
+  "id": 183,
+  "name": "gooey",
+  "description": "Lowers attacking Pokémon's Speed by one stage on contact.",
+  "flavor_text": "Contact with the Pokémon\nlowers the attacker’s Speed stat.",
+  "pokemon_ids": [
+    704,
+    705,
+    706,
+    960,
+    961,
+    10241,
+    10242
+  ]
+}

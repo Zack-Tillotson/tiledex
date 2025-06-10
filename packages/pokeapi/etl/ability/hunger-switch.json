@@ -1,0 +1,10 @@
+{
+  "id": 258,
+  "name": "hunger-switch",
+  "description": "The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn.",
+  "flavor_text": "The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn.",
+  "pokemon_ids": [
+    877,
+    10187
+  ]
+}

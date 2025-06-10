@@ -1,0 +1,10 @@
+{
+  "id": 195,
+  "name": "water-compaction",
+  "description": "Raises this Pokémon's Defense by two stages when it's hit by a Water move.",
+  "flavor_text": "Boosts the Pokémon’s Defense stat sharply when hit\nby a Water-type move.",
+  "pokemon_ids": [
+    769,
+    770
+  ]
+}

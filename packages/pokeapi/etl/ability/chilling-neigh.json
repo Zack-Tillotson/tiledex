@@ -1,0 +1,9 @@
+{
+  "id": 264,
+  "name": "chilling-neigh",
+  "description": "When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat.",
+  "flavor_text": "When the Pokémon knocks out a target, it utters a\nchilling neigh, which boosts its Attack stat.",
+  "pokemon_ids": [
+    896
+  ]
+}

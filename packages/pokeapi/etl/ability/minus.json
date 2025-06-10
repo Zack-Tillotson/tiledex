@@ -1,0 +1,16 @@
+{
+  "id": 58,
+  "name": "minus",
+  "description": "This Pokémon has 1.5× its Special Attack if any friendly Pokémon has plus or minus.\n\nThis bonus does not count as a stat modifier.  If either ability is disabled by gastro acid, both lose their effect.",
+  "flavor_text": "Boosts the Sp. Atk stat if another\nPokémon has Plus or Minus.",
+  "pokemon_ids": [
+    309,
+    310,
+    312,
+    599,
+    600,
+    601,
+    10184,
+    10228
+  ]
+}

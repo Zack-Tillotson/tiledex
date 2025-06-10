@@ -1,0 +1,9 @@
+{
+  "id": 262,
+  "name": "transistor",
+  "description": "Increases the power of Electric-type moves used by this Pokémon by 50%.",
+  "flavor_text": "Powers up Electric-type moves.",
+  "pokemon_ids": [
+    894
+  ]
+}

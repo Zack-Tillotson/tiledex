@@ -1,0 +1,16 @@
+{
+  "id": 165,
+  "name": "aroma-veil",
+  "description": "Protects allies against moves that affect their mental state.",
+  "flavor_text": "Protects allies from attacks that\nlimit their move choices.",
+  "pokemon_ids": [
+    682,
+    683,
+    868,
+    869,
+    915,
+    927,
+    10223,
+    10254
+  ]
+}

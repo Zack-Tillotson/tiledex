@@ -1,0 +1,11 @@
+{
+  "id": 272,
+  "name": "purifying-salt",
+  "description": "The Pokémon’s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
+  "flavor_text": "The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
+  "pokemon_ids": [
+    932,
+    933,
+    934
+  ]
+}

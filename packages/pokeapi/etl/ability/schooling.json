@@ -1,0 +1,10 @@
+{
+  "id": 208,
+  "name": "schooling",
+  "description": "If this Pokémon is a wishiwashi and level 20 or above, then when it enters battle and at the start of each turn, it becomes Schooling Form if its HP is 25% or higher and Solo Form otherwise.\n\nThis ability cannot be replaced, copied, or nullified.",
+  "flavor_text": "When it has a lot of HP, the Pokémon forms a\npowerful school. It stops schooling when its HP\nis low.",
+  "pokemon_ids": [
+    746,
+    10127
+  ]
+}

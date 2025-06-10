@@ -1,0 +1,14 @@
+{
+  "id": 37,
+  "name": "huge-power",
+  "description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to pure power.",
+  "flavor_text": "Boosts the Pokémon’s\nAttack stat.",
+  "pokemon_ids": [
+    183,
+    184,
+    298,
+    659,
+    660,
+    10052
+  ]
+}

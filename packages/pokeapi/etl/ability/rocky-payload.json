@@ -1,0 +1,9 @@
+{
+  "id": 276,
+  "name": "rocky-payload",
+  "description": "Increases the power of Rock-type moves used by this Pokémon by 50%.",
+  "flavor_text": "Powers up Rock-type moves.",
+  "pokemon_ids": [
+    962
+  ]
+}

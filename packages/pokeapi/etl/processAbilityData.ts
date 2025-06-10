@@ -103,9 +103,10 @@ async function processAllAbilityData(): Promise<void> {
         if (abilityIndex !== -1) {
           // Update the ability with description and flavor text
           const updatedAbility: ExtendedPokemonAbility = {
-            ...pokemon.abilities[abilityIndex],
+            name: processedAbility.name || "unknown",
             description: processedAbility.description,
             flavor_text: processedAbility.flavor_text,
+            is_hidden: pokemon.abilities[abilityIndex]?.is_hidden ?? false
           };
           pokemon.abilities[abilityIndex] = updatedAbility;
         }

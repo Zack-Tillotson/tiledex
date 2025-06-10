@@ -1,0 +1,11 @@
+{
+  "id": 203,
+  "name": "long-reach",
+  "description": "A move used by this Pokémon will not make contact.",
+  "flavor_text": "The Pokémon uses its moves without making contact\nwith the target.",
+  "pokemon_ids": [
+    722,
+    723,
+    724
+  ]
+}

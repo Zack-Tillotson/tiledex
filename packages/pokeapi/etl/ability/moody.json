@@ -1,0 +1,16 @@
+{
+  "id": 141,
+  "name": "moody",
+  "description": "After each turn, one of this Pokémon's stats at random rises two stages, and another falls one stage.\n\nIf a stat is already at 6 or -6 stages, it will not be chosen to be increased or decreased, respectively.",
+  "flavor_text": "Raises one stat and\nlowers another.",
+  "pokemon_ids": [
+    223,
+    224,
+    235,
+    361,
+    362,
+    399,
+    400,
+    952
+  ]
+}

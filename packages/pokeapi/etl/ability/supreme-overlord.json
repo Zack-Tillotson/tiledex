@@ -1,0 +1,9 @@
+{
+  "id": 293,
+  "name": "supreme-overlord",
+  "description": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated.",
+  "flavor_text": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated.",
+  "pokemon_ids": [
+    983
+  ]
+}

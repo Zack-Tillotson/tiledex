@@ -1,0 +1,28 @@
+{
+  "id": 158,
+  "name": "prankster",
+  "description": "This Pokémon's non-damaging moves have their priority increased by one stage.",
+  "flavor_text": "Gives priority to a\nstatus move.",
+  "pokemon_ids": [
+    198,
+    302,
+    313,
+    314,
+    447,
+    509,
+    510,
+    546,
+    547,
+    641,
+    642,
+    678,
+    707,
+    859,
+    860,
+    861,
+    944,
+    945,
+    10056,
+    10222
+  ]
+}

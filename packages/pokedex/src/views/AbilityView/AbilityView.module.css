@@ -1,0 +1,36 @@
+.container {
+  padding: .5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backLinkContainer {
+  margin-bottom: .5rem;
+}
+
+.backLink {
+  color: #666;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.backLink:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.error {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.error h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.error p {
+  color: #666;
+  margin-bottom: 2rem;
+} 

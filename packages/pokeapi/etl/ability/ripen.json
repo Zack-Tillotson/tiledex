@@ -1,0 +1,13 @@
+{
+  "id": 247,
+  "name": "ripen",
+  "description": "Ripens Berries and doubles their effect.",
+  "flavor_text": "Ripens Berries and doubles their effect.",
+  "pokemon_ids": [
+    840,
+    841,
+    842,
+    10216,
+    10217
+  ]
+}

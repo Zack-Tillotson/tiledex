@@ -1,0 +1,12 @@
+{
+  "id": 291,
+  "name": "cud-chew",
+  "description": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
+  "flavor_text": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
+  "pokemon_ids": [
+    981,
+    10250,
+    10251,
+    10252
+  ]
+}

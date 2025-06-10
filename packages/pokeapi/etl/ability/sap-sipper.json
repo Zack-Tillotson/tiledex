@@ -1,0 +1,29 @@
+{
+  "id": 157,
+  "name": "sap-sipper",
+  "description": "Whenever a grass-type move hits this Pokémon, its Attack rises one stage, negating any other effect on it.",
+  "flavor_text": "Boosts the Attack stat when hit\nby a Grass-type move.",
+  "pokemon_ids": [
+    183,
+    184,
+    203,
+    234,
+    241,
+    298,
+    522,
+    523,
+    585,
+    586,
+    626,
+    672,
+    673,
+    704,
+    705,
+    706,
+    780,
+    899,
+    981,
+    10241,
+    10242
+  ]
+}

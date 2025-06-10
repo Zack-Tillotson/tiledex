@@ -1,0 +1,10 @@
+{
+  "id": 246,
+  "name": "ice-scales",
+  "description": "The Pokémon is protected by ice scales, which halve the damage taken from special moves.",
+  "flavor_text": "The Pokémon is protected by ice scales, which halve\nthe damage taken from special moves.",
+  "pokemon_ids": [
+    872,
+    873
+  ]
+}

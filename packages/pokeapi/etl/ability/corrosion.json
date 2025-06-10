@@ -1,0 +1,13 @@
+{
+  "id": 212,
+  "name": "corrosion",
+  "description": "This Pokémon's moves and item ignore the usual immunity of Poison and Steel Pokémon when attempting to inflict poison.",
+  "flavor_text": "The Pokémon can poison the target even if it’s\na Steel or Poison type.",
+  "pokemon_ids": [
+    757,
+    758,
+    969,
+    970,
+    10129
+  ]
+}

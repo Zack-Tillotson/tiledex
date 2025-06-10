@@ -1,0 +1,9 @@
+{
+  "id": 137,
+  "name": "toxic-boost",
+  "description": "This Pokémon has 1.5× its Attack when poisoned.",
+  "flavor_text": "Powers up physical attacks when\nthe Pokémon is poisoned.",
+  "pokemon_ids": [
+    335
+  ]
+}

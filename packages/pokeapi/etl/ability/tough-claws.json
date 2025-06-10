@@ -1,0 +1,16 @@
+{
+  "id": 181,
+  "name": "tough-claws",
+  "description": "Strengthens moves that make contact to 1.33× their power.",
+  "flavor_text": "Powers up moves that\nmake direct contact.",
+  "pokemon_ids": [
+    688,
+    689,
+    863,
+    10034,
+    10042,
+    10076,
+    10152,
+    10161
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": 156,
+  "name": "magic-bounce",
+  "description": "When this Pokémon is targeted by a move flagged as being reflectable, the move is redirected to its user.\n\nAll reflectable moves are non-damaging, and most non-damaging moves that target other Pokémon are reflectable.\n\nA move reflected by this ability or magic coat cannot be reflected back.",
+  "flavor_text": "Reflects status moves.",
+  "pokemon_ids": [
+    177,
+    178,
+    196,
+    856,
+    857,
+    858,
+    10057,
+    10066,
+    10075,
+    10221
+  ]
+}

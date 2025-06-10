@@ -1,0 +1,11 @@
+{
+  "id": 274,
+  "name": "wind-rider",
+  "description": "Boosts the Pokémon’s Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves.",
+  "flavor_text": "Boosts the Pokémon's Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves.",
+  "pokemon_ids": [
+    275,
+    946,
+    947
+  ]
+}

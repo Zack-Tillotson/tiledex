@@ -1,0 +1,21 @@
+{
+  "id": 173,
+  "name": "strong-jaw",
+  "description": "Strengthens biting moves to 1.5× their power.",
+  "flavor_text": "The Pokémon’s strong jaw gives\nit tremendous biting power.",
+  "pokemon_ids": [
+    696,
+    697,
+    734,
+    735,
+    779,
+    833,
+    834,
+    836,
+    882,
+    10070,
+    10121,
+    10214,
+    10243
+  ]
+}

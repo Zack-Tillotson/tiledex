@@ -1,0 +1,15 @@
+{
+  "id": 202,
+  "name": "slush-rush",
+  "description": "During Hail, this Pokémon has double Speed.",
+  "flavor_text": "Boosts the Pokémon’s Speed stat in a hailstorm.",
+  "pokemon_ids": [
+    613,
+    614,
+    881,
+    883,
+    975,
+    10101,
+    10102
+  ]
+}

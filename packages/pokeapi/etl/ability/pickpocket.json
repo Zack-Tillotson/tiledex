@@ -1,0 +1,24 @@
+{
+  "id": 124,
+  "name": "pickpocket",
+  "description": "Whenever a move makes contact with this Pokémon, if it does not have a held item, it steals the attacker's held item.\n\nThis Pokémon cannot steal upon being knocked out.  It can steal if the attacker has a substitute, but cannot steal when its own Substitute is hit.  If a move hits multiple times, only the last hit triggers this ability.  If this Pokémon is wild, it cannot steal from a trained Pokémon.",
+  "flavor_text": "Steals an item from an attacker\nthat made direct contact.",
+  "pokemon_ids": [
+    215,
+    273,
+    274,
+    275,
+    461,
+    688,
+    689,
+    859,
+    860,
+    861,
+    944,
+    957,
+    958,
+    959,
+    10222,
+    10235
+  ]
+}

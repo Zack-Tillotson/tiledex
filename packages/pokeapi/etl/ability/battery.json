@@ -1,0 +1,9 @@
+{
+  "id": 217,
+  "name": "battery",
+  "description": "Ally Pokémon's moves have their power increased to 1.3×.",
+  "flavor_text": "Powers up ally Pokémon’s special moves.",
+  "pokemon_ids": [
+    737
+  ]
+}

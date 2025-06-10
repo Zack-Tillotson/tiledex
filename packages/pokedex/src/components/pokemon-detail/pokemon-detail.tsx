@@ -57,6 +57,10 @@ interface PokemonDetailProps {
     pokemonName: string,
     children: React.ReactNode,
   ) => React.ReactNode;
+  renderAbilityLink?: (
+    abilityName: string,
+    children: React.ReactNode,
+  ) => React.ReactNode;
 }
 
 export function PokemonDetail({
@@ -65,19 +69,20 @@ export function PokemonDetail({
   className = "",
   renderTypeLink,
   renderPokemonLink,
+  renderAbilityLink,
 }: PokemonDetailProps): React.ReactElement {
   return (
     <div className={`${styles.container} ${className}`}>
       {/* Overview Section */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Overview</h2>
         <div className={styles.overviewContainer}>
           <div className={styles.headerInfo}>
-            <div className={styles.idBadge}>
-              #{pokemon.id.toString().padStart(3, "0")}
+            <div className={styles.nameRow}>
+              <span className={styles.pokemonNumber}>
+                #{pokemon.id.toString().padStart(3, "0")}
+              </span>
+              <h2 className={styles.pokemonName}>{pokemon.name}</h2>
             </div>
-            <h1 className={styles.pokemonName}>{pokemon.name}</h1>
-
             <div className={styles.typesList}>
               {pokemon.types.map((type: string) => {
                 const typeBadge = (
@@ -106,7 +111,6 @@ export function PokemonDetail({
             <div className={styles.imagesGrid}>
               {pokemon.sprites.official_artwork && (
                 <div className={styles.imageContainer}>
-                  <h3 className={styles.imageTitle}>Official Artwork</h3>
                   <img
                     src={pokemon.sprites.official_artwork}
                     alt={`${pokemon.name} official artwork`}
@@ -116,32 +120,6 @@ export function PokemonDetail({
                   />
                 </div>
               )}
-              <div className={styles.spriteRow}>
-                {pokemon.sprites.front_default && (
-                  <div className={styles.imageContainer}>
-                    <h3 className={styles.imageTitle}>Front Default</h3>
-                    <img
-                      src={pokemon.sprites.front_default}
-                      alt={`${pokemon.name} front default`}
-                      width={120}
-                      height={120}
-                      className={styles.image}
-                    />
-                  </div>
-                )}
-                {pokemon.sprites.back_default && (
-                  <div className={styles.imageContainer}>
-                    <h3 className={styles.imageTitle}>Back Default</h3>
-                    <img
-                      src={pokemon.sprites.back_default}
-                      alt={`${pokemon.name} back default`}
-                      width={120}
-                      height={120}
-                      className={styles.image}
-                    />
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </div>
@@ -216,14 +194,24 @@ export function PokemonDetail({
             <div className={styles.attributeItem}>
               <h3 className={styles.attributeLabel}>Abilities</h3>
               <div className={styles.abilitiesList}>
-                {pokemon.abilities.map((ability) => (
-                  <span key={ability.name} className={styles.abilityTag}>
-                    {ability.name}
-                    {ability.is_hidden && (
-                      <span className={styles.hiddenTag}> (Hidden)</span>
-                    )}
-                  </span>
-                ))}
+                {pokemon.abilities.map((ability: PokemonAbility) => {
+                  const abilityElement = (
+                    <span key={ability.name} className={styles.abilityItem}>
+                      {ability.name}
+                      {ability.is_hidden && (
+                        <span className={styles.hiddenBadge}>(Hidden)</span>
+                      )}
+                    </span>
+                  );
+
+                  return renderAbilityLink ? (
+                    <React.Fragment key={ability.name}>
+                      {renderAbilityLink(ability.name, abilityElement)}
+                    </React.Fragment>
+                  ) : (
+                    abilityElement
+                  );
+                })}
               </div>
             </div>
           )}

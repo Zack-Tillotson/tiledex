@@ -1,0 +1,11 @@
+{
+  "id": 177,
+  "name": "gale-wings",
+  "description": "Raises flying moves' priority by one stage.",
+  "flavor_text": "Gives priority to Flying-type\nmoves.",
+  "pokemon_ids": [
+    661,
+    662,
+    663
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": 229,
+  "name": "grassy-surge",
+  "description": "When this Pokémon enters battle, it changes the terrain to grassy terrain.",
+  "flavor_text": "Turns the ground into Grassy Terrain when\nthe Pokémon enters a battle.",
+  "pokemon_ids": [
+    787,
+    810,
+    811,
+    812,
+    10209
+  ]
+}

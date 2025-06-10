@@ -1,0 +1,9 @@
+{
+  "id": 297,
+  "name": "earth-eater",
+  "description": "If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage.",
+  "flavor_text": "If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage.",
+  "pokemon_ids": [
+    968
+  ]
+}

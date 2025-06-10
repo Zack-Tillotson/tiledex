@@ -1,0 +1,10 @@
+{
+  "id": 179,
+  "name": "grass-pelt",
+  "description": "Boosts Defense while grassy terrain is in effect.",
+  "flavor_text": "Boosts the Defense stat\nin Grassy Terrain.",
+  "pokemon_ids": [
+    672,
+    673
+  ]
+}

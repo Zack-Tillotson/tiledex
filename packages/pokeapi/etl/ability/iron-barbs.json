@@ -1,0 +1,12 @@
+{
+  "id": 160,
+  "name": "iron-barbs",
+  "description": "Whenever a move makes contact with this Pokémon, the move's user takes 1/8 of its maximum HP in damage.\n\nThis ability functions identically to rough skin.",
+  "flavor_text": "Inflicts damage to the\nattacker on contact.",
+  "pokemon_ids": [
+    597,
+    598,
+    777,
+    10154
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": 279,
+  "name": "commander",
+  "description": "When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there.",
+  "flavor_text": "When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there.",
+  "pokemon_ids": [
+    978,
+    10258,
+    10259
+  ]
+}

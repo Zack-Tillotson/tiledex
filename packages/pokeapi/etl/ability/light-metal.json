@@ -1,0 +1,15 @@
+{
+  "id": 135,
+  "name": "light-metal",
+  "description": "This Pokémon has half the usual weight for its species.",
+  "flavor_text": "Halves the Pokémon’s weight.",
+  "pokemon_ids": [
+    212,
+    374,
+    375,
+    376,
+    379,
+    884,
+    10225
+  ]
+}

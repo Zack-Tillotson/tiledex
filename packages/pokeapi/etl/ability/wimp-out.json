@@ -1,0 +1,9 @@
+{
+  "id": 193,
+  "name": "wimp-out",
+  "description": "After this Pokémon is hit by a move, if that move caused this Pokémon's HP to drop below half, it switches out.",
+  "flavor_text": "The Pokémon cowardly switches out when its HP\nbecomes half or less.",
+  "pokemon_ids": [
+    767
+  ]
+}

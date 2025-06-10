@@ -1,0 +1,9 @@
+{
+  "id": 186,
+  "name": "dark-aura",
+  "description": "Strengthens dark moves for all friendly and opposing Pokémon.",
+  "flavor_text": "Powers up each Pokémon’s\nDark-type moves.",
+  "pokemon_ids": [
+    717
+  ]
+}

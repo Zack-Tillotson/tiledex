@@ -1,0 +1,9 @@
+{
+  "id": 225,
+  "name": "rks-system",
+  "description": "Changes this Pokémon's type to match its held Memory.\n\nThis ability cannot be copied, replaced, or nullified.  This ability only takes effect for Silvally.",
+  "flavor_text": "Changes the Pokémon’s type to match the\nmemory disc it holds.",
+  "pokemon_ids": [
+    773
+  ]
+}

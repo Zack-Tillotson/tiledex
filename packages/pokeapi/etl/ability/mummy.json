@@ -1,0 +1,10 @@
+{
+  "id": 152,
+  "name": "mummy",
+  "description": "Whenever a contact move hits this Pokémon, the attacking Pokémon's ability changes to Mummy.\n\nmultitype is unaffected.  If a Pokémon with moxie knocks this Pokémon out, the former's ability will change without taking effect.",
+  "flavor_text": "Contact with the Pokémon\nspreads this Ability.",
+  "pokemon_ids": [
+    562,
+    563
+  ]
+}

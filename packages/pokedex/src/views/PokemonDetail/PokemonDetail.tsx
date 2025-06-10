@@ -88,6 +88,14 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
             </Link>
           );
         }}
+        renderAbilityLink={(abilityName: string, children: React.ReactNode) => (
+          <Link
+            href={`/pokedex/abilities/${abilityName.toLowerCase()}`}
+            className={styles.abilityLink}
+          >
+            {children}
+          </Link>
+        )}
       />
     </div>
   );

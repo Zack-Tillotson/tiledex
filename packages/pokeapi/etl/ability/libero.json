@@ -1,0 +1,12 @@
+{
+  "id": 236,
+  "name": "libero",
+  "description": "Changes the Pokémon’s type to the type of the move it’s about to use. This works only once each time the Pokémon enters battle.",
+  "flavor_text": "Changes the Pokémon’s type to the type of the\nmove it’s about to use.",
+  "pokemon_ids": [
+    813,
+    814,
+    815,
+    10210
+  ]
+}

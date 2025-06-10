@@ -1,0 +1,9 @@
+{
+  "id": 296,
+  "name": "armor-tail",
+  "description": "The mysterious tail covering the Pokémon’s head makes opponents unable to use priority moves against the Pokémon or its allies.",
+  "flavor_text": "The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.",
+  "pokemon_ids": [
+    981
+  ]
+}

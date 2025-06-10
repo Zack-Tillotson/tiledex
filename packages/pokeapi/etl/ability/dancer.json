@@ -1,0 +1,12 @@
+{
+  "id": 216,
+  "name": "dancer",
+  "description": "Whenever another Pokémon uses a dance move, this Pokémon will use the same move immediately afterwards.",
+  "flavor_text": "When another Pokémon uses a dance move,\nit can use a dance move following it regardless\nof its Speed.",
+  "pokemon_ids": [
+    741,
+    10123,
+    10124,
+    10125
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": 269,
+  "name": "seed-sower",
+  "description": "Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.",
+  "flavor_text": "Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.",
+  "pokemon_ids": [
+    930
+  ]
+}

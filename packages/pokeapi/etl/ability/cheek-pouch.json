@@ -1,0 +1,15 @@
+{
+  "id": 167,
+  "name": "cheek-pouch",
+  "description": "Restores HP upon eating a Berry, in addition to the Berry's effect.",
+  "flavor_text": "Restores HP as well when\nthe Pokémon eats a Berry.",
+  "pokemon_ids": [
+    659,
+    660,
+    702,
+    819,
+    820,
+    925,
+    10257
+  ]
+}

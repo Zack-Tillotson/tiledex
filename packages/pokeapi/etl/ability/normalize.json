@@ -1,0 +1,10 @@
+{
+  "id": 96,
+  "name": "normalize",
+  "description": "This Pokémon's moves all act as if they were normal-type.\n\nMoves that inflict typeless damage do so as usual.  Moves of variable type, such as hidden power, are affected.  They otherwise work as usual, however; weather ball, for example, is always forced to be Normal, but it still has doubled power and looks different during weather.\n\nAs thunder wave is prevented by immunities, unlike most non-damaging moves, it does not affect ghost-type Pokémon under the effect of this ability.",
+  "flavor_text": "All the Pokémon’s moves\nbecome Normal type.",
+  "pokemon_ids": [
+    300,
+    301
+  ]
+}

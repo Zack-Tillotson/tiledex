@@ -85,7 +85,9 @@ async function fetchAbilityData(abilityName: string): Promise<ProcessedAbility> 
           // Extract Pokemon IDs from the API response
           const pokemon_ids = parsedData.pokemon.map(p => {
             const urlParts = p.pokemon.url.split('/');
-            return parseInt(urlParts[urlParts.length - 2], 10);
+            const idStr = urlParts[urlParts.length - 2];
+            if (!idStr) throw new Error(`Invalid Pokemon URL: ${p.pokemon.url}`);
+            return parseInt(idStr, 10);
           });
 
           resolve({

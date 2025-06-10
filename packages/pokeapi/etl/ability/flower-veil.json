@@ -1,0 +1,13 @@
+{
+  "id": 166,
+  "name": "flower-veil",
+  "description": "Protects friendly grass Pokémon from having their stats lowered by other Pokémon.",
+  "flavor_text": "Prevents lowering of ally\nGrass-type Pokémon’s stats.",
+  "pokemon_ids": [
+    669,
+    670,
+    671,
+    764,
+    10061
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": 105,
+  "name": "super-luck",
+  "description": "This Pokémon's moves have critical hit rates one stage higher than normal.",
+  "flavor_text": "Boosts the critical-hit\nratios of moves.",
+  "pokemon_ids": [
+    175,
+    176,
+    198,
+    359,
+    430,
+    468,
+    519,
+    520,
+    521
+  ]
+}

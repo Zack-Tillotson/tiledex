@@ -1,0 +1,19 @@
+{
+  "id": 224,
+  "name": "beast-boost",
+  "description": "Raises this Pokémon's highest stat by one stage when it faints another Pokémon.",
+  "flavor_text": "The Pokémon boosts its most proficient stat each\ntime it knocks out a Pokémon.",
+  "pokemon_ids": [
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    803,
+    804,
+    805,
+    806
+  ]
+}

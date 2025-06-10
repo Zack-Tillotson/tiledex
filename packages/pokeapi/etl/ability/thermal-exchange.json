@@ -1,0 +1,11 @@
+{
+  "id": 270,
+  "name": "thermal-exchange",
+  "description": "Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.",
+  "flavor_text": "Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.",
+  "pokemon_ids": [
+    996,
+    997,
+    998
+  ]
+}

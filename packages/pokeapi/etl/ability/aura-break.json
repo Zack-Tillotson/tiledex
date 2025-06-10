@@ -1,0 +1,10 @@
+{
+  "id": 188,
+  "name": "aura-break",
+  "description": "While this Pokémon is on the field, dark aura and fairy aura weaken moves of their respective types to 2/3 their power, rather than strengthening them.",
+  "flavor_text": "The effects of “Aura” Abilities\nare reversed.",
+  "pokemon_ids": [
+    718,
+    10181
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": 182,
+  "name": "pixilate",
+  "description": "Turns the bearer's normal-type moves into fairy moves.  Moves changed by this ability have 1.3× their power.",
+  "flavor_text": "Normal-type moves become\nFairy-type moves.",
+  "pokemon_ids": [
+    700,
+    10051,
+    10067
+  ]
+}

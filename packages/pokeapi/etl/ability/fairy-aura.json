@@ -1,0 +1,9 @@
+{
+  "id": 187,
+  "name": "fairy-aura",
+  "description": "Strengthens fairy moves for all friendly and opposing Pokémon.",
+  "flavor_text": "Powers up each Pokémon’s\nFairy-type moves.",
+  "pokemon_ids": [
+    716
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": 196,
+  "name": "merciless",
+  "description": "This Pokémon's moves critical hit against poisoned targets.",
+  "flavor_text": "The Pokémon’s attacks become critical hits if the\ntarget is poisoned.",
+  "pokemon_ids": [
+    747,
+    748
+  ]
+}

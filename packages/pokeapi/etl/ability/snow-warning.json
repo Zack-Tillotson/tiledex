@@ -1,0 +1,16 @@
+{
+  "id": 117,
+  "name": "snow-warning",
+  "description": "The weather changes to hail when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, drizzle, drought, or sand stream are sent out at the same time, the abilities will activate in order of Speed, respecting trick room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay.",
+  "flavor_text": "The Pokémon summons a\nhailstorm when it enters a battle.",
+  "pokemon_ids": [
+    459,
+    460,
+    584,
+    698,
+    699,
+    10060,
+    10103,
+    10104
+  ]
+}

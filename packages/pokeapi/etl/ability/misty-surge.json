@@ -1,0 +1,10 @@
+{
+  "id": 228,
+  "name": "misty-surge",
+  "description": "When this Pokémon enters battle, it changes the terrain to misty terrain.",
+  "flavor_text": "Turns the ground into Misty Terrain when\nthe Pokémon enters a battle.",
+  "pokemon_ids": [
+    788,
+    10167
+  ]
+}

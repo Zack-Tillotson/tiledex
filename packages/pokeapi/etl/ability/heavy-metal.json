@@ -1,0 +1,18 @@
+{
+  "id": 134,
+  "name": "heavy-metal",
+  "description": "This Pokémon has double the usual weight for its species.",
+  "flavor_text": "Doubles the Pokémon’s weight.",
+  "pokemon_ids": [
+    304,
+    305,
+    306,
+    436,
+    437,
+    878,
+    879,
+    884,
+    10224,
+    10225
+  ]
+}

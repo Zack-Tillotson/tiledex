@@ -1,0 +1,9 @@
+{
+  "id": 200,
+  "name": "steelworker",
+  "description": "This Pokémon's Steel moves have 1.5× power.",
+  "flavor_text": "Powers up Steel-type moves.",
+  "pokemon_ids": [
+    781
+  ]
+}

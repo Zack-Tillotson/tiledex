@@ -20,7 +20,9 @@
     "fetch-abilities:refresh": "ts-node etl/fetchAbilityData.ts --refresh",
     "fetch-abilities:range": "ts-node etl/fetchAbilityData.ts --rangeStart $1 --rangeEnd $2",
     "fetch-abilities:ability": "ts-node etl/fetchAbilityData.ts --ability=\"$1\"",
-    "fetch-abilities:ability:refresh": "ts-node etl/fetchAbilityData.ts --ability=\"$1\" --refresh"
+    "fetch-abilities:ability:refresh": "ts-node etl/fetchAbilityData.ts --ability=\"$1\" --refresh",
+    "process-ability-data": "ts-node etl/processAbilityData.ts",
+    "process-abilities": "ts-node etl/processAbilities.ts"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

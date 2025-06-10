@@ -1,0 +1,12 @@
+{
+  "id": 116,
+  "name": "solid-rock",
+  "description": "This Pokémon takes 0.75× as much damage from moves that are super effective against it.\n\nThis ability functions identically to filter.",
+  "flavor_text": "Reduces damage from\nsupereffective attacks.",
+  "pokemon_ids": [
+    323,
+    464,
+    564,
+    565
+  ]
+}

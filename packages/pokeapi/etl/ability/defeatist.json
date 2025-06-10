@@ -1,0 +1,10 @@
+{
+  "id": 129,
+  "name": "defeatist",
+  "description": "This Pokémon's Attack and Special Attack are halved when it has half its HP or less.",
+  "flavor_text": "Lowers stats when HP\nbecomes half or less.",
+  "pokemon_ids": [
+    566,
+    567
+  ]
+}

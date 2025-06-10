@@ -1,0 +1,9 @@
+{
+  "id": 100,
+  "name": "stall",
+  "description": "This Pokémon moves last within its priority bracket.\n\nMultiple Pokémon with this ability move in order of Speed amongst themselves.\n\nThe full incense and lagging tail take precedence over this ability; that is, Pokémon with these items move after Pokémon with this ability.  Pokémon with both this ability and one of these items are delayed as much as if they had only the item.\n\nThis ability works as usual during trick room: Pokémon with this ability will move in reverse order of Speed after Pokémon without it.",
+  "flavor_text": "The Pokémon moves after\nall other Pokémon do.",
+  "pokemon_ids": [
+    302
+  ]
+}

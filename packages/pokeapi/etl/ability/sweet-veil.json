@@ -1,0 +1,19 @@
+{
+  "id": 175,
+  "name": "sweet-veil",
+  "description": "Prevents friendly Pokémon from sleeping.",
+  "flavor_text": "Prevents itself and ally Pokémon\nfrom falling asleep.",
+  "pokemon_ids": [
+    684,
+    685,
+    742,
+    743,
+    761,
+    762,
+    763,
+    868,
+    869,
+    10150,
+    10223
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": 231,
+  "name": "shadow-shield",
+  "description": "When this Pokémon has full HP, regular damage (not fixed damage!) from moves is halved.\n\nThis ability cannot be nullified.",
+  "flavor_text": "Reduces the amount of damage the Pokémon takes\nwhile its HP is full.",
+  "pokemon_ids": [
+    792
+  ]
+}

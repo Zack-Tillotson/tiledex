@@ -1,0 +1,9 @@
+{
+  "id": 122,
+  "name": "flower-gift",
+  "description": "Friendly Pokémon have 1.5× their Attack and Special Defense during strong sunlight if any friendly Pokémon has this ability.\n\nUnlike forecast, multitype, and zen mode, this ability is not tied to its Pokémon's form change; cherrim will switch between its forms even if it loses this ability.  As such, this ability also works if obtained by a Pokémon other than Cherrim.",
+  "flavor_text": "Powers up party Pokémon\nwhen it is sunny.",
+  "pokemon_ids": [
+    421
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": 178,
+  "name": "mega-launcher",
+  "description": "Strengthens aura and pulse moves to 1.5× their power.",
+  "flavor_text": "Powers up aura and pulse moves.",
+  "pokemon_ids": [
+    692,
+    693,
+    10036
+  ]
+}

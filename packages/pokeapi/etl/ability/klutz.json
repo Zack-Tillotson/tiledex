@@ -1,0 +1,20 @@
+{
+  "id": 103,
+  "name": "klutz",
+  "description": "In battle, this Pokémon cannot use its held item, nor will the item have any passive effect on the battle, positive or negative.  This Pokémon also cannot use fling.\n\nThe Speed cut from the iron ball and the effort items (the macho brace, power weight, power bracer, power belt, power lens, power band, and power anklet) is unaffected.  Items that do not directly affect the battle, such as the exp share, the amulet coin, or the soothe bell, work as usual.  All held items work as usual out of battle.\n\nOther moves that use the held item, such as natural gift and switcheroo, work as usual.",
+  "flavor_text": "The Pokémon can’t use\nany held items.",
+  "pokemon_ids": [
+    427,
+    428,
+    527,
+    528,
+    531,
+    622,
+    623,
+    759,
+    760,
+    848,
+    926,
+    951
+  ]
+}

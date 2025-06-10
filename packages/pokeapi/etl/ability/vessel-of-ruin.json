@@ -1,0 +1,9 @@
+{
+  "id": 284,
+  "name": "vessel-of-ruin",
+  "description": "The power of the Pokémon’s ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.",
+  "flavor_text": "The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.",
+  "pokemon_ids": [
+    1003
+  ]
+}

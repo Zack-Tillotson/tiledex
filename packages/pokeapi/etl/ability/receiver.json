@@ -1,0 +1,9 @@
+{
+  "id": 222,
+  "name": "receiver",
+  "description": "When an ally faints, this Pokémon gains its Ability.",
+  "flavor_text": "The Pokémon copies the Ability of a defeated ally.",
+  "pokemon_ids": [
+    766
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": 197,
+  "name": "shields-down",
+  "description": "When this Pokémon enters battle and at the end of each turn, if its HP is 50% or above, it changes into Meteor Form; otherwise, it changes into Core Form.  In Meteor Form, it cannot be given a major status ailment (though existing ones are not cured), cannot become drowsy from yawn, and cannot use rest (which will simply fail).\n\nThis ability cannot be copied, replaced, or nullified.  This ability only takes effect for Minior.",
+  "flavor_text": "When its HP becomes half or less, the Pokémon’s\nshell breaks and it becomes aggressive.",
+  "pokemon_ids": [
+    774,
+    10130,
+    10131,
+    10132,
+    10133,
+    10134,
+    10135,
+    10136,
+    10137,
+    10138,
+    10139,
+    10140,
+    10141,
+    10142
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 298,
+  "name": "mycelium-might",
+  "description": "The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target.",
+  "flavor_text": "The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target.",
+  "pokemon_ids": [
+    948,
+    948,
+    949,
+    949
+  ]
+}

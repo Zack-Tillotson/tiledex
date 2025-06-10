@@ -1,0 +1,11 @@
+{
+  "id": 227,
+  "name": "psychic-surge",
+  "description": "When this Pokémon enters battle, it changes the terrain to psychic terrain.",
+  "flavor_text": "Turns the ground into Psychic Terrain when\nthe Pokémon enters a battle.",
+  "pokemon_ids": [
+    786,
+    876,
+    10186
+  ]
+}

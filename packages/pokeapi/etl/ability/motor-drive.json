@@ -1,0 +1,12 @@
+{
+  "id": 78,
+  "name": "motor-drive",
+  "description": "Whenever an electric-type move hits this Pokémon, its Speed rises one stage, negating any other effect on it.\n\nThis ability will not take effect if this Pokémon is immune to Electric moves.  Electric moves will ignore this Pokémon's substitute.\n\nThis effect includes non-damaging moves, i.e. thunder wave.",
+  "flavor_text": "Boosts the Speed stat when it’s\nhit by an Electric-type move.",
+  "pokemon_ids": [
+    466,
+    522,
+    523,
+    587
+  ]
+}

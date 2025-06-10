@@ -1,0 +1,12 @@
+{
+  "id": 260,
+  "name": "unseen-fist",
+  "description": "If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.",
+  "flavor_text": "If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself.",
+  "pokemon_ids": [
+    892,
+    10191,
+    10226,
+    10227
+  ]
+}

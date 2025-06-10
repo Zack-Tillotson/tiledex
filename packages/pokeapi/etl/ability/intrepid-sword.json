@@ -1,0 +1,10 @@
+{
+  "id": 234,
+  "name": "intrepid-sword",
+  "description": "Boosts the Pokémon’s Attack stat the first time the Pokémon enters a battle.",
+  "flavor_text": "Boosts the Pokémon’s Attack stat when the Pokémon\nenters a battle.",
+  "pokemon_ids": [
+    888,
+    10188
+  ]
+}

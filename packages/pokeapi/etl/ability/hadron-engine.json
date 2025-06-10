@@ -1,0 +1,17 @@
+{
+  "id": 289,
+  "name": "hadron-engine",
+  "description": "Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain.",
+  "flavor_text": "Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain.",
+  "pokemon_ids": [
+    1008,
+    10268,
+    10268,
+    10269,
+    10269,
+    10270,
+    10270,
+    10271,
+    10271
+  ]
+}

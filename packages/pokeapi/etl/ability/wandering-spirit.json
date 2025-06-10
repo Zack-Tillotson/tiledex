@@ -1,0 +1,10 @@
+{
+  "id": 254,
+  "name": "wandering-spirit",
+  "description": "The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.",
+  "flavor_text": "The Pokémon exchanges Abilities with a Pokémon\nthat hits it with a move that makes direct contact.",
+  "pokemon_ids": [
+    867,
+    10179
+  ]
+}

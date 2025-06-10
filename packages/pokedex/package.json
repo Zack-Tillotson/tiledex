@@ -9,7 +9,8 @@
     "./PokemonGrid": "./src/views/PokemonGrid/PokemonGrid.tsx",
     "./GenerationGrid": "./src/views/GenerationGrid/GenerationGrid.tsx",
     "./SearchForm": "./src/views/SearchForm/SearchForm.tsx",
-    "./PokemonType": "./src/views/PokemonType/PokemonType.tsx"
+    "./PokemonType": "./src/views/PokemonType/PokemonType.tsx",
+    "./AbilityView": "./src/views/AbilityView/AbilityView.tsx"
   },
   "scripts": {
     "build": "tsc",

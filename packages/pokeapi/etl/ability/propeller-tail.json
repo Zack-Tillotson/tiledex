@@ -1,0 +1,10 @@
+{
+  "id": 239,
+  "name": "propeller-tail",
+  "description": "Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves.",
+  "flavor_text": "Ignores the effects of opposing Pokémon’s Abilities and\nmoves that draw in moves.",
+  "pokemon_ids": [
+    846,
+    847
+  ]
+}

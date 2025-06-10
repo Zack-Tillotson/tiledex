@@ -1,0 +1,9 @@
+{
+  "id": 253,
+  "name": "perish-body",
+  "description": "When the Pokémon with Perish Body is hit with a contact move, both the attacker and the Pokémon with Perish Body will faint in three turns.",
+  "flavor_text": "When hit by a move that makes direct contact,\nthe Pokémon and the attacker will faint after three turns\nunless they switch out of battle.",
+  "pokemon_ids": [
+    864
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": 168,
+  "name": "protean",
+  "description": "Changes the bearer's type to match each move it uses.\n\nThe type change takes place just before the move is used.",
+  "flavor_text": "Changes the Pokémon’s type to\nthe type of the move it’s using.",
+  "pokemon_ids": [
+    352,
+    656,
+    657,
+    658,
+    906,
+    907,
+    908
+  ]
+}

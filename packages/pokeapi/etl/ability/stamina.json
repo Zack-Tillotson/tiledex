@@ -1,0 +1,11 @@
+{
+  "id": 192,
+  "name": "stamina",
+  "description": "Raises this Pokémon's Defense by one stage when it takes damage from a move.",
+  "flavor_text": "Boosts the Defense stat when hit by an attack.",
+  "pokemon_ids": [
+    749,
+    750,
+    1018
+  ]
+}

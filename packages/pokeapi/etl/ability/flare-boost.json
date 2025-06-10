@@ -1,0 +1,10 @@
+{
+  "id": 138,
+  "name": "flare-boost",
+  "description": "This Pokémon has 1.5× its Special Attack when burned.",
+  "flavor_text": "Powers up special attacks when\nthe Pokémon is burned.",
+  "pokemon_ids": [
+    425,
+    426
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": 294,
+  "name": "costar",
+  "description": "When the Pokémon enters a battle, it copies an ally’s stat changes.",
+  "flavor_text": "When the Pokémon enters a battle, it copies an ally's stat changes.",
+  "pokemon_ids": [
+    973
+  ]
+}

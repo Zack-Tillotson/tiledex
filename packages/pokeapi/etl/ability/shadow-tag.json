@@ -1,0 +1,14 @@
+{
+  "id": 23,
+  "name": "shadow-tag",
+  "description": "While this Pokémon is in battle, opposing Pokémon cannot flee or switch out.\n\nOther Pokémon with this ability are unaffected.  Pokémon with run away can still flee.  Pokémon can still switch out with the use of a move or item.",
+  "flavor_text": "Prevents opposing Pokémon\nfrom escaping.",
+  "pokemon_ids": [
+    202,
+    360,
+    574,
+    575,
+    576,
+    10038
+  ]
+}

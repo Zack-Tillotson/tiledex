@@ -1,0 +1,10 @@
+{
+  "id": 277,
+  "name": "wind-power",
+  "description": "The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses.",
+  "flavor_text": "The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses.",
+  "pokemon_ids": [
+    940,
+    941
+  ]
+}

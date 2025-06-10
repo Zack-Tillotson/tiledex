@@ -1,0 +1,10 @@
+{
+  "id": 275,
+  "name": "guard-dog",
+  "description": "Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work.",
+  "flavor_text": "Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work.",
+  "pokemon_ids": [
+    943,
+    1014
+  ]
+}

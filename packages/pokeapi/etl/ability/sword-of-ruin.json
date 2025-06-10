@@ -1,0 +1,9 @@
+{
+  "id": 285,
+  "name": "sword-of-ruin",
+  "description": "The power of the Pokémon’s ruinous sword lowers the Defense stats of all Pokémon except itself.",
+  "flavor_text": "The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.",
+  "pokemon_ids": [
+    1002
+  ]
+}

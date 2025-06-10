@@ -1,0 +1,12 @@
+{
+  "id": 278,
+  "name": "zero-to-hero",
+  "description": "The Pokémon transforms into its Hero Form when it switches out.",
+  "flavor_text": "The Pokémon transforms into its Hero Form when it switches out.",
+  "pokemon_ids": [
+    964,
+    964,
+    10256,
+    10256
+  ]
+}

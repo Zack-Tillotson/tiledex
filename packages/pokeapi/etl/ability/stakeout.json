@@ -1,0 +1,17 @@
+{
+  "id": 198,
+  "name": "stakeout",
+  "description": "This Pokémon's moves have double power against Pokémon that switched in this turn.",
+  "flavor_text": "Doubles the damage dealt to the target’s\nreplacement if the target switches out.",
+  "pokemon_ids": [
+    734,
+    735,
+    827,
+    828,
+    917,
+    918,
+    942,
+    943,
+    10121
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": 265,
+  "name": "grim-neigh",
+  "description": "When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat.",
+  "flavor_text": "When the Pokémon knocks out a target, it utters a\nterrifying neigh, which boosts its Sp. Atk stat.",
+  "pokemon_ids": [
+    897
+  ]
+}

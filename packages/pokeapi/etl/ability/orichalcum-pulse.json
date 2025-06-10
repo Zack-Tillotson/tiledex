@@ -1,0 +1,17 @@
+{
+  "id": 288,
+  "name": "orichalcum-pulse",
+  "description": "Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight.",
+  "flavor_text": "Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight.",
+  "pokemon_ids": [
+    1007,
+    10264,
+    10264,
+    10265,
+    10265,
+    10266,
+    10266,
+    10267,
+    10267
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": 273,
+  "name": "well-baked-body",
+  "description": "The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.",
+  "flavor_text": "The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted.",
+  "pokemon_ids": [
+    927
+  ]
+}

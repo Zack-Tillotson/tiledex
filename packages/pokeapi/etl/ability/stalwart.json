@@ -1,0 +1,11 @@
+{
+  "id": 242,
+  "name": "stalwart",
+  "description": "Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves.",
+  "flavor_text": "Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.",
+  "pokemon_ids": [
+    884,
+    1018,
+    10225
+  ]
+}

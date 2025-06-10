@@ -1,0 +1,10 @@
+{
+  "id": 201,
+  "name": "berserk",
+  "description": "Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage.",
+  "flavor_text": "Boosts the Pokémon’s Sp. Atk stat when it takes a \nhit that causes its HP to become half or less.",
+  "pokemon_ids": [
+    780,
+    10171
+  ]
+}

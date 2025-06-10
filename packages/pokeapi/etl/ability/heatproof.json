@@ -1,0 +1,13 @@
+{
+  "id": 85,
+  "name": "heatproof",
+  "description": "This Pokémon takes half as much damage from fire-type moves and burns.",
+  "flavor_text": "Weakens the power of\nFire-type moves.",
+  "pokemon_ids": [
+    436,
+    437,
+    837,
+    1012,
+    1013
+  ]
+}

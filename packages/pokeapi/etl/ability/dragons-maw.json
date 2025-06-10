@@ -1,0 +1,9 @@
+{
+  "id": 263,
+  "name": "dragons-maw",
+  "description": "Increases the power of Dragon-type moves used by this Pokémon by 50%.",
+  "flavor_text": "Powers up Dragon-type moves.",
+  "pokemon_ids": [
+    895
+  ]
+}

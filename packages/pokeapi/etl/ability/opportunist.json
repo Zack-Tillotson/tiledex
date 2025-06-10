@@ -1,0 +1,9 @@
+{
+  "id": 290,
+  "name": "opportunist",
+  "description": "If an opponent’s stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
+  "flavor_text": "If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
+  "pokemon_ids": [
+    956
+  ]
+}

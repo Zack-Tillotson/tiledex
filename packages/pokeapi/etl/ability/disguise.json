@@ -1,0 +1,12 @@
+{
+  "id": 209,
+  "name": "disguise",
+  "description": "If this Pokémon is in its Disguised Form and takes damage from a move, it switches to its Busted Form and the damage is prevented.  Other effects are not prevented.\n\nThis ability cannot be copied or replaced.  This ability only takes effect for Mimikyu.",
+  "flavor_text": "Once per battle, the shroud that covers the\nPokémon can protect it from an attack.",
+  "pokemon_ids": [
+    778,
+    10143,
+    10144,
+    10145
+  ]
+}

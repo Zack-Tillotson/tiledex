@@ -1,0 +1,11 @@
+{
+  "id": 90,
+  "name": "poison-heal",
+  "description": "If this Pokémon is poisoned, it will heal for 1/8 of its maximum HP after each turn rather than taking damage.  This includes bad poison.",
+  "flavor_text": "Restores HP if the\nPokémon is poisoned.",
+  "pokemon_ids": [
+    285,
+    286,
+    472
+  ]
+}

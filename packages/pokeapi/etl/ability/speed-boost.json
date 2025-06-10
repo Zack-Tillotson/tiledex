@@ -1,0 +1,22 @@
+{
+  "id": 3,
+  "name": "speed-boost",
+  "description": "This Pokémon's Speed rises one stage after each turn.",
+  "flavor_text": "Its Speed stat is\ngradually boosted.",
+  "pokemon_ids": [
+    193,
+    255,
+    256,
+    257,
+    291,
+    318,
+    319,
+    469,
+    543,
+    544,
+    545,
+    955,
+    956,
+    10050
+  ]
+}
