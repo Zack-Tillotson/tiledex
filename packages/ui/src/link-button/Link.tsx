@@ -11,9 +11,11 @@ export function Link({
   className = "",
   disabled = false,
   onClick,
+  variant = "primary",
+  size = "medium",
 }: CustomLinkProps) {
   
-  const classes = `${styles.base} ${className}`.trim();
+  const classes = `${styles.base} ${styles[variant]} ${styles[size]} ${className}`.trim();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (disabled) {
