@@ -1,4 +1,4 @@
-import { GenerationGrid } from "@repo/pokedex/GenerationGrid";
+import { PokedexPage } from "@repo/pokedex/PokedexPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Browse Pokémon by generation, from Kanto to Galar regions.",
 };
 
-export default function PokedexPage() {
-  return <GenerationGrid />;
+export default function Page() {
+  return <PokedexPage />;
 }

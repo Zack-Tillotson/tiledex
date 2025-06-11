@@ -1,0 +1,21 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: var(--spacing-4);
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.searchButtonLink,
+.typesButtonLink {
+  min-width: 200px;
+  text-align: center;
+} 

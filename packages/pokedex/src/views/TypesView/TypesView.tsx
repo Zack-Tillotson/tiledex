@@ -5,7 +5,8 @@ import Link from "next/link";
 import styles from "./TypesView.module.css";
 import { TypesGrid } from "../../components/types-grid";
 import { getPokemonByType } from "@repo/pokeapi";
-import { POKEMON_TYPE_COLORS, PokemonTypeKey } from "@repo/types";
+import { POKEMON_TYPE_COLORS } from "@repo/types";
+import { Header, Text } from "@repo/ui";
 
 // Define TypeInfo interface locally to avoid import issues
 interface TypeInfo {
@@ -25,15 +26,20 @@ export function TypesView() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Pokémon Types</h1>
-      <p className={styles.description}>
-        Explore Pokémon by their types. Each type has unique characteristics and
-        strengths.
-      </p>
+      <div className={styles.header}>
+        <Link href="/pokedex" className={styles.backLink}>
+          &larr; Back to Pokédex
+        </Link>
+        <Header level={1} className={styles.title}>Pokémon Types</Header>
+        <Text variant="body" className={styles.description}>
+          Explore Pokémon by their types. Each type has unique characteristics and
+          strengths.
+        </Text>
+      </div>
 
       <TypesGrid
         types={typeInfoList}
-        getTypeHref={(type: string) => `/types/${type}`}
+        getTypeHref={(type: string) => `/pokedex/types/${type}`}
       />
     </div>
   );

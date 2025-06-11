@@ -3,8 +3,9 @@ import { PokemonDetail } from "@repo/pokedex/PokemonDetail";
 import { getAllPokemon } from "@repo/pokeapi";
 
 // @ts-expect-error - Next.js App Router type issues
-export default function PokemonDetailPage({ params }) {
-  return <PokemonDetail id={params.id} />;
+export default async function PokemonDetailPage({ params }) {
+  const { id } = await params;
+  return <PokemonDetail id={id} />;
 }
 
 // Force static rendering for this page
@@ -13,7 +14,7 @@ export const dynamic = "force-static";
 // Generate metadata for the page
 // @ts-expect-error - Next.js App Router type issues
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id } = await params;
   return {
     title: `Pokemon #${id} | Pokedex`,
     description: `Detailed information about Pokemon #${id}`,

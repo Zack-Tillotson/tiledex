@@ -4,7 +4,7 @@ import { getAllTypes } from "@repo/pokeapi";
 // Generate metadata for the page
 // @ts-expect-error - Next.js App Router type issues
 export async function generateMetadata({ params }) {
-  const { typeId } = params;
+  const { typeId } = await params;
   const formattedTypeId =
     typeId.charAt(0).toUpperCase() + typeId.slice(1).toLowerCase();
 
@@ -24,8 +24,7 @@ export async function generateStaticParams() {
 }
 
 // @ts-expect-error - Next.js App Router type issues
-export default function TypePage({ params }) {
-  const { typeId } = params;
-
+export default async function TypePage({ params }) {
+  const { typeId } = await params;
   return <PokemonType typeId={typeId} />;
-}
+} 

@@ -66,7 +66,7 @@ export async function PokemonType({ typeId }: PokemonTypeProps) {
         <Text variant="body" className={styles.errorText}>
           {`No Pokémon found with type: ${typeId}`}
         </Text>
-        <Link href="/types" className={styles.backLink}>
+        <Link href="/pokedex/types" className={styles.backLink}>
           <Button variant="primary">Back to Types</Button>
         </Link>
       </div>

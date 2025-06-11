@@ -19,14 +19,6 @@ export function Navigation() {
             Pokédex
           </Link>
         </li>
-        <li className={styles.navItem}>
-          <Link
-            href="/types"
-            className={`${styles.navLink} ${pathname === "/types" || pathname?.startsWith("/types/") ? styles.active : ""}`}
-          >
-            Types
-          </Link>
-        </li>
       </ul>
     </nav>
   );

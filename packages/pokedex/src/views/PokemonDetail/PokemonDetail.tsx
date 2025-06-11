@@ -66,7 +66,7 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
         pokemonData={allPokemon}
         renderTypeLink={(type: string, children: React.ReactNode) => (
           <Link
-            href={`/types/${type.toLowerCase()}`}
+            href={`/pokedex/types/${type.toLowerCase()}`}
             className={styles.typeLink}
           >
             {children}

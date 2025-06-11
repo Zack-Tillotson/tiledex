@@ -1,6 +1,7 @@
 .card {
-  padding: var(--spacing-4);
+  padding: var(--spacing-2);
   background: var(--color-background);
+  border: solid 1px var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;

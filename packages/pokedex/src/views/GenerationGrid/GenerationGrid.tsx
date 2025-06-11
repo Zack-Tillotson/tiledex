@@ -16,19 +16,6 @@ const typeColors: Record<string, string> = {
 export function GenerationGrid() {
   return (
     <div className={styles.container}>
-      <Header level={1} className={styles.heading}>
-        Pokédex
-      </Header>
-
-      <Link
-        variant="primary"
-        size="large"
-        href="/pokedex/search"
-        className={styles.searchButtonLink}
-      >
-        Search All Pokémon
-      </Link>
-
       <div className={styles.grid}>
         {generations.map((gen: GenerationData) => (
           <Card
