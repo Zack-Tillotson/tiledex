@@ -1,5 +1,31 @@
+import { Metadata } from 'next';
 import styles from "./page.module.css";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: 'TiledEx - Create Your Pokémon Story',
+  description: 'Craft your own Pokémon adventure with TiledEx. Build your roster, research Pokémon, and bring your story to life in the Pokémon world.',
+  keywords: 'Pokémon, storytelling, world building, roster management, Pokémon research, creative writing, Pokémon adventure',
+  openGraph: {
+    title: 'TiledEx - Create Your Pokémon Story',
+    description: 'Craft your own Pokémon adventure with TiledEx. Build your roster, research Pokémon, and bring your story to life in the Pokémon world.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/brand/hero-1200.png',
+        width: 1200,
+        height: 630,
+        alt: 'TiledEx - Your Pokémon Storytelling Companion'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TiledEx - Create Your Pokémon Story',
+    description: 'Craft your own Pokémon adventure with TiledEx. Build your roster, research Pokémon, and bring your story to life in the Pokémon world.',
+    images: ['/images/brand/hero-1200.png']
+  }
+};
 
 export default function Home() {
   return (
@@ -12,7 +38,7 @@ export default function Home() {
               sizes="100vw"
             />
             <img
-              src="/images/brand/hero-400.png"
+              src="/images/brand/hero.png"
               alt="TiledEx Hero"
               className="w-full h-full object-cover"
             />
@@ -25,7 +51,7 @@ export default function Home() {
           <div className={styles.cardContent}>
             <h2 className={styles.cardTitle}>Pokédex</h2>
             <p className={styles.cardDescription}>
-              Browse through all Pokémon species with detailed information
+              Research Pokémon species and their characteristics to enrich your story
             </p>
             <div className={styles.cardIcon}>
               <div className={styles.pokeball}></div>

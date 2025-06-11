@@ -1,0 +1,51 @@
+{
+  "name": "TiledEx - Pokémon Storytelling Companion",
+  "short_name": "TiledEx",
+  "description": "Create your own Pokémon adventure. Build your roster, research Pokémon, and bring your story to life in the Pokémon world.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#00a9a9",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/brand/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/brand/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/brand/favicon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/brand/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle", "productivity"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-1200x768.png",
+      "sizes": "1200x768",
+      "type": "image/png",
+      "label": "TiledEx Homepage",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/screenshot-428x593.png",
+      "sizes": "428x593",
+      "type": "image/png",
+      "label": "TiledEx Homepage",
+      "form_factor": "narrow"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+} 
