@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./pokemon-card.module.css";
 import { Card } from "@repo/ui";
 import { getPokemonTypeColor } from "@repo/types";
+import Image from "next/image";
 
 // Define Pokemon interface directly to avoid import issues
 interface Pokemon {
@@ -62,6 +63,13 @@ export function PokemonCard({
                 className={styles.type}
                 style={{ backgroundColor: getPokemonTypeColor(type) }}
               >
+                <Image
+                  src={`/images/types/${type.toLowerCase()}.svg`}
+                  alt={`${type} type icon`}
+                  width={12}
+                  height={12}
+                  className={styles.typeIcon}
+                />
                 {type}
               </span>
             ))}

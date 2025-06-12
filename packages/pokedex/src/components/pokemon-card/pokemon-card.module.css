@@ -60,11 +60,19 @@
 }
 
 .type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   text-transform: capitalize;
   color: var(--cornsilk-000);
+}
+
+.typeIcon {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .attributes {

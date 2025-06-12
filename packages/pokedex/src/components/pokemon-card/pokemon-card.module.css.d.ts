@@ -7,6 +7,7 @@ declare const styles: {
   readonly name: string;
   readonly types: string;
   readonly type: string;
+  readonly typeIcon: string;
 };
 
 export default styles;

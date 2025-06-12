@@ -10,6 +10,7 @@ import {
 } from "@repo/types";
 import { Link } from "@repo/ui";
 import { validatePokemonType, validatePokemonTypes } from "./type-validation";
+import Image from "next/image";
 
 export function PokemonType({
   typeData,
@@ -28,7 +29,7 @@ export function PokemonType({
     } catch (error) {
       console.error(`Invalid type in pokemon ${poke.name}:`, error);
     }
-    });
+  });
 
   // Validate type effectiveness data if present
   try {
@@ -42,10 +43,40 @@ export function PokemonType({
     console.error(`Invalid type in type effectiveness data:`, error);
   }
 
+  const TypeBadge = ({ type }: { type: string }) => {
+    const validType = validatePokemonType(type);
+    return (
+      <span
+        className={styles.typeBadge}
+        style={{
+          backgroundColor: getPokemonTypeColor(validType),
+        }}
+      >
+        <Image
+          src={`/images/types/${validType.toLowerCase()}.svg`}
+          alt={`${validType} type icon`}
+          width={16}
+          height={16}
+          className={styles.typeIcon}
+        />
+        {validType}
+      </span>
+    );
+  };
+
   return (
     <div className={`${styles.container} ${className}`}>
       <div className={styles.typeHeader} style={{ backgroundColor }}>
-        <h1 className={styles.typeName}>{validatedType}</h1>
+        <div className={styles.typeTitle}>
+          <Image
+            src={`/images/types/${validatedType.toLowerCase()}.svg`}
+            alt={`${validatedType} type icon`}
+            width={48}
+            height={48}
+            className={styles.typeIcon}
+          />
+          <h1 className={styles.typeName}>{validatedType}</h1>
+        </div>
         <div className={styles.pokemonCount}>{pokemon.length} Pokémon</div>
       </div>
 
@@ -58,6 +89,13 @@ export function PokemonType({
             <div className={styles.effectivenessCard}>
               <h3 className={styles.effectivenessTitle}>
                 <span className={styles.typePill} style={{ backgroundColor }}>
+                  <Image
+                    src={`/images/types/${validatedType.toLowerCase()}.svg`}
+                    alt={`${validatedType} type icon`}
+                    width={20}
+                    height={20}
+                    className={styles.typeIcon}
+                  />
                   {validatedType}
                 </span>{" "}
                 Attacks
@@ -69,20 +107,9 @@ export function PokemonType({
                     Super Effective Against:
                   </h4>
                   <div className={styles.typeList}>
-                    {typeInfo.superEffectiveAgainst.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.superEffectiveAgainst.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -93,20 +120,9 @@ export function PokemonType({
                     Not Very Effective Against:
                   </h4>
                   <div className={styles.typeList}>
-                    {typeInfo.notVeryEffectiveAgainst.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.notVeryEffectiveAgainst.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -117,20 +133,9 @@ export function PokemonType({
                     No Effect Against:
                   </h4>
                   <div className={styles.typeList}>
-                    {typeInfo.noEffectAgainst.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.noEffectAgainst.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -140,6 +145,13 @@ export function PokemonType({
             <div className={styles.effectivenessCard}>
               <h3 className={styles.effectivenessTitle}>
                 <span className={styles.typePill} style={{ backgroundColor }}>
+                  <Image
+                    src={`/images/types/${validatedType.toLowerCase()}.svg`}
+                    alt={`${validatedType} type icon`}
+                    width={20}
+                    height={20}
+                    className={styles.typeIcon}
+                  />
                   {validatedType}
                 </span>{" "}
                 Being Attacked
@@ -149,20 +161,9 @@ export function PokemonType({
                 <div className={styles.effectivenessSection}>
                   <h4 className={styles.effectivenessSubtitle}>Weak To:</h4>
                   <div className={styles.typeList}>
-                    {typeInfo.weakTo.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.weakTo.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -173,20 +174,9 @@ export function PokemonType({
                     Resistant To:
                   </h4>
                   <div className={styles.typeList}>
-                    {typeInfo.resistantTo.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.resistantTo.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -195,20 +185,9 @@ export function PokemonType({
                 <div className={styles.effectivenessSection}>
                   <h4 className={styles.effectivenessSubtitle}>Immune To:</h4>
                   <div className={styles.typeList}>
-                    {typeInfo.immuneTo.map((type) => {
-                      const validType = validatePokemonType(type);
-                      return (
-                        <span
-                          key={validType}
-                          className={styles.typeBadge}
-                          style={{
-                            backgroundColor: getPokemonTypeColor(validType),
-                          }}
-                        >
-                          {validType}
-                        </span>
-                      );
-                    })}
+                    {typeInfo.immuneTo.map((type) => (
+                      <TypeBadge key={type} type={type} />
+                    ))}
                   </div>
                 </div>
               )}
@@ -218,7 +197,6 @@ export function PokemonType({
       )}
 
       <h2 className={styles.sectionTitle}>Pokémon with {validatedType} type</h2>
-
       <div className={styles.pokemonGrid}>
         {pokemon.map((poke: PokemonTypeData["pokemon"][number]) => (
           <PokemonCard

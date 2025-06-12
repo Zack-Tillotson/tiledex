@@ -1,6 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-8);
 }
 
 .compactContainer {
@@ -17,7 +18,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-8);
 }
 
 .sectionTitle {
@@ -28,36 +29,33 @@
 }
 
 .overviewContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .5rem;
-  align-items: start;
+  display: flex;
+  gap: var(--spacing-8);
 }
 
 .headerInfo {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
 }
 
 .nameRow {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  align-items: baseline;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
 }
 
 .pokemonNumber {
-  font-size: 1.75rem;
-  color: #666;
-  font-weight: 500;
+  font-size: var(--font-size-xl);
+  color: var(--charcoal-600);
+  font-weight: var(--font-weight-medium);
 }
 
 .pokemonName {
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
   text-transform: capitalize;
   margin: 0;
-  color: #333;
+  color: var(--charcoal-900);
 }
 
 .idBadge {
@@ -68,29 +66,29 @@
 
 .typesList {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--spacing-2);
 }
 
 .typeBadgeWrapper {
-  display: inline-block;
+  text-decoration: none;
 }
 
 .typeBadge {
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
   color: white;
-  font-weight: 500;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   text-transform: capitalize;
-  font-size: 0.9rem;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.typeBadge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.typeIcon {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .imagesSection {
@@ -180,10 +178,22 @@
   padding: 0.75rem;
 }
 
+.totalStat {
+  grid-column: 1 / -1;
+  background-color: #f1f3f5;
+  padding: 1rem;
+}
+
 .statName {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.25rem;
+}
+
+.totalStat .statName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
 }
 
 .statBarContainer {
@@ -192,6 +202,10 @@
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 0.25rem;
+}
+
+.totalStat .statBarContainer {
+  height: 10px;
 }
 
 .statBar {
@@ -204,6 +218,19 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: #333;
+}
+
+.totalStat .statValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.statSeparator {
+  grid-column: 1 / -1;
+  height: 1px;
+  background-color: #e9ecef;
+  margin: 0.5rem 0;
 }
 
 /* Attributes Section */
@@ -311,6 +338,33 @@
   text-align: center;
 }
 
+/* Type Defenses Section */
+.typeDefensesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
+}
+
+.typeDefenseCard {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.typeDefenseTitle {
+  font-size: 1.1rem;
+  color: #495057;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.typeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 /* Responsive design */
 @media (min-width: 768px) {
   .content {
@@ -344,7 +398,15 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-4);
+  }
+
   .overviewContainer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .pokemonName {
+    font-size: var(--font-size-3xl);
   }
 }

@@ -2,28 +2,10 @@ import React from "react";
 import styles from "./pokemon-detail.module.css";
 import { PokemonEvolution } from "../pokemon-evolution";
 import { getPokemonTypeColor } from "@repo/types";
+import Image from "next/image";
+import { getTypeByName } from "@repo/pokeapi";
 
 // Define Pokemon interfaces locally to avoid import issues
-// These match the structure in the types package
-interface Pokemon {
-  id: number;
-  name: string;
-  types: string[];
-  sprites: {
-    front_default: string;
-    back_default?: string;
-    front_shiny?: string;
-    back_shiny?: string;
-    official_artwork?: string;
-  };
-  stats: PokemonStat[];
-  height: number;
-  weight: number;
-  abilities: PokemonAbility[];
-  species: string;
-  evolution?: EvolutionNode[];
-}
-
 interface PokemonStat {
   name: string;
   base_stat: number;
@@ -46,21 +28,71 @@ interface EvolutionNode {
   };
 }
 
-// Helper functions removed as they're no longer used in the compact view
+interface Pokemon {
+  id: number;
+  name: string;
+  types: string[];
+  height: number;
+  weight: number;
+  species: string;
+  abilities: PokemonAbility[];
+  stats: PokemonStat[];
+  sprites: {
+    front_default: string;
+    official_artwork?: string;
+  };
+  evolution?: EvolutionNode[];
+}
 
 interface PokemonDetailProps {
   pokemon: Pokemon;
   pokemonData?: Pokemon[];
   className?: string;
   renderTypeLink?: (type: string, children: React.ReactNode) => React.ReactNode;
-  renderPokemonLink?: (
-    pokemonName: string,
-    children: React.ReactNode,
-  ) => React.ReactNode;
-  renderAbilityLink?: (
-    abilityName: string,
-    children: React.ReactNode,
-  ) => React.ReactNode;
+  renderPokemonLink?: (pokemonName: string, children: React.ReactNode) => React.ReactNode;
+  renderAbilityLink?: (ability: string, children: React.ReactNode) => React.ReactNode;
+}
+
+// Helper function to calculate combined type effectiveness
+function calculateTypeDefenses(types: string[]) {
+  const typeData = types.map(type => getTypeByName(type));
+  const superEffective: string[] = [];
+  const notVeryEffective: string[] = [];
+  const noEffect: string[] = [];
+
+  // For each attacking type
+  const allTypes = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"];
+  
+  allTypes.forEach(attackingType => {
+    let effectiveness = 1;
+    
+    // Check each of the Pokémon's types
+    typeData.forEach(type => {
+      if (!type) return;
+      
+      if (type.weakTo.includes(attackingType)) {
+        effectiveness *= 2;
+      } else if (type.resistantTo.includes(attackingType)) {
+        effectiveness *= 0.5;
+      } else if (type.immuneTo.includes(attackingType)) {
+        effectiveness = 0;
+      }
+    });
+
+    if (effectiveness === 0) {
+      noEffect.push(attackingType);
+    } else if (effectiveness >= 2) {
+      superEffective.push(attackingType);
+    } else if (effectiveness <= 0.5) {
+      notVeryEffective.push(attackingType);
+    }
+  });
+
+  return {
+    superEffective,
+    notVeryEffective,
+    noEffect
+  };
 }
 
 export function PokemonDetail({
@@ -71,6 +103,8 @@ export function PokemonDetail({
   renderPokemonLink,
   renderAbilityLink,
 }: PokemonDetailProps): React.ReactElement {
+  const typeDefenses = calculateTypeDefenses(pokemon.types);
+
   return (
     <div className={`${styles.container} ${className}`}>
       {/* Overview Section */}
@@ -90,6 +124,13 @@ export function PokemonDetail({
                     className={styles.typeBadge}
                     style={{ backgroundColor: getPokemonTypeColor(type) }}
                   >
+                    <Image
+                      src={`/images/types/${type.toLowerCase()}.svg`}
+                      alt={`${type} type icon`}
+                      width={16}
+                      height={16}
+                      className={styles.typeIcon}
+                    />
                     {type}
                   </span>
                 );
@@ -125,28 +166,103 @@ export function PokemonDetail({
         </div>
       </section>
 
+      {/* Evolution Section */}
+      {pokemon.evolution && pokemon.evolution.length > 0 && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Evolution</h2>
+          <PokemonEvolution
+            evolution={pokemon.evolution}
+            currentPokemonName={pokemon.name}
+            pokemonData={pokemonData}
+            renderPokemonLink={renderPokemonLink}
+          />
+        </section>
+      )}
+
+      {/* Type Defenses Section */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Type Defenses</h2>
+        <div className={styles.typeDefensesGrid}>
+          {typeDefenses.superEffective.length > 0 && (
+            <div className={styles.typeDefenseCard}>
+              <h3 className={styles.typeDefenseTitle}>Weak To</h3>
+              <div className={styles.typeList}>
+                {typeDefenses.superEffective.map((type) => (
+                  <span
+                    key={type}
+                    className={styles.typeBadge}
+                    style={{ backgroundColor: getPokemonTypeColor(type) }}
+                  >
+                    <Image
+                      src={`/images/types/${type.toLowerCase()}.svg`}
+                      alt={`${type} type icon`}
+                      width={16}
+                      height={16}
+                      className={styles.typeIcon}
+                    />
+                    {type}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {typeDefenses.notVeryEffective.length > 0 && (
+            <div className={styles.typeDefenseCard}>
+              <h3 className={styles.typeDefenseTitle}>Resistant To</h3>
+              <div className={styles.typeList}>
+                {typeDefenses.notVeryEffective.map((type) => (
+                  <span
+                    key={type}
+                    className={styles.typeBadge}
+                    style={{ backgroundColor: getPokemonTypeColor(type) }}
+                  >
+                    <Image
+                      src={`/images/types/${type.toLowerCase()}.svg`}
+                      alt={`${type} type icon`}
+                      width={16}
+                      height={16}
+                      className={styles.typeIcon}
+                    />
+                    {type}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {typeDefenses.noEffect.length > 0 && (
+            <div className={styles.typeDefenseCard}>
+              <h3 className={styles.typeDefenseTitle}>Immune To</h3>
+              <div className={styles.typeList}>
+                {typeDefenses.noEffect.map((type) => (
+                  <span
+                    key={type}
+                    className={styles.typeBadge}
+                    style={{ backgroundColor: getPokemonTypeColor(type) }}
+                  >
+                    <Image
+                      src={`/images/types/${type.toLowerCase()}.svg`}
+                      alt={`${type} type icon`}
+                      width={16}
+                      height={16}
+                      className={styles.typeIcon}
+                    />
+                    {type}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Stats</h2>
         <div className={styles.statsSection}>
           <div className={styles.statsGrid}>
-            {pokemon.stats.map((stat: PokemonStat) => (
-              <div key={stat.name} className={styles.statItem}>
-                <h3 className={styles.statName}>{stat.name}</h3>
-                <div className={styles.statBarContainer}>
-                  <div
-                    className={styles.statBar}
-                    style={{
-                      width: `${Math.min(100, (stat.base_stat / 160) * 100)}%`,
-                      backgroundColor: getStatColor(stat.base_stat),
-                    }}
-                  ></div>
-                </div>
-                <span className={styles.statValue}>{stat.base_stat}</span>
-              </div>
-            ))}
-            <div className={styles.statSeparator}></div>
-            <div className={styles.statItem}>
+            <div className={`${styles.statItem} ${styles.totalStat}`}>
               <h3 className={styles.statName}>Total</h3>
               <div className={styles.statBarContainer}>
                 <div
@@ -166,6 +282,22 @@ export function PokemonDetail({
                 {pokemon.stats.reduce((sum, stat) => sum + stat.base_stat, 0)}
               </span>
             </div>
+            <div className={styles.statSeparator}></div>
+            {pokemon.stats.map((stat: PokemonStat) => (
+              <div key={stat.name} className={styles.statItem}>
+                <h3 className={styles.statName}>{stat.name}</h3>
+                <div className={styles.statBarContainer}>
+                  <div
+                    className={styles.statBar}
+                    style={{
+                      width: `${Math.min(100, (stat.base_stat / 160) * 100)}%`,
+                      backgroundColor: getStatColor(stat.base_stat),
+                    }}
+                  ></div>
+                </div>
+                <span className={styles.statValue}>{stat.base_stat}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -217,19 +349,6 @@ export function PokemonDetail({
           )}
         </div>
       </section>
-
-      {/* Evolution Section */}
-      {pokemon.evolution && pokemon.evolution.length > 0 && (
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Evolution Chain</h2>
-          <PokemonEvolution
-            evolution={pokemon.evolution}
-            currentPokemonName={pokemon.name}
-            pokemonData={pokemonData.length > 0 ? pokemonData : [pokemon]}
-            renderPokemonLink={renderPokemonLink}
-          />
-        </section>
-      )}
     </div>
   );
 }

@@ -1,6 +1,8 @@
 declare const styles: {
   readonly container: string;
   readonly typeHeader: string;
+  readonly typeTitle: string;
+  readonly typeIcon: string;
   readonly typeName: string;
   readonly pokemonCount: string;
   readonly description: string;

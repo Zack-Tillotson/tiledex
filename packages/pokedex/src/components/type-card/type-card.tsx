@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./type-card.module.css";
 import { Card } from "@repo/ui";
 import { getPokemonTypeColor } from "@repo/types";
+import Image from "next/image";
 
 export interface TypeCardProps {
   type: string;
@@ -26,7 +27,16 @@ export function TypeCard({
       style={{ backgroundColor: getPokemonTypeColor(type) }}
     >
       <div className={styles.content}>
-        <h2 className={styles.typeName}>{type}</h2>
+        <div className={styles.typeHeader}>
+          <Image
+            src={`/images/types/${type.toLowerCase()}.svg`}
+            alt={`${type} type icon`}
+            width={32}
+            height={32}
+            className={styles.typeIcon}
+          />
+          <h2 className={styles.typeName}>{type}</h2>
+        </div>
         <div className={styles.count}>{count} Pokémon</div>
       </div>
     </Card>
