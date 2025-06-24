@@ -52,15 +52,6 @@ export function PokemonDetail({ id }: PokemonDetailProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backLinkContainer}>
-        <Link
-          href={`/pokedex/generation/${generation.id}`}
-          className={styles.backLink}
-        >
-          &larr; Back to Generation {getGenerationRomanNumeral(generation.id)}
-        </Link>
-      </div>
-
       <PokemonDetailUI
         pokemon={pokemon}
         pokemonData={allPokemon}

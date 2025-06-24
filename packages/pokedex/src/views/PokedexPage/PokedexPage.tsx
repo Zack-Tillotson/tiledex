@@ -14,16 +14,16 @@ export function PokedexPage() {
 
       <div className={styles.navigation}>
         <Link
-          variant="primary"
+          variant="outline"
           size="large"
           href="/pokedex/search"
           className={styles.searchButtonLink}
         >
-          Search All Pokémon
+          Search by Name
         </Link>
 
         <Link
-          variant="secondary"
+          variant="primary"
           size="large"
           href="/pokedex/types"
           className={styles.typesButtonLink}

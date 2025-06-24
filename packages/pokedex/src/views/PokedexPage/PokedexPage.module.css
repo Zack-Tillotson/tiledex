@@ -14,8 +14,11 @@
   margin-bottom: var(--spacing-6);
 }
 
-.searchButtonLink,
+.searchButtonLink {
+  width: 100%;
+  text-align: center;
+}
 .typesButtonLink {
-  min-width: 200px;
+  width: 100%;
   text-align: center;
 } 

@@ -27,9 +27,6 @@ export function TypesView() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Link href="/pokedex" className={styles.backLink}>
-          &larr; Back to Pokédex
-        </Link>
         <Header level={1} className={styles.title}>Pokémon Types</Header>
         <Text variant="body" className={styles.description}>
           Explore Pokémon by their types. Each type has unique characteristics and

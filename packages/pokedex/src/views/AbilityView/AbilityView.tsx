@@ -28,12 +28,6 @@ export function AbilityView({ name }: AbilityViewProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.backLinkContainer}>
-        <Link href="/pokedex" className={styles.backLink}>
-          &larr; Back to Pokedex
-        </Link>
-      </div>
-
       <AbilityDetail
         name={ability.name}
         description={ability.description}

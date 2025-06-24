@@ -11,7 +11,8 @@
     "./SearchForm": "./src/views/SearchForm/SearchForm.tsx",
     "./PokemonType": "./src/views/PokemonType/PokemonType.tsx",
     "./AbilityView": "./src/views/AbilityView/AbilityView.tsx",
-    "./PokedexPage": "./src/views/PokedexPage/PokedexPage.tsx"
+    "./PokedexPage": "./src/views/PokedexPage/PokedexPage.tsx",
+    "./Breadcrumbs": "./src/views/Breadcrumbs/Breadcrumbs.tsx"
   },
   "scripts": {
     "build": "tsc",

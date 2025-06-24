@@ -49,13 +49,11 @@ export default function Home() {
       <div className={styles.cardGrid}>
         <Link href="/pokedex" className={styles.card}>
           <div className={styles.cardContent}>
-            <h2 className={styles.cardTitle}>Pokédex</h2>
+            <h2 className={styles.cardTitle}>Pokedex</h2>
+            <div className={styles.pokeball}></div>
             <p className={styles.cardDescription}>
               Research Pokémon species and their characteristics to enrich your story
             </p>
-            <div className={styles.cardIcon}>
-              <div className={styles.pokeball}></div>
-            </div>
           </div>
         </Link>
 
