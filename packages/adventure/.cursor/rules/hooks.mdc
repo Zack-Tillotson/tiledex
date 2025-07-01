@@ -1,0 +1,53 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Hook Rules
+
+Hooks encapsulate business logic with clean interfaces and should be thoroughly tested.
+
+## Guidelines
+- Must start with 'use' prefix
+- Must have unit tests
+- No UI logic
+- Must have clean interfaces with TypeScript types
+
+## Examples
+
+✅ Good:
+```typescript
+// hooks/usePokemonData.ts
+/**
+ * Hook to fetch and manage Pokemon data
+ * @param id - The ID of the Pokemon to fetch
+ * @returns Pokemon data and loading state
+ */
+interface UsePokemonDataResult {
+  pokemon: Pokemon | null;
+  isLoading: boolean;
+  error: Error | null;
+}
+
+export function usePokemonData(id: string): UsePokemonDataResult {
+  const [pokemon, setPokemon] = useState<Pokemon | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    async function fetchPokemon() {
+      try {
+        const data = await getPokemon(id);
+        setPokemon(data);
+      } catch (err) {
+        setError(err as Error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchPokemon();
+  }, [id]);
+
+  return { pokemon, isLoading, error };
+}
+```

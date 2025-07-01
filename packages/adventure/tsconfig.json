@@ -1,0 +1,12 @@
+{
+  "extends": "../../packages/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "plugins": [{ "name": "next" }]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/types/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+} 

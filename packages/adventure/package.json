@@ -1,0 +1,30 @@
+{
+  "name": "@repo/adventure",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.3",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.26.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+} 
