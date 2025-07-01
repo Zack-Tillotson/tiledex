@@ -1,0 +1,48 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.backButtonLink {
+  min-width: 200px;
+}
+
+.content {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.placeholder {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--color-background-secondary);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--color-border);
+}
+
+.episodeInfo {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--color-background);
+  border-radius: var(--radius-md);
+  text-align: left;
+}
+
+.episodeInfo p {
+  margin: 0.5rem 0;
+} 

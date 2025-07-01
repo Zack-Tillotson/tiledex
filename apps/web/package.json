@@ -12,6 +12,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/adventure": "workspace:*",
     "@repo/pokeapi": "workspace:*",
     "@repo/pokedex": "workspace:*",
     "@repo/types": "workspace:*",

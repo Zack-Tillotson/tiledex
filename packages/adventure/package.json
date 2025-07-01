@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    ".": "./src/index.ts",
+    "./Dashboard": "./src/views/Dashboard/Dashboard.tsx",
+    "./PartyOverview": "./src/views/PartyOverview/PartyOverview.tsx",
+    "./CampaignOverview": "./src/views/CampaignOverview/CampaignOverview.tsx",
+    "./EpisodeOverview": "./src/views/EpisodeOverview/EpisodeOverview.tsx"
   },
   "scripts": {
     "build": "tsc",

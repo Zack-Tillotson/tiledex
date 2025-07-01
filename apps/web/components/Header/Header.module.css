@@ -31,8 +31,50 @@
 }
 
 .logoImage {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+.logoImageSmall {
+  height: 3.125rem;
+  width: 3.125rem;
+  display: none;
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* Homepage specific styles - always show wider logo */
+.homepage .logoImage {
+  display: block;
+}
+
+.homepage .logoImageSmall {
+  display: none;
+}
+
+/* Mobile styles - only apply favicon logic to non-homepage routes */
+@media (max-width: 768px) {
+  .logoImageSmall {
+    display: block;
+  }
+
+  .logoImage {
+    display: none;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  /* Override for homepage on mobile */
+  .homepage .logoImage {
+    display: block;
+  }
+  
+  .homepage .logoImageSmall {
+    display: none;
+  }
 }
 
 .logoText {

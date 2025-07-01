@@ -57,6 +57,16 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/adventure" className={styles.card}>
+          <div className={styles.cardContent}>
+            <h2 className={styles.cardTitle}>Adventure</h2>
+            <div className={styles.adventureIcon}></div>
+            <p className={styles.cardDescription}>
+              Manage your party, campaigns, and story episodes for your Pokémon adventure
+            </p>
+          </div>
+        </Link>
+
         {/* More cards can be added here in the future */}
       </div>
     </div>
