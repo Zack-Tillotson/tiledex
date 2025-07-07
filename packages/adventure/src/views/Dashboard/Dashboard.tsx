@@ -11,6 +11,22 @@ import { Header, Link } from "@repo/ui";
 export function Dashboard() {
   return (
     <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <picture>
+            <source
+              srcSet="/images/brand/adventure1.png"
+              sizes="100vw"
+            />
+            <img
+              src="/images/brand/adventure1.png"
+              alt="Pokémon Adventure - Brothers with Pokémon running towards a forest"
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
+      </section>
+
       <Header level={1} className={styles.heading}>
         Adventure Dashboard
       </Header>
@@ -26,7 +42,7 @@ export function Dashboard() {
         </Link>
 
         <Link
-          variant="primary"
+          variant="outline"
           size="large"
           href="/adventure/campaign"
           className={styles.campaignButtonLink}

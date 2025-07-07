@@ -11,6 +11,22 @@ import { Header, Link } from "@repo/ui";
 export function PartyOverview() {
   return (
     <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <picture>
+            <source
+              srcSet="/images/brand/adventure2.png"
+              sizes="100vw"
+            />
+            <img
+              src="/images/brand/adventure2.png"
+              alt="Pokémon Party - Team of trainers and their Pokémon"
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
+      </section>
+
       <Header level={1} className={styles.heading}>
         Party Overview
       </Header>

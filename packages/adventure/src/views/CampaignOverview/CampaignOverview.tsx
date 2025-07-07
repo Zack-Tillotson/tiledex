@@ -11,6 +11,22 @@ import { Header, Link } from "@repo/ui";
 export function CampaignOverview() {
   return (
     <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <picture>
+            <source
+              srcSet="/images/brand/campaign2.png"
+              sizes="100vw"
+            />
+            <img
+              src="/images/brand/campaign2.png"
+              alt="Pokémon Campaign - Story map and adventure planning"
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
+      </section>
+
       <Header level={1} className={styles.heading}>
         Campaign Overview
       </Header>

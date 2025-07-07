@@ -16,6 +16,22 @@ interface EpisodeOverviewProps {
 export function EpisodeOverview({ episodeId }: EpisodeOverviewProps) {
   return (
     <div className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <picture>
+            <source
+              srcSet="/images/brand/episode1.png"
+              sizes="100vw"
+            />
+            <img
+              src="/images/brand/episode1.png"
+              alt="Pokémon Episode - Story scene and character development"
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
+      </section>
+
       <Header level={1} className={styles.heading}>
         Episode: {episodeId}
       </Header>
