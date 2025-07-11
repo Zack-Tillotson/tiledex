@@ -6,6 +6,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit",
     "fetch-data": "ts-node etl/fetchPokemonData.ts",

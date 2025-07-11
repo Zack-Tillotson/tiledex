@@ -35,6 +35,7 @@ export function SearchForm({
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
       <Input
+        name="search"
         label="Pokémon Name"
         id="search"
         type="text"

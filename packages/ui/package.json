@@ -17,6 +17,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "clean": "rm -rf dist",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit"
   },

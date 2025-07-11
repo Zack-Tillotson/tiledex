@@ -3,6 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
+    "clean:all": "turbo run clean && rm -rf .turbo && rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules",
+    "clean:cache": "rm -rf .turbo",
     "deploy": "turbo run deploy",
     "dev": "turbo run dev",
     "lint": "turbo run lint",

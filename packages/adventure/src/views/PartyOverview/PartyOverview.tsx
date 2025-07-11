@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { Header, SkeletonPage } from "@repo/ui";
+import { Header, SkeletonPage, Button } from "@repo/ui";
 import { useClientData } from "../../data/index.js";
 import { PartyList } from "../../components/index.js";
 import styles from "./PartyOverview.module.css";
@@ -30,9 +30,18 @@ export function PartyOverview() {
         </div>
       </section>
 
-      <Header level={1} className={styles.heading}>
-        The Adventurers
-      </Header>
+      <div className={styles.headerSection}>
+        <Header level={1} className={styles.heading}>
+          The Adventurers
+        </Header>
+        <Button 
+          variant="primary" 
+          size="medium"
+          onClick={() => window.location.href = "/adventure/party/new"}
+        >
+          Add Member
+        </Button>
+      </div>
 
       <PartyList party={data.party || []} />
       

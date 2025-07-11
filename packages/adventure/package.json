@@ -10,10 +10,12 @@
     "./Dashboard": "./dist/views/Dashboard/Dashboard.js",
     "./PartyOverview": "./dist/views/PartyOverview/PartyOverview.js",
     "./CampaignOverview": "./dist/views/CampaignOverview/CampaignOverview.js",
-    "./EpisodeOverview": "./dist/views/EpisodeOverview/EpisodeOverview.js"
+    "./EpisodeOverview": "./dist/views/EpisodeOverview/EpisodeOverview.js",
+    "./PartyMemberForm": "./dist/views/PartyMemberForm/PartyMemberForm.js"
   },
   "scripts": {
     "build": "tsc",
+    "clean": "rm -rf dist",
     "postbuild": "find src -name '*.module.css' -exec sh -c 'mkdir -p dist/$(dirname \"${1#src/}\") && cp \"$1\" \"dist/${1#src/}\"' _ {} \\;",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
@@ -21,6 +23,9 @@
   "dependencies": {
     "@repo/types": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@tanstack/react-query": "^5.0.0",
+    "next": "^15.3.0",
+    "react-hook-form": "^7.48.2",
     "superstruct": "0.16.0",
     "zustand": "^4.5.0"
   },

@@ -1,111 +1,59 @@
-# Tiledex - A Modern Pokédex Application
+# TiledEx
 
-A modern, performant Pokédex application built with Next.js and TypeScript, featuring a tile-based interface for exploring Pokémon.
+A monorepo for Pokémon-related applications and packages.
 
-## Features
-
-- 🎮 Interactive tile-based Pokémon exploration
-- ⚡ Fast and responsive UI with Next.js App Router
-- 🎨 Modern, component-based architecture with reusable UI components
-- 📱 Fully responsive design that works on all devices
-- 🔍 Local PokeAPI data for blazing-fast performance
-- 🌐 Server-side rendering for optimal performance
-
-## Tech Stack
-
-- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: CSS Modules with design tokens
-- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
-- **Package Manager**: [pnpm](https://pnpm.io/)
-- **Monorepo Tools**: [Turborepo](https://turborepo.org/)
-- **Hosting**: Firebase Hosting
-- **Development Tools**:
-  - ESLint for code linting
-  - Prettier for code formatting
-  - TypeScript for static type checking
-
-## Project Structure
-
-The project is organized as a monorepo with the following structure:
-
-### Apps
-- `web`: The main Next.js application (Pokédex interface)
-
-### Packages
-- `@repo/ui`: Shared React component library
-- `@repo/pokeapi`: Static PokeAPI data package
-- `@repo/types`: Shared TypeScript types
-- `@repo/pokedex`: Core Pokédex functionality
-- `@repo/eslint-config`: Shared ESLint configuration
-- `@repo/typescript-config`: Shared TypeScript configuration
-
-## Getting Started
+## Development
 
 ### Prerequisites
 
 - Node.js >= 18
 - pnpm >= 9.0.0
 
-### Installation
+### Setup
 
-1. Clone the repository:
-   ```sh
-   git clone <repository-url>
-   cd tiledex
-   ```
-
-2. Install dependencies:
-   ```sh
-   pnpm install
-   ```
+```bash
+pnpm install
+```
 
 ### Development
 
-Run the development server:
-```sh
+```bash
 pnpm dev
 ```
 
-The application will be available at [http://localhost:3042](http://localhost:3042)
-
 ### Building
 
-Build all packages and applications:
-```sh
+```bash
 pnpm build
 ```
 
-### Deployment
+### Cleaning Build Artifacts
 
-Deploy to Firebase Hosting:
-```sh
-pnpm deploy
+The project includes several clean commands to remove build artifacts:
+
+- `pnpm clean` - Removes build artifacts from all packages and apps (dist, .next, out directories)
+- `pnpm clean:cache` - Removes Turbo cache only
+- `pnpm clean:all` - Removes all build artifacts, cache, and node_modules (full clean)
+
+### Linting
+
+```bash
+pnpm lint
 ```
 
-## Development Guidelines
+### Type Checking
 
-- Follow the component architecture guidelines:
-  - Atomic components in `@repo/ui`
-  - UI components for presentation
-  - View components for business logic
-  - Custom hooks for reusable logic
-- Use CSS Modules for styling
-- Write unit tests for all components and hooks
-- Follow the Prettier code style
-- Ensure type safety with TypeScript
+```bash
+pnpm check-types
+```
 
-## Contributing
+## Project Structure
 
-1. Create a new branch for your feature
-2. Make your changes
-3. Run tests and type checking:
-   ```sh
-   pnpm lint
-   pnpm check-types
-   ```
-4. Create a pull request
-
-## License
-
-This project is proprietary and confidential.
+- `apps/web` - Next.js web application
+- `packages/adventure` - Adventure game package
+- `packages/pokedex` - Pokédex package
+- `packages/ui` - Shared UI components
+- `packages/types` - Shared TypeScript types
+- `packages/pokeapi` - Pokémon API utilities
+- `packages/eslint-config` - Shared ESLint configuration
+- `packages/typescript-config` - Shared TypeScript configuration

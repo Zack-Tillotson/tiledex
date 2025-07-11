@@ -1,5 +1,6 @@
 import React from "react";
 import { Party } from "../types/party.js";
+import { Button } from "@repo/ui";
 import styles from "./PartyList.module.css";
 
 interface PartyListProps {
@@ -24,7 +25,16 @@ export function PartyList({ party }: PartyListProps) {
                   className={styles.avatar}
                 />
               </div>
-              <h3 className={styles.memberName}>{member.name}</h3>
+              <div className={styles.memberInfo}>
+                <h3 className={styles.memberName}>{member.name}</h3>
+                <Button
+                  variant="secondary"
+                  size="small"
+                  onClick={() => window.location.href = `/adventure/party/-/?id=${member.id}`}
+                >
+                  Edit
+                </Button>
+              </div>
             </div>
             
             <div className={styles.pokemonList}>

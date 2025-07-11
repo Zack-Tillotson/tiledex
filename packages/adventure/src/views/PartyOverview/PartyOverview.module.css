@@ -22,7 +22,14 @@
   object-fit: cover;
 }
 
-.heading {
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
-  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  text-align: left;
 }
