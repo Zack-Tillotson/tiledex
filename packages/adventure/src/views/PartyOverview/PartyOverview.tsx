@@ -1,14 +1,18 @@
-"use client";
+'use client'
 
 import React from "react";
+import { Header, SkeletonPage } from "@repo/ui";
+import { useClientData } from "../../data/index.js";
+import { PartyList } from "../../components/index.js";
 import styles from "./PartyOverview.module.css";
-import { Header, Link } from "@repo/ui";
 
-/**
- * PartyOverview view for managing party members
- * Displays party composition and member details
- */
 export function PartyOverview() {
+  const { isLoading, data } = useClientData({ party: true });
+
+  if (isLoading) {
+    return <SkeletonPage />;
+  }
+  
   return (
     <div className={styles.container}>
       <section className={styles.hero}>
@@ -21,33 +25,17 @@ export function PartyOverview() {
             <img
               src="/images/brand/adventure2.png"
               alt="Pokémon Party - Team of trainers and their Pokémon"
-              className="w-full h-full object-cover"
             />
           </picture>
         </div>
       </section>
 
       <Header level={1} className={styles.heading}>
-        Party Overview
+        The Adventurers
       </Header>
 
-      <div className={styles.navigation}>
-        <Link
-          variant="outline"
-          size="large"
-          href="/adventure"
-          className={styles.backButtonLink}
-        >
-          Back to Dashboard
-        </Link>
-      </div>
-
-      <div className={styles.content}>
-        <p>Manage your party members and their Pokémon here.</p>
-        <div className={styles.placeholder}>
-          <p>Party management features coming soon...</p>
-        </div>
-      </div>
+      <PartyList party={data.party || []} />
+      
     </div>
   );
 }

@@ -2,21 +2,26 @@
   "name": "@repo/adventure",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./Dashboard": "./src/views/Dashboard/Dashboard.tsx",
-    "./PartyOverview": "./src/views/PartyOverview/PartyOverview.tsx",
-    "./CampaignOverview": "./src/views/CampaignOverview/CampaignOverview.tsx",
-    "./EpisodeOverview": "./src/views/EpisodeOverview/EpisodeOverview.tsx"
+    ".": "./dist/index.js",
+    "./Dashboard": "./dist/views/Dashboard/Dashboard.js",
+    "./PartyOverview": "./dist/views/PartyOverview/PartyOverview.js",
+    "./CampaignOverview": "./dist/views/CampaignOverview/CampaignOverview.js",
+    "./EpisodeOverview": "./dist/views/EpisodeOverview/EpisodeOverview.js"
   },
   "scripts": {
     "build": "tsc",
+    "postbuild": "find src -name '*.module.css' -exec sh -c 'mkdir -p dist/$(dirname \"${1#src/}\") && cp \"$1\" \"dist/${1#src/}\"' _ {} \\;",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/types": "workspace:*",
     "@repo/ui": "workspace:*",
+    "superstruct": "0.16.0",
     "zustand": "^4.5.0"
   },
   "devDependencies": {
@@ -32,4 +37,4 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
-} 
+}

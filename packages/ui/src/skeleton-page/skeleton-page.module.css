@@ -16,13 +16,13 @@
   position: relative;
 }
 
-.heroImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .heading {
   margin-bottom: 2rem;
   text-align: center;
 }
+
+.contentSkeleton {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+} 

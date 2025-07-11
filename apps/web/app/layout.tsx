@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Header } from "../components/Header";
+import { QueryProvider } from "../components/QueryProvider";
 
 import "./globals.css";
 import "@repo/ui/styles";
@@ -54,8 +55,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <main className="main-content">{children}</main>
+        <QueryProvider>
+          <Header />
+          <main className="main-content">{children}</main>
+        </QueryProvider>
       </body>
     </html>
   );

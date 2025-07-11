@@ -11,6 +11,8 @@
     "./card": "./src/card/card.tsx",
     "./link-button": "./src/link-button/Link.tsx",
     "./pokemon-card": "./src/pokemon-card/pokemon-card.tsx",
+    "./skeleton": "./src/skeleton/skeleton.tsx",
+    "./skeleton-page": "./src/skeleton-page/skeleton-page.tsx",
     "./type-card": "./src/type-card/type-card.tsx"
   },
   "scripts": {
