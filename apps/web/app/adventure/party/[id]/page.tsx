@@ -19,6 +19,7 @@ export function generateStaticParams() {
  * Server component that renders the client-side view
  * @param params - Route parameters containing the party member ID
  */
-export default function EditPartyMemberPage({ params }: EditPartyMemberPageProps) {
-  return <EditPartyMemberView id={params.id} />;
+export default async function EditPartyMemberPage({ params }: EditPartyMemberPageProps) {
+  const {id} = await params;
+  return <EditPartyMemberView id={id} />;
 } 

@@ -1,5 +1,6 @@
 import { collection, getDocs, query, where, doc, getDoc, updateDoc } from "firebase/firestore";
 import { Party, PartyMember } from "../types/party.js";
+import { Campaign, CampaignEpisode } from "../types/campaign.js";
 import { validateParty } from "../types/validation.js";
 import { firebase } from "./firebase.js";
 
@@ -38,6 +39,36 @@ export async function getParty(): Promise<Party> {
     console.error('Party validation failed:', error);
     // Return empty array if validation fails
     return [];
+  }
+}
+
+/**
+ * Get the user's campaign data
+ * @returns Campaign data or null if not found
+ */
+export async function getCampaignData(): Promise<Campaign | null> {
+  try {
+    const campaign = await getCampaign();
+    
+    if (!campaign) {
+      return null;
+    }
+    
+    const campaignData = campaign.data();
+    
+    // Validate and return campaign data
+    const validatedCampaign: Campaign = {
+      id: campaign.id,
+      owner: campaignData.owner,
+      party: campaignData.party || [],
+      objectives: campaignData.objectives || [],
+      episodes: campaignData.episodes || [],
+    };
+    
+    return validatedCampaign;
+  } catch (error) {
+    console.error("Error getting campaign:", error);
+    throw error;
   }
 }
 
@@ -119,6 +150,36 @@ export async function savePartyMember(id: string | null, data: Omit<PartyMember,
     return memberId;
   } catch (error) {
     console.error("Error saving party member:", error);
+    throw error;
+  }
+}
+
+/**
+ * Get episode data from the campaign by episode ID
+ * @param episodeId - The episode ID to fetch
+ * @returns Episode data or null if not found
+ */
+export async function getEpisodeData(episodeId: string): Promise<CampaignEpisode | null> {
+  try {
+    const campaign = await getCampaign();
+    
+    if (!campaign) {
+      return null;
+    }
+    
+    const campaignData = campaign.data();
+    const episodes = campaignData.episodes || [];
+    
+    // Find the episode by ID
+    const episode = episodes[episodeId];
+    
+    if (episode) {
+      return episode;
+    }
+    
+    return null;
+  } catch (error) {
+    console.error("Error getting episode:", error);
     throw error;
   }
 }

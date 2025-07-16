@@ -1,19 +1,19 @@
 import { useQueries } from "@tanstack/react-query";
 import { Campaign } from "../types/campaign.js";
-import { Episode } from "../types/episode.js";
+import { CampaignEpisode } from "../types/campaign.js";
 import { Party } from "../types/party.js";
-import { getParty } from "./library.js";
+import { getParty, getCampaignData, getEpisodeData } from "./library.js";
 
 interface Request {
   party?: boolean;
   campaign?: boolean;
-  episode?: Episode["id"];
+  episode?: string;
 }
 
 interface Result {
   party?: Party;
   campaign?: Campaign;
-  episode?: Episode;
+  episode?: CampaignEpisode;
 }
 
 interface HookResult {
@@ -36,7 +36,7 @@ export function useClientData(request: Request): HookResult {
   if (request.campaign) {
     queries.push({
       queryKey: ["campaign"],
-      queryFn: () => Promise.resolve(undefined as Campaign | undefined), // TODO: implement getCampaign
+      queryFn: getCampaignData,
     });
   }
 
@@ -44,7 +44,7 @@ export function useClientData(request: Request): HookResult {
   if (request.episode) {
     queries.push({
       queryKey: ["episode", request.episode],
-      queryFn: () => Promise.resolve(undefined as Episode | undefined), // TODO: implement getEpisode
+      queryFn: () => getEpisodeData(request.episode!),
     });
   }
 
@@ -65,7 +65,7 @@ export function useClientData(request: Request): HookResult {
     queryIndex++;
   }
   if (request.episode) {
-    result.episode = results[queryIndex]?.data as Episode | undefined;
+    result.episode = results[queryIndex]?.data as CampaignEpisode | undefined;
   }
 
   const isLoading = results.some(result => result.isLoading);

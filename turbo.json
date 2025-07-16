@@ -20,6 +20,16 @@
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "devPackages": {
+      "dependsOn": [
+        "@repo/ui#build", 
+        "@repo/pokedex#build", 
+        "@repo/pokeapi#build", 
+        "@repo/adventure#build"
+      ],
+      "cache": false,
+      "persistent": true
     }
   }
 }

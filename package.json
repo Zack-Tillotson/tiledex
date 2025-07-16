@@ -8,6 +8,7 @@
     "clean:cache": "rm -rf .turbo",
     "deploy": "turbo run deploy",
     "dev": "turbo run dev",
+    "devPackages": "turbo watch devPackages",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"

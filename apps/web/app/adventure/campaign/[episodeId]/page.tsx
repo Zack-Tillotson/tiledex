@@ -39,6 +39,6 @@ export default async function Page({ params }: PageProps) {
 
 export async function generateStaticParams() {
   return [
-    { episodeId: "episode-1" }
+    { episodeId: "-" }
   ];
 } 

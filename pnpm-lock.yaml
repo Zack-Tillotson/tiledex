@@ -79,6 +79,12 @@ importers:
 
   packages/adventure:
     dependencies:
+      '@repo/pokeapi':
+        specifier: workspace:*
+        version: link:../pokeapi
+      '@repo/pokedex':
+        specifier: workspace:*
+        version: link:../pokedex
       '@repo/types':
         specifier: workspace:*
         version: link:../types
