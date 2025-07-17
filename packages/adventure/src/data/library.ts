@@ -1,21 +1,45 @@
-import { collection, getDocs, query, where, doc, getDoc, updateDoc } from "firebase/firestore";
+import { collection, getDocs, query, where, doc, getDoc, updateDoc, addDoc } from "firebase/firestore";
 import { Party, PartyMember } from "../types/party.js";
 import { Campaign, CampaignEpisode } from "../types/campaign.js";
 import { validateParty } from "../types/validation.js";
 import { firebase } from "./firebase.js";
 
 /**
- * Get the user's campaign document
- * @returns The campaign document snapshot or null if not found
+ * Create a blank campaign for a new user
+ * @returns The newly created campaign document snapshot
  */
-async function getCampaign() {
+async function createBlankCampaign() {
+  const { db, uid } = await firebase();
+  
+  const blankCampaign = {
+    owner: uid,
+    party: [],
+    objectives: [],
+    episodes: [],
+  };
+  
+  const docRef = await addDoc(collection(db, 'campaigns'), blankCampaign);
+  
+  // Get the created document
+  const q = query(collection(db, 'campaigns'), where('owner', '==', uid));
+  const snapshot = await getDocs(q);
+  
+  return snapshot.docs[0];
+}
+
+/**
+ * Get the user's campaign document, creating a blank one if it doesn't exist
+ * @returns The campaign document snapshot
+ */
+async function getCampaign(): Promise<any> {
   const { db, uid } = await firebase();
   
   const q = query(collection(db, 'campaigns'), where('owner', '==', uid));
   const snapshot = await getDocs(q);
   
   if (snapshot.empty) {
-    return null;
+    // Create a blank campaign for new users
+    return await createBlankCampaign();
   }
   
   return snapshot.docs[0];
@@ -23,11 +47,6 @@ async function getCampaign() {
 
 export async function getParty(): Promise<Party> {
   const campaign = await getCampaign();
-  
-  if (!campaign) {
-    return [];
-  }
-
   const campaignData = campaign.data();
   const rawParty = campaignData.party;
   
@@ -44,16 +63,11 @@ export async function getParty(): Promise<Party> {
 
 /**
  * Get the user's campaign data
- * @returns Campaign data or null if not found
+ * @returns Campaign data
  */
-export async function getCampaignData(): Promise<Campaign | null> {
+export async function getCampaignData(): Promise<Campaign> {
   try {
     const campaign = await getCampaign();
-    
-    if (!campaign) {
-      return null;
-    }
-    
     const campaignData = campaign.data();
     
     // Validate and return campaign data
@@ -80,11 +94,6 @@ export async function getCampaignData(): Promise<Campaign | null> {
 export async function getPartyMember(id: string): Promise<PartyMember | null> {
   try {
     const campaign = await getCampaign();
-    
-    if (!campaign) {
-      return null;
-    }
-    
     const campaignData = campaign.data();
     const party = campaignData.party || [];
     
@@ -111,11 +120,6 @@ export async function getPartyMember(id: string): Promise<PartyMember | null> {
 export async function savePartyMember(id: string | null, data: Omit<PartyMember, "id">): Promise<string> {
   try {
     const campaign = await getCampaign();
-    
-    if (!campaign) {
-      throw new Error("No campaign found for user");
-    }
-    
     const campaignData = campaign.data();
     const party = campaignData.party || [];
     
@@ -162,11 +166,6 @@ export async function savePartyMember(id: string | null, data: Omit<PartyMember,
 export async function getEpisodeData(episodeId: string): Promise<CampaignEpisode | null> {
   try {
     const campaign = await getCampaign();
-    
-    if (!campaign) {
-      return null;
-    }
-    
     const campaignData = campaign.data();
     const episodes = campaignData.episodes || [];
     
