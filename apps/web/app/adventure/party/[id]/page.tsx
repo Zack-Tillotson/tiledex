@@ -1,9 +1,9 @@
 import { EditPartyMemberView } from "../../../../views/EditPartyMemberView";
 
 interface EditPartyMemberPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -14,12 +14,7 @@ export function generateStaticParams() {
   ];
 }
 
-/**
- * Page for editing an existing party member
- * Server component that renders the client-side view
- * @param params - Route parameters containing the party member ID
- */
 export default async function EditPartyMemberPage({ params }: EditPartyMemberPageProps) {
-  const {id} = await params;
+  const { id } = await params;
   return <EditPartyMemberView id={id} />;
 } 
